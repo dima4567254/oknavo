@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'REM';
+	font-weight:900;
+	font-style:normal;
+	src: url("../fonts/REM-Black.woff2") format("woff2"), url("../fonts/REM-Black.woff") format("woff");
+	font-display:swap;
+}
+@font-face {
+	font-family: 'REM';
+	font-weight:700;
+	font-style:normal;
+	src: url("../fonts/REM-Bold.woff2") format("woff2"), url("../fonts/REM-Bold.woff") format("woff");
+	font-display:swap;
+}
+@font-face {
+	font-family: 'REM';
+	font-weight:400;
+	font-style:normal;
+	src: url("../fonts/REM-Regular.woff2") format("woff2"), url("../fonts/REM-Regular.woff") format("woff");
+	font-display:swap;
+}
+@font-face {
+	font-family: 'REM';
+	font-weight:600;
+	font-style:normal;
+	src: url("../fonts/REM-SemiBold.woff2") format("woff2"), url("../fonts/REM-SemiBold.woff") format("woff");
+	font-display:swap;
+}
