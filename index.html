@@ -10,68 +10,80 @@
     <title>ПЛАСТИКОВІ ВІКНА В ОДЕСІ</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
 </head>
+<!-- да бывает спан в параграфе -->
+<!-- если для слайдера нужно стрелки их записать -->
+<!--!!! типерь название плпгиноав в слайдере с большой буквы -->
+<!-- переименовать info -->
+<!-- menu nav скорей всего не првильно -->
+<!-- 36 что то не правильно с параграфами -->
 
 <body>
     <header class="header">
         <div class="container">
-            <nav class="menu">
-                <div class="menu__box">
-                    <a class="logo menu__logo" href="#">
+            <nav class="header__wrapper">
+                <div class="header__box">
+                    <a class="header__logo logo" href="#">
                         <img class="logo__menu" src="images/logo.svg" alt="logo">
                     </a>
-                    <div class="menu__text">
+                    <div class="header__text">
                         <p>
                             Офіційний представник заводу АДІСЕМ
                         </p>
                     </div>
                 </div>
-                <div class="menu__info">
-                    <div class="menu__box">
-                        <div class="menu__inner">
-                            <svg class="social__svg" width="15px" height="15px">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <p>
-                                9.30-19.00
-                            </p>
+                <div class="header__inner">
+                    <div class="info">
+                        <div class="info__time">
+                            <div class="info__inner">
+                                <svg class="info__svg" width="1.5rem" height="1.5rem">
+                                    <use xlink:href="images/sprite.svg#clock">
+                                    </use>
+                                </svg>
+                                <p>
+                                    9.30-19.00
+                                </p>
+                            </div>
+                            <div class="info__tel">
+                                Приймаємо дзвінки
+                            </div>
                         </div>
-                        <p>
-                            Приймаємо дзвінки
-                        </p>
+                        <div class="info__box">
+                            <div class="info__wrapper">
+                                <svg class="info__svg" width="1.5rem" height="1.5rem" style="transform:rotate(270deg);">
+                                    <use xlink:href="images/sprite.svg#tel">
+                                    </use>
+                                </svg>
+                                <a class="info__link" href="tel:+380960989500">
+                                    +380-96-098-95-00
+                                </a>
+                            </div>
+                            <div class="info__wrapper">
+                                <svg class="info__svg" width="1.5rem" height="1.5rem" style="transform:rotate(270deg);">
+                                    <use xlink:href="images/sprite.svg#tel">
+                                    </use>
+                                </svg>
+                                <a class="info__link" href="tel:+0800309996">
+                                    080 030-99-96
+                                </a>
+                            </div>
+                            <div class="info__text">
+                                <p>
+                                    Дзвінок безкоштовний
+                                </p>
+                                <span>
+                                    для всіх операторів
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu__box">
-                        <div class="menu__inner">
-                            <svg class="social__svg" width="15px" height="15px">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <a href="tel:+380960989500">+380-96-098-95-00</a>
-                        </div>
-                        <div class="menu__inner">
-                            <svg class="social__svg" width="15px" height="15px">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <a href="tel:+0800309996">080 030-99-96</a>
-                        </div>
-                        <div class="menu__text">
-                            <p>
-                                Дзвінок безкоштовний
-                            </p>
-                            <span>
-                                для всіх операторів
-                            </span>
-                        </div>
-                    </div>
-                    <button class="menu__btn" type="button">
+                    <button class="header__btn" type="button">
                         <span></span>
                         <span class="sr-only">open menu</span>
                     </button>
-                    <div class="menu__wrapper">
-                        <a class="logo menu__logo" href="#">
+                    <nav class="menu">
+                        <!-- <a class="logo menu__logo" href="#">
                             <img class="logo__menu" src="images/logo.svg" alt="logo">
-                        </a>
+                        </a> -->
                         <ul class="menu__items">
                             <li class="menu__item">
                                 <a class="menu__link menu__link--active" href="#">
@@ -104,88 +116,564 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-                <!-- <div class="menu__nav"> -->
-                <!-- <div class="dropdown">
-                        <select class="dropdown__select">
-                            <option class="dropdown__optoon dropdown-svg" value="1" name="email">1
-                            </option>
-                            <option class="dropdown__optoon" value="0" name="email">2</option>
-                        </select>
-                    </div> -->
-                <!-- <button class="button button--cart" type="button">
-                        <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969"
-                            viewBox="0 0 18.94 16.969">
-                            <path class="cls-1" fill='#243f4d' fill-rule='evenodd'
-                                d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
-                                transform="translate(-1716 -69)" />
-                        </svg>
-                        <span class="sr-only">button cart</span>
-                    </button>
-                    <span class="sr-only">cart</span>
-                    <button class="button  button--search" type="button">
-                        <svg class="button__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="16"
-                            viewBox="0 0 15 16" font-size='16px' opacity='0.8' fill='#212121' font-family='FontAwesome'>
-                            <text id="search" class="cls-1" x="-0.112" y="13.072"></text>
-                        </svg>
-                        <span class="sr-only">button search</span>
-                    </button>
-                    <span class="sr-only">search</span> -->
-                <!-- </div> -->
             </nav>
         </div>
     </header>
-    <div class="block"></div>
+
     <main class="main">
-        <section class="section">
-
+        <section class="intro">
             <div class="container">
-                <div class="title">rem</div>
+                <div class="intro__wrapper">
+                    <!-- <img src="images/master-a.webp" alt="Людина в уніформі майстра"> -->
+                    <img src="images/incision.webp" alt="Віконна рама в розрізі">
+                    <div class="intro__box">
+                        <h1 class="intro__title">
+                            скління пластикових вікон і балконів в одеській області
+                        </h1>
+                        <div class="intro__text">
+                            <p>
+                                розстрочка 0% до 10 місяців без першого внеску
+                            </p>
+                            <span>
+                                дайте відповідь лише на 4 запитання, і отримаєте:
+                            </span>
+                        </div>
+                        <div class="intro__inner">
+                            <div class="intro__box">
+                                <img src="images/calc.webp" alt="Калькулятор">
+                                <div class="intro__text">
+                                    <p>
+                                        розстрочка 0% до 10 місяців без першого внеску
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="intro__box">
+                                <img src="images/gift.webp" alt="Подарунок перев'язаний червоною стрічкою">
+                                <div class="intro__text">
+                                    <p>
+                                        розстрочка 0% до 10 місяців без першого внеску
+                                    </p>
+                                </div>
+                            </div>
+                            <a class="intro__link" href="#">
+                                розрахувати попередню вартість
+                                <span>
+                                    і отримати подарунок
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="services">
             <div class="container">
-                <div class="title">rem</div>
+                <h2 class="services__title title">
+                    рішення під будь-який бюджет
+                </h2>
+                <div class="services__text">
+                    <p>
+                        Наша продукція
+                    </p>
+                </div>
+                <ul class="services__items">
+                    <li class="services__item">
+                        <img src="images/window.webp" alt="глухі, арочні, одностулкові, двостулкові та інші">
+                        <h3 class="services__title">
+                            вікна
+                        </h3>
+                        <div class="services__subtext">
+                            <p>
+                                глухі, арочні, одностулкові, двостулкові та інші
+                            </p>
+                        </div>
+                        <a class="services__link" href="#">
+                            вибрати вікно
+                        </a>
+                    </li>
+                    <li class="services__item">
+                        <img src="images/balcony.webp" alt="П-подібні, французький балкон, лоджія та інші">
+                        <h3 class="services__title">
+                            Скління балконів
+                        </h3>
+                        <div class="services__subtext">
+                            <p>
+                                П-подібні, французький балкон, лоджія та інші
+                            </p>
+                        </div>
+                        <a class="services__link" href="#">
+                            Вибрати балкон
+                        </a>
+                    </li>
+                    <li class="services__item">
+                        <img src="images/door.webp" alt="Металопластикові двері для Вашого будинку">
+                        <h3 class="services__title title">
+                            Металопластикові двері
+                        </h3>
+                        <div class="services__subtext">
+                            <p>
+                                Металопластикові двері для Вашого будинку
+                            </p>
+                        </div>
+                        <a class="services__link" href="#">
+                            Вибрати двері
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="">
+        <section class="installments">
             <div class="container">
-
+                <h2 class="installments__title">
+                    РОЗСТРОЧКА 0%
+                </h2>
+                <div class="installments__subtext">
+                    <p>
+                        Як оформити розстрочку?
+                    </p>
+                </div>
+                <div class="installments__wrapper">
+                    <div class="installments__text">
+                        Після залишеної заявки з Вами
+                        <span>зв'язується менеджер відділу продажів</span>,
+                        і ви узгоджуєте час
+                        для виїзду
+                        інженера
+                    </div>
+                    <div class="installments__text">
+                        <p>
+                            нженер робить виміри й озвучує точну вартість
+                        </p>
+                        <p>
+                            Для розстрочки необхідна ваша присутність на офісі (можливо проїхати з інженером відразу
+                            після
+                            заміру)
+                        </p>
+                    </div>
+                    <div class="installments__text">
+                        <p>
+                            Менеджери оформляють документи для розстрочки з максимальним терміном д
+                        </p>
+                        <span>
+                            10ти МІСЯЦІВ під 0% і без
+                            початкового внеску
+                        </span>
+                    </div>
+                    <div class="installments__text">
+                        Перший платіж здійснюється
+                        <span>через місяць</span> після оформлення
+                        <p>
+                            (а це означає, що ваші вироби вже будуть встановлені і ви будете розуміти, за що платите)
+                        </p>
+                    </div>
+                    <div class="installments__text">
+                        Через <span>10-14 робочих днів</span> ваші вироби будуть доставлені за місцем і встановлені.
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="cause">
             <div class="container">
-
+                <div class="cause__wrapper">
+                    <div class="cause__box">
+                        <h2 class="cause__title title">
+                            викликати фахівця
+                        </h2>
+                        <div class="cause__text">
+                            <p>
+                                Ви можете залишити заявку, і викликати нашого інженера який зніме всі розміри необхідні
+                                для
+                                прорахунку, і озвучить Вам точну вартість прямо на місці.
+                            </p>
+                            Вам<span> не потрібно чекати </span>кілька днів!
+                        </div>
+                        <button class="cause__btn btn" type="button">
+                            викликати фахівця
+                        </button>
+                    </div>
+                    <img src="images/cause.webp" alt="Людина в уніформі майстра">
+                </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="trust">
             <div class="container">
-
+                <h2 class="trust__title">
+                    сумніваєтеся, чи варто нам довіряти?
+                </h2>
+                <div class="trust__text">
+                    <p>
+                        Тоді почитайте чесні відгуки наших клієнтів
+                    </p>
+                </div>
+                <div class="trust-casey__wrapper trustCasey">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-wrapper">
+                        <ul class="trust__items">
+                            <li class="trust__item">
+                                <h3 class="trust__title">
+                                    Оксана С.
+                                </h3>
+                                <div class="trust__instagram">
+                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
+                                        <use xlink:href="images/sprite.svg#instagram">
+                                        </use>
+                                    </svg>
+                                    srubinova28
+                                </div>
+                                <div class="trust__text">
+                                    <p>
+                                        Доброго дня. Хотіла б подякувати вам за встановлення. Все пройшло швидко і
+                                        якісно. Я
+                                        думала, це буде набагато довше.
+                                    </p>
+                                    <p>
+                                        Велике Вам спасибі і успіхів у цій справі :)
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="trust__item">
+                                <h3 class="trust__title">
+                                    Микола Г.
+                                </h3>
+                                <div class="trust__instagram">
+                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
+                                        <use xlink:href="images/sprite.svg#instagram">
+                                        </use>
+                                    </svg>
+                                    kolyan_gurkov97
+                                </div>
+                                <div class="trust__text">
+                                    <p>
+                                        Довго шукав того, кому можна довірити заміну своїх вікон, попався ваш сайт у
+                                        пошуку:
+                                        зайшов -
+                                        одразу стало все зрозуміло, залишив заявку на сайті, мені зателефонували того ж
+                                        дня
+                                        і
+                                        проконсультували.
+                                    </p>
+                                    <p>
+                                        Команда монтажників - професіонали своєї справи. Приїхали вчасно, одразу
+                                        приступили до роботи. Зробили все швидко і якісно.
+                                    </p>
+                                    <p>
+                                        Буду рекомендувати вашу компанію своїм знайомим.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="trust__item">
+                                <h3 class="trust__title">
+                                    Слава З.
+                                </h3>
+                                <div class="trust__instagram">
+                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
+                                        <use xlink:href="images/sprite.svg#instagram">
+                                        </use>
+                                    </svg>
+                                    zolotarevslava
+                                </div>
+                                <div class="trust__text">
+                                    <p>
+                                        Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому рівні.
+                                        Залишилися
+                                        дуже задоволеними!
+                                    </p>
+                                    <p>
+                                        Будемо вас рекомендувати :)
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="advantages">
             <div class="container">
-
+                <h2 class="advantages__title">
+                    переваги роботи з нами
+                </h2>
+                <div class="advantages__subtext">
+                    <p>
+                        Чому працювати з нами - вигідно?
+                    </p>
+                </div>
+                <div class="advantages__wrapper">
+                    <ul class="advantages__items">
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                зручна оплата
+                            </h3>
+                            <div class="advantages__text">
+                                Розстрочка до 10 місяців під 0%,
+                                <span>без початкового внеску</span>
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                чіткі гарантії
+                            </h3>
+                            <div class="advantages__text">
+                                гарантія на весь товар
+                                <span>5 років</span>
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                відкритість
+                            </h3>
+                            <div class="advantages__text">
+                                озвучування вартості
+                                <span>відразу</span> після заміру, а також безкоштовна доставка вікон
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="advantages__inner">
+                        <img src="images/master-a.webp" alt="Людина в уніформі майстра з рулеткою">
+                        <div class="advantages__box">
+                            <div class="advantages__name">
+                                олександр
+                            </div>
+                            <div class="advantages__info">
+                                монтажник, досвід роботи: 5 років
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="advantages__items">
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                лояльність
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    перший платіж
+                                    <span>
+                                        через місяць
+                                    </span>
+                                    після оформлення
+                                </p>
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                спеціалісти
+                            </h3>
+                            <div class="advantages__text">
+                                <span>
+                                    безкоштовний
+                                </span>
+                                виклик інженера
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                швидкість
+                            </h3>
+                            <div class="advantages__text">
+                                монтаж продукції проводиться протягом одного дня, виготовлення
+                                <span>від 10 до 14 днів.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="gallery">
             <div class="container">
-
+                <div class="gallery__title title">
+                    галерея робіт
+                </div>
+                <div class="gallery__text">
+                    <p>
+                        Подивіться, які результати ми приносимо нашим клієнтам
+                    </p>
+                </div>
+                <div class="gallery-casey__wrapper galleryCasey">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-wrapper">
+                        <ul class="gallery-casey__items">
+                            <li class="gallery-slide">
+                                <img class="gallery__img" src="images/galery/1.jpg" alt="Білі пластикові двері">
+                            </li>
+                            <li class="swiper-slide">
+                                <img class="gallery__img" src="images/galery/2.jpg" alt="Пластиковое вікно">
+                            </li>
+                            <li class="swiper-slide">
+                                <img class="gallery__img" src="images/galery/3.jpg" alt="Двері різного кольору">
+                            </li>
+                            <li class="swiper-slide">
+                                <img class="gallery__img" src="images/galery/1.jpg" alt="Білі пластикові двері">
+                            </li>
+                            <li class="swiper-slide">
+                                <img class="gallery__img" src="images/galery/2.jpg" alt="Пластиковое вікно">
+                            </li>
+                            <li class="swiper-slide">
+                                <img class="gallery__img" src="images/galery/3.jpg" alt="Двері різного кольору">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <ul class="gallery__items">
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Білі пластикові двері">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Пластиковое вікно">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Двері різного кольору">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Білі пластикові двері">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Пластиковое вікно">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="images/galery/1.jpg" alt="Двері різного кольору">
+                    </li>
+                </ul> -->
+                </div>
             </div>
         </section>
 
+        <section class="goods-installments">
+            <h2 class="goods-installments__title">
+                товар у розстрочку
+            </h2>
+            <div class="goods-installments__text">
+                Віднедавна ми єдині в Одеській Області, хто забезпечує
+                <span>
+                    Розстрочку до 10 місяців під 0% Без Першого
+                    Внеску.
+                </span>
+            </div>
+            <div class="goods-installments__wrapper">
+                <img src="images/master-f.webp" alt="Людина в уніформі майстра з ручкою і планшетом">
+                <form class="form">
+                    <div class="form__text">
+                        <p>
+                            Скористайтеся унікальною пропозицією! Просто введіть Ваше Ім'я та Номер телефону
+                        </p>
+                    </div>
+                    <label class="sr-only" for="work-name">
+                        Введіть ваше ім'я*
+                    </label>
+                    <input class="form__input" id="work-name" type="text" name="name" placeholder="Введіть ім'я*"
+                        required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                    <label class="sr-only" for="work-tel">
+                        Введіть ваш телефон*
+                    </label>
+                    <input class="form__input" id="work-tel" type="tel" name="tel" placeholder="Введіть Ваш номер*"
+                        required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                    <button class="form__btn btn" type="submit">
+                        хочу розстрочку
+                        <span class="sr-only">send message button</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <h2 class="contact__title title">
+                    контактна інформація
+                </h2>
+                <div class="info">
+                    <div class="info__box">
+                        <div class="info__inner">
+                            <svg class="info__svg" width="1.5rem" height="1.5rem">
+                                <use xlink:href="images/sprite.svg#facebook">
+                                </use>
+                            </svg>
+                            <p>
+                                9.30-19.00
+                            </p>
+                        </div>
+                        <p>
+                            Приймаємо дзвінки
+                        </p>
+                    </div>
+                    <div class="info__box">
+                        <div class="info__inner">
+                            <svg class="info__svg" width="1.5rem" height="1.5rem">
+                                <use xlink:href="images/sprite.svg#facebook">
+                                </use>
+                            </svg>
+                            <a href="tel:+380960989500">+380-96-098-95-00</a>
+                        </div>
+                        <div class="info__inner">
+                            <svg class="info__svg" width="1.5rem" height="1.5rem">
+                                <use xlink:href="images/sprite.svg#facebook">
+                                </use>
+                            </svg>
+                            <a href="tel:+0800309996">080 030-99-96</a>
+                        </div>
+                        <div class="info__text">
+                            <p>
+                                Дзвінок безкоштовний
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <footer class="footer">
-
+        <div class="conrainer">
+            <div class="footer__text">
+                офіційний представник заводу
+                <span>
+                    адісем
+                </span>
+            </div>
+            <ul class="menu__items">
+                <li class="menu__item">
+                    <a class="menu__link menu__link--active" href="#">
+                        Продукція
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#service">
+                        Розстрочка
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#collections">
+                        Відгуки
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#products">
+                        Переваги
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#about">
+                        Галерея
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#blog">
+                        Контакти
+                    </a>
+                </li>
+            </ul>
+            <svg class="social__svg" width="1.5rem" height="1.5rem">
+                <use xlink:href="images/sprite.svg#instagram">
+                </use>
+            </svg>
+        </div>
     </footer>
 
 
@@ -197,13 +685,13 @@
 -->
 
     <!--
-  <form class="footer-top__form">
+  <form class="form">
       <label class="sr-only" for="email">
           Enter your email
       </label>
-      <input class="footer-top__input" id="email-input" type="email" name="email" placeholder="Your Email" required
+      <input class="input" id="email-input" type="email" name="email" placeholder="Your Email" required
           oninvalid="this.setCustomValidity('fill in this field!')">
-      <button class="footer-top__btn" type="submit">
+      <button class="btn" type="submit">
           <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
               xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="17" viewBox="0 0 20 17">
               <image id="send" width="20" height="17"
