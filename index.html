@@ -16,6 +16,7 @@
 <!-- переименовать info -->
 <!-- menu nav скорей всего не првильно -->
 <!-- 36 что то не правильно с параграфами -->
+<!-- задал svg стили инлайтово в файле не работало -->
 
 <body>
     <header class="header">
@@ -127,12 +128,11 @@
             <div class="container">
                 <div class="intro__wrapper">
                     <!-- <img src="images/master-a.webp" alt="Людина в уніформі майстра"> -->
-                    <img src="images/incision.webp" alt="Віконна рама в розрізі">
-                    <div class="intro__box">
+                    <div class="intro__left">
                         <h1 class="intro__title">
                             скління пластикових вікон і балконів в одеській області
                         </h1>
-                        <div class="intro__text">
+                        <div class="intro__subtext">
                             <p>
                                 розстрочка 0% до 10 місяців без першого внеску
                             </p>
@@ -141,35 +141,41 @@
                             </span>
                         </div>
                         <div class="intro__inner">
-                            <div class="intro__box">
-                                <img src="images/calc.webp" alt="Калькулятор">
-                                <div class="intro__text">
-                                    <p>
-                                        розстрочка 0% до 10 місяців без першого внеску
-                                    </p>
+                            <div class="intro__boxs">
+                                <div class="intro__box">
+                                    <img class="intro__calc" src="images/calc.webp" alt="Калькулятор">
+                                    <div class="intro__text">
+                                        <p>
+                                            Повний розрахунок необхідної послуги
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="intro__box">
-                                <img src="images/gift.webp" alt="Подарунок перев'язаний червоною стрічкою">
-                                <div class="intro__text">
-                                    <p>
-                                        розстрочка 0% до 10 місяців без першого внеску
-                                    </p>
+                                <div class="intro__box">
+                                    <img class="intro__gift" src="images/gift.webp"
+                                        alt="Подарунок перев'язаний червоною стрічкою">
+                                    <div class="intro__text">
+                                        <p>
+                                            Подарунок на Ваш вибір
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                             <a class="intro__link" href="#">
-                                розрахувати попередню вартість
                                 <span>
-                                    і отримати подарунок
+                                    розрахувати попередню вартість
                                 </span>
+                                <p>
+                                    і отримати подарунок
+                                </p>
                             </a>
                         </div>
                     </div>
+                    <img class="intro__img" src="images/incision.webp" alt="Віконна рама в розрізі">
                 </div>
             </div>
         </section>
 
-        <section class="services">
+        <section class="services section">
             <div class="container">
                 <h2 class="services__title title">
                     рішення під будь-який бюджет
@@ -181,8 +187,9 @@
                 </div>
                 <ul class="services__items">
                     <li class="services__item">
-                        <img src="images/window.webp" alt="глухі, арочні, одностулкові, двостулкові та інші">
-                        <h3 class="services__title">
+                        <img class="services__img" src="images/window.webp"
+                            alt="глухі, арочні, одностулкові, двостулкові та інші">
+                        <h3 class="services__subtitle">
                             вікна
                         </h3>
                         <div class="services__subtext">
@@ -191,12 +198,13 @@
                             </p>
                         </div>
                         <a class="services__link" href="#">
-                            вибрати вікно
+                            Вибрати вікно
                         </a>
                     </li>
                     <li class="services__item">
-                        <img src="images/balcony.webp" alt="П-подібні, французький балкон, лоджія та інші">
-                        <h3 class="services__title">
+                        <img class="services__img" src="images/balcony.webp"
+                            alt="П-подібні, французький балкон, лоджія та інші">
+                        <h3 class="services__subtitle">
                             Скління балконів
                         </h3>
                         <div class="services__subtext">
@@ -209,8 +217,9 @@
                         </a>
                     </li>
                     <li class="services__item">
-                        <img src="images/door.webp" alt="Металопластикові двері для Вашого будинку">
-                        <h3 class="services__title title">
+                        <img class="services__img" src="images/door.webp"
+                            alt="Металопластикові двері для Вашого будинку">
+                        <h3 class="services__subtitle">
                             Металопластикові двері
                         </h3>
                         <div class="services__subtext">
@@ -228,7 +237,7 @@
 
         <section class="installments">
             <div class="container">
-                <h2 class="installments__title">
+                <h2 class="installments__title title">
                     РОЗСТРОЧКА 0%
                 </h2>
                 <div class="installments__subtext">
@@ -237,41 +246,64 @@
                     </p>
                 </div>
                 <div class="installments__wrapper">
-                    <div class="installments__text">
-                        Після залишеної заявки з Вами
-                        <span>зв'язується менеджер відділу продажів</span>,
-                        і ви узгоджуєте час
-                        для виїзду
-                        інженера
+                    <div class="installments__item installments__item--tel">
+                        <div class="installments__box">
+                            <div class="installments__text">
+                                Після залишеної заявки з Вами
+                                <span>зв'язується менеджер відділу продажів</span>,
+                                і ви узгоджуєте час
+                                для виїзду
+                                інженера
+                            </div>
+                        </div>
                     </div>
-                    <div class="installments__text">
-                        <p>
-                            нженер робить виміри й озвучує точну вартість
-                        </p>
-                        <p>
-                            Для розстрочки необхідна ваша присутність на офісі (можливо проїхати з інженером відразу
-                            після
-                            заміру)
-                        </p>
+                    <div class="installments__item installments__item--roulette">
+                        <div class="installments__box">
+                            <div class="installments__text">
+                                <p>
+                                    нженер робить виміри й озвучує точну вартість
+                                </p>
+                                <p>
+                                    Для розстрочки необхідна ваша присутність на офісі (можливо проїхати з інженером
+                                    відразу
+                                    після
+                                    заміру)
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="installments__text">
-                        <p>
-                            Менеджери оформляють документи для розстрочки з максимальним терміном д
-                        </p>
-                        <span>
-                            10ти МІСЯЦІВ під 0% і без
-                            початкового внеску
-                        </span>
+                    <div class="installments__item installments__item--folder">
+                        <div class="installments__box">
+                            <div class="installments__text">
+                                Менеджери оформляють документи для розстрочки з максимальним терміном
+                                <span>
+                                    до 10ти МІСЯЦІВ під 0% і без
+                                    початкового внеску
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="installments__text">
-                        Перший платіж здійснюється
-                        <span>через місяць</span> після оформлення
-                        <p>
-                            (а це означає, що ваші вироби вже будуть встановлені і ви будете розуміти, за що платите)
-                        </p>
+                    <div class="installments__item installments__item--wallet">
+                        <div class="installments__box">
+                            <div class="installments__text">
+                                <p>
+                                    Перший платіж здійснюється
+                                    <span>через місяць</span> після оформлення
+                                </p>
+                                <p>
+                                    (а це означає, що ваші вироби вже будуть встановлені і ви будете розуміти, за що
+                                    платите)
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="installments__text">
-                        Через <span>10-14 робочих днів</span> ваші вироби будуть доставлені за місцем і встановлені.
+                    <div class="installments__item installments__item--like">
+                        <div class="installments__box">
+                            <div class="installments__text">
+                                Через <span>10-14 робочих днів</span> ваші вироби будуть доставлені за місцем і
+                                встановлені.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -290,115 +322,1004 @@
                                 для
                                 прорахунку, і озвучить Вам точну вартість прямо на місці.
                             </p>
-                            Вам<span> не потрібно чекати </span>кілька днів!
+                            <p>
+                                Вам<span> не потрібно чекати </span>кілька днів!
+                            </p>
                         </div>
                         <button class="cause__btn btn" type="button">
                             викликати фахівця
                         </button>
                     </div>
-                    <img src="images/cause.webp" alt="Людина в уніформі майстра">
+                    <div class="cause__images">
+                        <img class="cause__img" src="images/cause.webp" alt="Людина в уніформі майстра">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="trust">
             <div class="container">
-                <h2 class="trust__title">
+                <h2 class="trust__title title">
                     сумніваєтеся, чи варто нам довіряти?
                 </h2>
-                <div class="trust__text">
+                <div class="trust__subtext">
                     <p>
                         Тоді почитайте чесні відгуки наших клієнтів
                     </p>
                 </div>
-                <div class="trust-casey__wrapper trustCasey">
+                <div class="trust__wrapper trustCasey">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-wrapper">
-                        <ul class="trust__items">
-                            <li class="trust__item">
-                                <h3 class="trust__title">
-                                    Оксана С.
-                                </h3>
-                                <div class="trust__instagram">
-                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
-                                        <use xlink:href="images/sprite.svg#instagram">
-                                        </use>
-                                    </svg>
-                                    srubinova28
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper trust__items">
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Оксана С.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        srubinova28
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Доброго дня. Хотіла б подякувати вам за встановлення. Все пройшло швидко
+                                            і
+                                            якісно. Я
+                                            думала, це буде набагато довше.
+                                        </p>
+                                        <p>
+                                            Велике Вам спасибі і успіхів у цій справі :)
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="trust__text">
-                                    <p>
-                                        Доброго дня. Хотіла б подякувати вам за встановлення. Все пройшло швидко і
-                                        якісно. Я
-                                        думала, це буде набагато довше.
-                                    </p>
-                                    <p>
-                                        Велике Вам спасибі і успіхів у цій справі :)
-                                    </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Микола Г.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        kolyan_gurkov97
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Довго шукав того, кому можна довірити заміну своїх вікон, попався ваш
+                                            сайт у
+                                            пошуку:
+                                            зайшов -
+                                            одразу стало все зрозуміло, залишив заявку на сайті, мені зателефонували
+                                            того ж
+                                            дня
+                                            і
+                                            проконсультували.
+                                        </p>
+                                        <p>
+                                            Команда монтажників - професіонали своєї справи. Приїхали вчасно, одразу
+                                            приступили до роботи. Зробили все швидко і якісно.
+                                        </p>
+                                        <p>
+                                            Буду рекомендувати вашу компанію своїм знайомим.
+                                        </p>
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="trust__item">
-                                <h3 class="trust__title">
-                                    Микола Г.
-                                </h3>
-                                <div class="trust__instagram">
-                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
-                                        <use xlink:href="images/sprite.svg#instagram">
-                                        </use>
-                                    </svg>
-                                    kolyan_gurkov97
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Слава З.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        zolotarevslava
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому
+                                            рівні.
+                                            Залишилися
+                                            дуже задоволеними!
+                                        </p>
+                                        <p>
+                                            Будемо вас рекомендувати :)
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="trust__text">
-                                    <p>
-                                        Довго шукав того, кому можна довірити заміну своїх вікон, попався ваш сайт у
-                                        пошуку:
-                                        зайшов -
-                                        одразу стало все зрозуміло, залишив заявку на сайті, мені зателефонували того ж
-                                        дня
-                                        і
-                                        проконсультували.
-                                    </p>
-                                    <p>
-                                        Команда монтажників - професіонали своєї справи. Приїхали вчасно, одразу
-                                        приступили до роботи. Зробили все швидко і якісно.
-                                    </p>
-                                    <p>
-                                        Буду рекомендувати вашу компанію своїм знайомим.
-                                    </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Оксана С.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        srubinova28
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Доброго дня. Хотіла б подякувати вам за встановлення. Все пройшло швидко
+                                            і
+                                            якісно. Я
+                                            думала, це буде набагато довше.
+                                        </p>
+                                        <p>
+                                            Велике Вам спасибі і успіхів у цій справі :)
+                                        </p>
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="trust__item">
-                                <h3 class="trust__title">
-                                    Слава З.
-                                </h3>
-                                <div class="trust__instagram">
-                                    <svg class="social__svg" width="1.5rem" height="1.5rem">
-                                        <use xlink:href="images/sprite.svg#instagram">
-                                        </use>
-                                    </svg>
-                                    zolotarevslava
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Микола Г.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        kolyan_gurkov97
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Довго шукав того, кому можна довірити заміну своїх вікон, попався ваш
+                                            сайт у
+                                            пошуку:
+                                            зайшов -
+                                            одразу стало все зрозуміло, залишив заявку на сайті, мені зателефонували
+                                            того ж
+                                            дня
+                                            і
+                                            проконсультували.
+                                        </p>
+                                        <p>
+                                            Команда монтажників - професіонали своєї справи. Приїхали вчасно, одразу
+                                            приступили до роботи. Зробили все швидко і якісно.
+                                        </p>
+                                        <p>
+                                            Буду рекомендувати вашу компанію своїм знайомим.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="trust__text">
-                                    <p>
-                                        Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому рівні.
-                                        Залишилися
-                                        дуже задоволеними!
-                                    </p>
-                                    <p>
-                                        Будемо вас рекомендувати :)
-                                    </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Слава З.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        zolotarevslava
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому
+                                            рівні.
+                                            Залишилися
+                                            дуже задоволеними!
+                                        </p>
+                                        <p>
+                                            Будемо вас рекомендувати :)
+                                        </p>
+                                    </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Оксана С.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        srubinova28
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Доброго дня. Хотіла б подякувати вам за встановлення. Все пройшло швидко
+                                            і
+                                            якісно. Я
+                                            думала, це буде набагато довше.
+                                        </p>
+                                        <p>
+                                            Велике Вам спасибі і успіхів у цій справі :)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Микола Г.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        kolyan_gurkov97
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Довго шукав того, кому можна довірити заміну своїх вікон, попався ваш
+                                            сайт у
+                                            пошуку:
+                                            зайшов -
+                                            одразу стало все зрозуміло, залишив заявку на сайті, мені зателефонували
+                                            того ж
+                                            дня
+                                            і
+                                            проконсультували.
+                                        </p>
+                                        <p>
+                                            Команда монтажників - професіонали своєї справи. Приїхали вчасно, одразу
+                                            приступили до роботи. Зробили все швидко і якісно.
+                                        </p>
+                                        <p>
+                                            Буду рекомендувати вашу компанію своїм знайомим.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Слава З.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        zolotarevslava
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому
+                                            рівні.
+                                            Залишилися
+                                            дуже задоволеними!
+                                        </p>
+                                        <p>
+                                            Будемо вас рекомендувати :)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Слава З.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        zolotarevslava
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому
+                                            рівні.
+                                            Залишилися
+                                            дуже задоволеними!
+                                        </p>
+                                        <p>
+                                            Будемо вас рекомендувати :)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__item">
+                                <div class="trust__box">
+                                    <h3 class="trust__subtitle">
+                                        Слава З.
+                                    </h3>
+                                    <div class="trust__instagram">
+                                        <svg class="trust__svg" width="1.5rem" height="1.5rem">
+                                            <use xlink:href="images/sprite.svg#instagram">
+                                            </use>
+                                        </svg>
+                                        zolotarevslava
+                                    </div>
+                                    <div class="trust__text">
+                                        <p>
+                                            Тетяна, добрий день! Величезне спасибі за роботу. Усе зроблено на вищому
+                                            рівні.
+                                            Залишилися
+                                            дуже задоволеними!
+                                        </p>
+                                        <p>
+                                            Будемо вас рекомендувати :)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- <section class="slider-casey section" id="slider-casey">
+                    <div class="container container--slider">
+                        <img class="slider-casey__images" src="images/icons/decor6.svg" alt="Декор">
+                        <h2 class="slider-casey__title title" data-aos="fade-up">
+                            Кейси
+                        </h2>
+                        <div class="slider-casey__wrapper slidercasey" data-aos="fromOpacity" data-aos-delay="100">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <ul class="swiper-wrapper slider-casey__items">
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item ">
+                                        <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Пульсоксиметр
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>2766</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/sani.jpg" alt="Палочки от засоров">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Палочки от засоров Sani sticks
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>8000</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/bedtime.jpg" alt="Постельное белье">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Постельное белье
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>1200</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item ">
+                                        <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Пульсоксиметр
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>2766</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/sani.jpg" alt="Пульсоксиметр">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Палочки от засоров Sani sticks
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>8000</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/bedtime.jpg" alt="Постельное белье">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Постельное белье
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>1200</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Пульсоксиметр
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>2766</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/sani.jpg" alt="Палочки от засоров">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Палочки от засоров Sani sticks
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>8000</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="slider-casey__item">
+                                        <img class="slider-casey__img" src="images/bedtime.jpg" alt="Постельное белье">
+                                        <div class="slider-casey__inner">
+                                            <h3 class="slider-casey__subtitle">
+                                                Постельное белье
+                                            </h3>
+                                            <div class="slider-casey__text">
+                                                <p>
+                                                    Кількість лідів:
+                                                    <span>1200</span>
+                                                </p>
+                                            </div>
+                                            <div class="slider-casey__list">
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Показник
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Аппрув
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Апсейл
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Середній чек
+                                                    </div>
+                                                    <div class="slider-casey__indicator">
+                                                        Викуп
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        До
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        65%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        48%
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        255<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__to">
+                                                        67%
+                                                    </div>
+                                                </div>
+                                                <div class="slider-casey__item">
+                                                    <div class="slider-casey__first">
+                                                        Після
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        95%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        96%
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        460<span>грн</span>
+                                                    </div>
+                                                    <div class="slider-casey__after">
+                                                        88%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section> -->
+
         <section class="advantages">
             <div class="container">
-                <h2 class="advantages__title">
+                <h2 class="advantages__title title">
                     переваги роботи з нами
                 </h2>
                 <div class="advantages__subtext">
@@ -409,12 +1330,14 @@
                 <div class="advantages__wrapper">
                     <ul class="advantages__items">
                         <li class="advantages__item">
-                            <h3 class="advantages__subtitle">
-                                зручна оплата
-                            </h3>
-                            <div class="advantages__text">
-                                Розстрочка до 10 місяців під 0%,
-                                <span>без початкового внеску</span>
+                            <div class="advantages__box">
+                                <h3 class="advantages__subtitle">
+                                    зручна оплата
+                                </h3>
+                                <div class="advantages__text">
+                                    Розстрочка до 10 місяців під 0%,
+                                    <span>без початкового внеску</span>
+                                </div>
                             </div>
                         </li>
                         <li class="advantages__item">
@@ -498,8 +1421,8 @@
                     </p>
                 </div>
                 <div class="gallery-casey__wrapper galleryCasey">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                     <div class="swiper-wrapper">
                         <ul class="gallery-casey__items">
                             <li class="gallery-slide">
