@@ -8,6 +8,106 @@
 // плавность градиента
 
 // →
+
+.swiper-pagination {
+    // position: relative;
+    bottom: 5%;
+}
+
+.swiper-slide {
+    max-width: rem(338);
+    opacity: 0.6;
+    padding: 10px;
+    background: $white;
+    // background: red;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    // padding-top: 20px;
+    margin-top: 20px;
+    // возможно перенести три своиства
+    // height: 525px;
+    height: 480px;
+}
+
+.swiper-slide-active {
+    // padding-top: 0;
+    max-width: rem(340);
+    margin-top: 0px;
+    opacity: 1;
+    // height: 545px;
+    height: 500px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.swiper-button-next {
+    top: 93%;
+    left: 52.5%;
+}
+
+.swiper-button-prev {
+    top: 93%;
+    left: 45.0%;
+    // птом придумать как сделать без точных значений
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 12px;
+    color: $black;
+    // cursor: pointer;
+}
+
+.swiper-pagination {
+    color: #af955e;
+    font-size: 19px;
+}
+
+.swiper-prev,
+.swiper-next {
+    position: absolute;
+    top: inherit;
+    bottom: 14%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    z-index: 100;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10px;
+        width: 7px;
+        background-image: url('../images/icons/arrow-right.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.swiper-next {
+    right: 48%;
+
+    &::before {
+        background-image: url('../images/icons/arrow-right.svg');
+    }
+}
+
+.swiper-prev {
+    left: 46%;
+
+    &::before {
+        background-image: url('../images/icons/arrow-left.svg');
+    }
+}
+
 .menu {
     &__btn {
         // display: none;
@@ -735,10 +835,15 @@
     }
 }
 
-
+// 
+// проверить все своиства
 .trust {
     padding: rem(100) 0px rem(60) 0px;
     position: relative;
+    background-image: url('../images/trust-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__title {
         max-width: rem(590);
@@ -756,42 +861,44 @@
     }
 
     &__wrapper {
-        max-width: 1105px;
+        // max-width: 1105px;
         overflow: hidden;
-        margin: 0 auto;
-        // position: relative !important;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            // top: 0;
+            bottom: 0;
+            right: -5px;
+            height: 165px;
+            width: 145px;
+            background-image: url('../images/likes.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: 100;
+        }
     }
 
     &__items {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         // записать потом в снипеты куда это записывать
     }
 
     &__item {
-        max-width: rem(335);
-        opacity: 0.6;
-        // margin-top: 70px;
-        // transition: all 300ms ease;
-        // height: 500px;
-        width: 357px;
-        // padding: 10px;
-
-        background: $white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    &__box {
         // height: 460px;
         height: 415px;
-
-        // position: relative;
-        padding: 40px 16px;
         border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
+        // position: relative;
+        padding: 40px 16px;
     }
+
+    &__box {}
 
     &__subtitle {
         margin-bottom: rem(10);
@@ -805,13 +912,11 @@
         font-weight: 400;
         font-size: rem(12);
         color: rgba(0, 0, 0, 0.4);
-        // display: inline-block;
     }
 
-    .svg {
+    &__svg {
         margin-right: rem(5);
     }
-
 
     &__text {
         font-weight: 400;
@@ -822,26 +927,179 @@
     &__text p {
         margin-bottom: rem(20);
     }
-
-
 }
 
-.swiper-pagination {
-    // position: relative;
-    bottom: 5%;
+
+// сделать пп и оптимизировать ксс есть что
+.advantages {
+    padding: 140px 0 100px;
+    // background-color:$white;
+    background: url('../images/advantage-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__subtext {
+        // margin-bottom: 170px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__itemss {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 245px;
+        margin-bottom: 70px;
+        position: relative;
+
+        &:nth-child(odd) {
+            margin-left: 70px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8%;
+            left: -12%;
+            height: 18px;
+            width: 18px;
+            background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
+            border-radius: 50%;
+        }
+    }
+
+    &__itemi {
+        width: 245px;
+        margin-bottom: 70px;
+        position: relative;
+
+        &:first-child {
+            margin-left: -30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8%;
+            left: -12%;
+            height: 18px;
+            width: 18px;
+            background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
+            border-radius: 50%;
+        }
+    }
+
+    &__box {
+        // padding: 10px;
+        max-width: 391px;
+        padding: 5px;
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        // line-height: 1.7;
+    }
+
+    &__wrap {
+        padding: 17px 0;
+        border: 1px solid transparent;
+        border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
+        border-image-slice: 1;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        margin-bottom: 15px;
+        // text-transform: uppercase;
+    }
+
+    &__text p {
+        font-weight: 400;
+        font-size: 13px;
+        // line-height: 154%;
+        line-height: 1.5;
+    }
+
+    &__text span {
+        font-weight: 700;
+    }
+
+    &__inner {
+        line-height: 1;
+    }
+
+    &__img {
+        width: 545px;
+        height: 650px;
+        object-fit: cover;
+    }
+
+    &__name {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    &__info {
+        font-weight: 400;
+        font-size: 11px;
+    }
 }
 
-// .append-buttons button {
-//     display: inline-block;
-//     cursor: pointer;
-//     border: 1px solid #007aff;
-//     color: #007aff;
-//     text-decoration: none;
-//     padding: 4px 10px;
-//     border-radius: 4px;
-//     margin: 0 10px;
-//     font-size: 13px;
-// }
+// записать и 2 вариант слайдера 
+// не идеальный вариан слайдера н опод другому не получилось потом попробывать
+.gallery {
+    padding: rem(50) 0 rem(150);
+    position: relative;
+
+    &__title {
+        margin-bottom: rem(10);
+    }
+
+    &__wrapper {
+        overflow: hidden;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        // gap: rem(30);
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: rem(15);
+        text-align: center;
+        margin-bottom: rem(30);
+    }
+
+    &__img {
+        width: rem(300);
+        height: rem(500);
+        object-fit: cover;
+    }
+}
+
+
+
 
 
 

@@ -60,6 +60,13 @@ body {
     background: linear-gradient(-45deg, #bb9f5c, #b99b6b, #655a3c);
 }
 
+@function max($numbers...) {
+@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+@return m#{i}n(#{$numbers});
+}
+
 // @keyframes my-animation {
 //     from {
 //         // left: 120%;

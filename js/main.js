@@ -5,7 +5,7 @@ const trustCasey = new Swiper('.trustCasey', {
     loop: true,
     loopedslides: 3,
     centeredSlides: true,
-    spaceBetween: 30,
+    // spaceBetween: 30,
     // slidesPerView: 2,
     // grid: {
     //     rows: 2,
@@ -18,6 +18,63 @@ const trustCasey = new Swiper('.trustCasey', {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    // breakpoints: {
+
+    //     // 1200: {
+    //     //     slidesPerView: 4,
+    //     // },
+
+    //     // 992: {
+    //     //     slidesPerView: 3,
+
+    //     // },
+
+    //     769: {
+    //         slidesPerView: 2,
+    //     },
+
+    //     578: {
+    //         slidesPerView: 1,
+    //     },
+    // },
+});
+const galleryCasey = new Swiper('.galleryCasey', {
+    slidesPerView: 3,
+    loop: true,
+    loopedslides: 1,
+    // centeredSlides: true,
+    // spaceBetween: 30,
+    // slidesPerView: 2,
+    // grid: {
+    //     rows: 2,
+    // },
+    autoplay: {
+        delay: 5000,
+    },
+
+    navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+    },
+    // breakpoints: {
+
+    //     // 1200: {
+    //     //     slidesPerView: 4,
+    //     // },
+
+    //     // 992: {
+    //     //     slidesPerView: 3,
+
+    //     // },
+
+    //     769: {
+    //         slidesPerView: 2,
+    //     },
+
+    //     578: {
+    //         slidesPerView: 1,
+    //     },
+    // },
 });
 
 
