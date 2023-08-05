@@ -1,5 +1,26 @@
 
 
+// для плайсхолдера
+// // let buttonModal4 = document.querySelector('.form__input');
+// let buttonModal4 = document.querySelector('.form__input');
+// let attr = buttonModal4.getAttribute("data-mask");
+// console.log(attr);
+
+  
+// 00: 25: 48.958 с
+
+
+
+// buttonModal4.addEventListener('click', () => {
+//     // var el = document.getElementById("username");
+//     buttonModal4.placeholder = "+38 (___) ___-__-__";
+// });
+
+// function newAtt() {
+//     var el = document.getElementById("username");
+//     el.placeholder = "newAttr";
+// };
+
 const trustCasey = new Swiper('.trustCasey', {
     slidesPerView: 3,
     loop: true,
@@ -78,11 +99,11 @@ const galleryCasey = new Swiper('.galleryCasey', {
 });
 
 
-// $('.menu__btn, .menu a').on('click', function () {
-//     $('.menu__btn,.menu__items').toggleClass('menu__items--active');
-//     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
-// });
-
+$('.header__btn, .menu a').on('click', function () {
+    $('.header__menu').toggleClass('header__menu--active');
+    // для крестика и для меню и что бы закрывалось меню после выбора сcылки
+});
+// .menu__btn,
 // $(function () {
 //     let header = $('.header');
 

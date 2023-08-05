@@ -17,6 +17,18 @@
 <!-- menu nav скорей всего не првильно -->
 <!-- 36 что то не правильно с параграфами -->
 <!-- задал svg стили инлайтово в файле не работало -->
+<!-- </p>
+ <span>возможно убрать такую ситуацию
+     Розстрочку до 10 місяців під 0% Без Першого
+     Внеску.
+ </span>
+ </p> -->
+<!-- там где одна строчка возможно сделать без п -->
+
+<!-- поменять везде лин хейдж -->
+<!-- починить меню  -->
+<!-- починить слайдер -->
+ <!-- поменять шрифт -->
 
 <body>
     <header class="header">
@@ -81,11 +93,11 @@
                         <span></span>
                         <span class="sr-only">open menu</span>
                     </button>
-                    <nav class="menu">
-                        <!-- <a class="logo menu__logo" href="#">
+                    <nav class="header__menu menu">
+                        <a class="logo menu__logo" href="#">
                             <img class="logo__menu" src="images/logo.svg" alt="logo">
-                        </a> -->
-                        <ul class="menu__items">
+                        </a>
+                        <ul class="menu__itemss">
                             <li class="menu__item">
                                 <a class="menu__link menu__link--active" href="#">
                                     Продукція
@@ -1476,8 +1488,8 @@
                                 <img class="gallery__img" src="images/galery/3.jpg" alt="Двері різного кольору">
                             </a>
                         </li>
-                    </div>
-                    <!-- <ul class="gallery__items">
+                </div>
+                <!-- <ul class="gallery__items">
                     <li class="gallery__item">
                         <img src="images/galery/1.jpg" alt="Білі пластикові двері">
                     </li>
@@ -1497,137 +1509,165 @@
                         <img src="images/galery/1.jpg" alt="Двері різного кольору">
                     </li>
                 </ul> -->
-                </div>
+            </div>
             </div>
         </section>
 
         <section class="goods-installments">
-            <h2 class="goods-installments__title">
-                товар у розстрочку
-            </h2>
-            <div class="goods-installments__text">
-                Віднедавна ми єдині в Одеській Області, хто забезпечує
-                <span>
-                    Розстрочку до 10 місяців під 0% Без Першого
-                    Внеску.
-                </span>
-            </div>
-            <div class="goods-installments__wrapper">
-                <img class="" src="images/master-f.webp" alt="Людина в уніформі майстра з ручкою і планшетом">
-                <form class="form">
-                    <div class="form__text">
-                        <p>
-                            Скористайтеся унікальною пропозицією! Просто введіть Ваше Ім'я та Номер телефону
-                        </p>
+            <div class="container">
+                <div class="goods-installments__wrapper">
+                    <div class="goods-installments__images">
+                        <img class="goods-installments__img" src="images/master-f.webp"
+                            alt="Людина в уніформі майстра з ручкою і планшетом">
                     </div>
-                    <label class="sr-only" for="work-name">
-                        Введіть ваше ім'я*
-                    </label>
-                    <input class="form__input" id="work-name" type="text" name="name" placeholder="Введіть ім'я*"
-                        required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="work-tel">
-                        Введіть ваш телефон*
-                    </label>
-                    <input class="form__input" id="work-tel" type="tel" name="tel" placeholder="Введіть Ваш номер*"
-                        required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="form__btn btn" type="submit">
-                        хочу розстрочку
-                        <span class="sr-only">send message button</span>
-                    </button>
-                </form>
+                    <div class="goods-installments__box">
+                        <h2 class="goods-installments__title title">
+                            товар у розстрочку
+                        </h2>
+                        <div class="goods-installments__text">
+                            <p>
+                                Віднедавна ми єдині в Одеській Області, хто забезпечує
+                            </p>
+                            <span>
+                                Розстрочку до 10 місяців під 0% Без Першого
+                                Внеску.
+                            </span>
+                            </p>
+                        </div>
+                        <form class="form">
+                            <div class="form__wrap">
+                                <div class="form__text">
+                                    <p>
+                                        Скористайтеся унікальною пропозицією! Просто введіть Ваше Ім'я та Номер телефону
+                                    </p>
+                                </div>
+                                <label class="sr-only" for="work-name">
+                                    Введіть ваше ім'я*
+                                </label>
+                                <span class="form__img form__img--men"></span>
+                                <input class="form__input" id="work-name" type="text" name="name"
+                                    placeholder="Введіть ім'я" required
+                                    oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+
+                                <label class="sr-only" for="work-tel">
+                                    Введіть ваш телефон*
+                                </label>
+                                <span class="form__img form__img--whatsap"></span>
+                                <input class="form__input" id="work-tel" type="tel" name="tel"
+                                    data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
+                                    oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+
+                                <button class="form__btn btn" type="submit">
+                                    хочу розстрочку
+                                    <span class="sr-only">Кнопка відправлення повідомлення</span>
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="contact">
             <div class="container">
-                <h2 class="contact__title title">
-                    контактна інформація
-                </h2>
-                <div class="info">
-                    <div class="info__box">
-                        <div class="info__inner">
-                            <svg class="info__svg" width="1.5rem" height="1.5rem">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <p>
-                                9.30-19.00
-                            </p>
-                        </div>
-                        <p>
-                            Приймаємо дзвінки
-                        </p>
-                    </div>
-                    <div class="info__box">
-                        <div class="info__inner">
-                            <svg class="info__svg" width="1.5rem" height="1.5rem">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <a href="tel:+380960989500">+380-96-098-95-00</a>
-                        </div>
-                        <div class="info__inner">
-                            <svg class="info__svg" width="1.5rem" height="1.5rem">
-                                <use xlink:href="images/sprite.svg#facebook">
-                                </use>
-                            </svg>
-                            <a href="tel:+0800309996">080 030-99-96</a>
-                        </div>
-                        <div class="info__text">
-                            <p>
-                                Дзвінок безкоштовний
-                            </p>
+                <div class="contact__wrapper">
+                    <div class="contact__box">
+                        <h2 class="contact__title title">
+                            контактна інформація
+                        </h2>
+                        <div class="contact__info info">
+                            <div class="info__time">
+                                <div class="info__inner">
+                                    <svg class="info__svg" width="1.5rem" height="1.5rem" fill="#b9a36b">
+                                        <use xlink:href="images/sprite.svg#clock">
+                                        </use>
+                                    </svg>
+                                    <span>
+                                        9.30-19.00
+                                    </span>
+                                </div>
+                                <div class="info__tel">
+                                    Приймаємо дзвінки
+                                </div>
+                            </div>
+                            <div class="info__box">
+                                <div class="info__wrapper">
+                                    <a class="info__link" href="tel:+380960989500">
+                                        <span>
+                                            +380-96-098-95-00
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="info__wrapper">
+                                    <a class="info__link" href="tel:+0800309996">
+                                        <span>
+                                            080 030-99-96
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="info__text">
+                                    <p>
+                                        Дзвінок безкоштовний
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
-        <div class="conrainer">
-            <div class="footer__text">
-                офіційний представник заводу
-                <span>
-                    адісем
-                </span>
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__text">
+                    офіційний представник заводу
+                    <p>
+                        адісем
+                    </p>
+                </div>
+                <nav class="footer__menu menu">
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="#">
+                                Продукція
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#service">
+                                Розстрочка
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#collections">
+                                Відгуки
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#products">
+                                Переваги
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#about">
+                                Галерея
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#blog">
+                                Контакти
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="footer__link" href="#">
+                    <svg class="footer__svg" width="1.4rem" height="1.6rem" fill="white">
+                        <use xlink:href="images/sprite.svg#instagram">
+                        </use>
+                    </svg>
+                </a>
             </div>
-            <ul class="menu__items">
-                <li class="menu__item">
-                    <a class="menu__link menu__link--active" href="#">
-                        Продукція
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#service">
-                        Розстрочка
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#collections">
-                        Відгуки
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#products">
-                        Переваги
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#about">
-                        Галерея
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#blog">
-                        Контакти
-                    </a>
-                </li>
-            </ul>
-            <svg class="social__svg" width="1.5rem" height="1.5rem">
-                <use xlink:href="images/sprite.svg#instagram">
-                </use>
-            </svg>
         </div>
     </footer>
 
