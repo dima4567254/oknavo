@@ -100,10 +100,19 @@ const galleryCasey = new Swiper('.galleryCasey', {
 
 
 $('.header__btn, .menu a').on('click', function () {
-    $('.header__menu').toggleClass('header__menu--active');
+    $('.header__menu ').toggleClass('header__menu--active');
     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
 });
-// .menu__btn,
+$('.header__btn').on('click', function () {
+    $('.header__btn ').toggleClass('active');
+    // для крестика и для меню и что бы закрывалось меню после выбора сcылки
+});
+$('.header__btn').on('click', function () {
+    $('.header__btn ').toggleClass('close');
+    // для крестика и для меню и что бы закрывалось меню после выбора сcылки
+});
+// 
+// ,
 // $(function () {
 //     let header = $('.header');
 
