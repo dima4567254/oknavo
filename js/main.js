@@ -190,20 +190,31 @@ $('.header__btn').on('click', function () {
        
        */
 // Overlay
-$('.trust__items').slick({
+// $('.trust__items').slick({
+//     // slidesToShow: 3,  /* количество слайдов на показ*/
+//     // slidesToScroll: 1,
+//     // centerMode: true,
+//     // centerPadding: "15px",
+// });
+
+$('.gallery__items').slick({
     slidesToShow: 3,  /* количество слайдов на показ*/
     slidesToScroll: 1,
+    // centerPadding: "15px",
     // centerMode: true,
+    // prevArrow: '<button type="button" aria-label="Previous" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
+    // nextArrow: '<button type="button" aria-label="Next" role="button" class="slick-arrow slick-arrow--next">Next</button>',
 });
-
+// дотсы
 $(".gallerys--overlay .js-slick").slick({
+    // variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" aria-label="Previous" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
     nextArrow: '<button type="button" aria-label="Next" role="button" class="slick-arrow slick-arrow--next">Next</button>',
     // centerMode: true,
     // slidesToShow: 3,  /* количество слайдов на показ*/
     // slidesToScroll: 3,
-    centerPadding: "15%",
+    // centerPadding: "15%",
     customPaging: function (slider, i) {
         var current = i + 1;
         current = current < 10 ? "0" + current : current;
@@ -222,7 +233,9 @@ $(".gallerys--overlay .js-slick").slick({
 });
 
 // // Carousel
+// слик
 $(".gallerys--carousel .js-slick").slick({
+    variableWidth: true,
     dots: true,
     slidesToShow: 3,  /* количество слайдов на показ*/
     slidesToScroll: 1,

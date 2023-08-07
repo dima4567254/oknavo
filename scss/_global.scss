@@ -41,7 +41,7 @@ body {
 }
 
 .container {
-    max-width: 1105px;
+    max-width: 1115px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -99,12 +99,17 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 193px;
+        flex-wrap: wrap;
         // потом сделать выше врапер
-        animation-name: link-skale;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+
         //  overflow: hidden;
+        &--skale {
+            animation-name: link-skale;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
 
     }
 
@@ -307,3 +312,4 @@ body {
 }
 
 // footer__link--indent
+
