@@ -49,6 +49,19 @@ $padding-576:30px;
     line-height: ($line-height / $font-size);
     font-size: ($font-size + $px);
 }
+$fz-btn:rem(11);
+$fz-link2:rem(12);
+$fz-instagram:rem(12);
+$fz-link:rem(13);
+$fz-text:rem(14);
+$fz-input:rem(14);
+$fz-subtext-s:rem(15);
+$fz-subtitle:rem(18);
+$fz-subtext:rem(24);
+$fz-title:rem(33);
+
+
+
 
 // @function percent($px, $from) {
 //     $result: math.div($px, $from) * 100%;
