@@ -8,15 +8,15 @@
 
 
 // 00: 25: 48.958 с
-var $pagingInfo = $('.paging-info');
-var $teamSlider = $('.team-slider');
+// var $pagingInfo = $('.paging-info');
+// var $teamSlider = $('.team-slider');
 
-$teamSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    var prefix = i < 10 ? '0' : '';
-    var prefixAll = slick.slideCount < 10 ? '0' : '';
-    $pagingInfo.html('<span class="current">' + prefix + i + '</span>' + '' + '<span class="total">' + prefixAll + slick.slideCount + '</span>');
-});
+// $teamSlider.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+//     var i = (currentSlide ? currentSlide : 0) + 1;
+//     var prefix = i < 10 ? '0' : '';
+//     var prefixAll = slick.slideCount < 10 ? '0' : '';
+//     $pagingInfo.html('<span class="current">' + prefix + i + '</span>' + '' + '<span class="total">' + prefixAll + slick.slideCount + '</span>');
+// });
 
 
 // buttonModal4.addEventListener('click', () => {
