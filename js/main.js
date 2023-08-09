@@ -200,10 +200,24 @@ $('.header__btn').on('click', function () {
 $('.gallery__items').slick({
     slidesToShow: 3,  /* количество слайдов на показ*/
     slidesToScroll: 1,
-    // centerPadding: "15px",
-    // centerMode: true,
-    // prevArrow: '<button type="button" aria-label="Previous" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
-    // nextArrow: '<button type="button" aria-label="Next" role="button" class="slick-arrow slick-arrow--next">Next</button>',
+    autoplay: true,
+    autoplaySpeed:3000,
+    responsive: [
+        // {
+        //     breakpoint: 992,//если меньше не включая 992
+        //     settings: {
+        //         slidesToShow: 2,
+
+        //     }
+        // },
+        // {
+        //     breakpoint: 400,
+        //     settings: {
+        //         slidesToShow: 1,
+
+        //     }
+        // },
+    ]
 });
 // дотсы
 $(".gallerys--overlay .js-slick").slick({
@@ -235,7 +249,7 @@ $(".gallerys--overlay .js-slick").slick({
 // // Carousel
 // слик
 $(".gallerys--carousel .js-slick").slick({
-    variableWidth: true,
+    // variableWidth: true,
     dots: true,
     slidesToShow: 3,  /* количество слайдов на показ*/
     slidesToScroll: 1,
@@ -256,5 +270,21 @@ $(".gallerys--carousel .js-slick").slick({
 			<span class="slick-dots-total">' + total + '</span>\
 		</button>'
         );
-    }
+    },
+    // responsive: [
+    //     {
+    //         breakpoint: 1150,
+    //         settings: {
+    //             slidesToShow: 2,
+    //         }
+    //     },
+
+    //     {
+    //         breakpoint: 620,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             slidesToScroll: 2,
+    //         }
+    //     },
+    // ]
 });

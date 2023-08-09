@@ -3,10 +3,9 @@ body {
     height: 100%;
 }
 
-
 body {
     font-weight: 700;
-    font-size: rem(16);
+    font-size: 16px;
     line-height: 154%;
     color: $black-main;
     font-family: 'REM';
@@ -47,13 +46,49 @@ body {
 }
 
 .title {
-    font-size: rem(36);
+    font-size: 36px;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 1200px) {
+        font-size: 33px;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 31px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 26px;
+    }
+
+    &--bem {
+        margin-bottom: 70px;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .section {
-    padding: rem(100) 0;
+    padding: 100px 0;
 }
 
 .btn {
@@ -72,10 +107,10 @@ body {
     text-align: center;
 
     &__time {
-        font-size: rem(12);
+        font-size: 12px;
         line-height: 1.2;
         color: #2c2c2c;
-        margin-right: rem(60);
+        margin-right: 60px;
     }
 
     &__time p {
@@ -86,7 +121,7 @@ body {
     }
 
     &__box {
-        margin-right: rem(60);
+        margin-right: 60px;
         // &:not(:last-child) {
         //     margin-right: 60px;
         // }
@@ -97,13 +132,13 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: rem(195);
+        max-width: 195px;
         flex-wrap: wrap;
         // потом сделать выше врапер
 
         //  overflow: hidden;
-        &--skale {
-            animation-name: link-skale;
+        &--animation {
+            animation-name: link-scale;
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
@@ -117,7 +152,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: rem(5);
+        margin-bottom: 5px;
     }
 
     &__inner p {
@@ -131,7 +166,7 @@ body {
     }
 
     &__svg {
-        margin-right: rem(5);
+        margin-right: 5px;
         // transform:rotate(270deg !important);
         // style="transform:rotate(270deg !important);">
     }
@@ -164,7 +199,7 @@ body {
     &__text {
         font-family: Century Gothic;
         font-weight: 400;
-        font-size: rem(12);
+        font-size: 12px;
         line-height: 1.2;
         color: #2c2c2c;
     }
@@ -196,6 +231,7 @@ body {
         right: -20%;
     }
 }
+
 // переименовать!!!!!!
 @keyframes my {
     0% {
@@ -218,7 +254,7 @@ body {
     }
 }
 
-@keyframes link-skale {
+@keyframes link-scale {
     0% {
         transform: scale(1);
     }
@@ -227,6 +263,7 @@ body {
         transform: scale(0.8);
     }
 }
+
 // переименовать!!!!!!
 @keyframes grat {
     0% {
@@ -242,5 +279,24 @@ body {
     }
 }
 
-// footer__link--indent
 
+
+.section {
+    &--bem {
+        padding: $padding-main 0;
+
+        @media (max-width: 992px) {
+            padding: $padding-992 0;
+        }
+
+        @media (max-width: 768px) {
+            padding: $padding-768 0;
+        }
+
+        @media (max-width: 576px) {
+            padding: $padding-576 0;
+        }
+    }
+}
+
+// footer__link--indent

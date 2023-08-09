@@ -9,11 +9,8 @@
 
 // →
 
-
-
-
 .header {
-    padding: rem(10) 0;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +26,8 @@
         justify-content: space-between;
         align-items: center;
     }
-// !!!одинаковые
+
+    // !!!одинаковые
     &__box {
         display: flex;
         justify-content: space-between;
@@ -38,20 +36,20 @@
 
     &__text {
         line-height: 1.3;
-        font-size: $fz-link2;
+        font-size: 12px;
         color: #2c2c2c;
         font-weight: 400;
     }
 
     &__logo {
-        margin-right: rem(80);
+        margin-right: 80px;
     }
 
     &__inner {
         display: flex;
         // justify-content: space-between;
         align-items: center;
-        // gap: rem(60);
+        // gap: 60px;
     }
 
 
@@ -62,9 +60,9 @@
         border: none;
         background-color: transparent;
         order: 1;
-        // margin-left: rem(40);
-        width: rem(23);
-        height: rem(22);
+        // margin-left: 40px;
+        width: 23px;
+        height: 22px;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -75,13 +73,13 @@
 
         // @media (max-width: 575) {
         //     order: 0;
-        //     margin-bottom: rem(20);
+        //     margin-bottom: 20px;
         // }
 
 
 
         span {
-            height: rem(2);
+            height: 2px;
             width: 100%;
             background-color: $black;
             transition: all 0.5s;
@@ -93,7 +91,7 @@
         &::after {
             position: absolute;
             content: '';
-            height: rem(2);
+            height: 2px;
             width: 100%;
             background-color: $black;
             transition: all 0.5s;
@@ -124,24 +122,26 @@
 
     &__btn.active:before {
         transform: rotate(45deg);
-        top: rem(9);
+        top: 9px;
 
     }
 
     &__btn.active::after {
         transform: rotate(-45deg);
-        bottom: rem(10);
+        bottom: 10px;
     }
 
     &__menu {
-        padding: rem(65) 0 0 rem(50);
+        padding: 65px 0 0 50px;
         transform: translateX(-200%);
         position: absolute;
         top: 0;
         left: 0;
         width: 30%;
         height: 100vh;
-        // max-width: 5rem(70);
+        // height: 650px;
+        // !!!
+        // max-width: 570px;
         transition: transform 1s;
 
         &.header__menu--active {
@@ -166,7 +166,7 @@
     color: $white;
 
     &__logo {
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
         display: block;
     }
 
@@ -176,19 +176,19 @@
 
     &__items {
         display: flex;
-        gap: rem(25);
+        gap: 25px;
         flex-direction: column;
     }
 
     &__item {
         outline-color: #000000;
-        outline-offset: rem(5);
+        outline-offset: 5px;
         width: 100%;
     }
 
     &__link {
         transition: font-size 0.5s;
-        font-size: $fz-link;
+        font-size: 13px;
         color: $white;
         text-decoration: none;
         opacity: 0.8;
@@ -199,16 +199,16 @@
         }
 
         &:hover {
-            font-size: rem(16);
+            font-size: 16px;
             opacity: 1;
             position: relative;
 
             // сохронить в блоки
             &::after {
                 content: "→";
-                margin-left: rem(10);
-                height: rem(10);
-                width: rem(10);
+                margin-left: 10px;
+                height: 10px;
+                width: 10px;
                 display: inline-block;
             }
         }
@@ -221,8 +221,8 @@
 
 .logo {
     &__menu {
-        width: rem(80);
-        height: rem(65);
+        width: 80px;
+        height: 65px;
         object-fit: cover;
     }
 }
@@ -236,27 +236,37 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
+    // height: calc(rem(650) + 10px);
     display: flex;
     flex-direction: column;
     justify-content: end;
+
+    // @media (max-width: 1200px) {
+    //     height: 70vh;
+    // }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: rem(-30);
+        margin-bottom: -30px;
+
+        @media (max-width: 576px) {
+            // justify-content: center;
+            display: block;
+        }
     }
 
     &__img {
-        width: rem(460);
-        height: rem(675);
+        width: 460px;
+        height: 675px;
         object-fit: cover;
     }
 
     &__boxs {
         display: flex;
-        max-width: rem(630);
-        margin-bottom: rem(50);
+        max-width: 630px;
+        margin-bottom: 50px;
     }
 
     &__box {
@@ -265,37 +275,37 @@
     }
 
     &__calc {
-        width: rem(49);
-        height: rem(46);
+        width: 50px;
+        height: 45px;
         object-fit: cover;
-        margin-right: rem(5);
+        margin-right: 5px;
     }
 
     &__gift {
-        width: rem(50);
-        height: rem(53);
+        width: 50px;
+        height: 53px;
         object-fit: cover;
-        margin-right: rem(5);
+        margin-right: 5px;
     }
 
     &__title {
-        font-size: $fz-title;
+        font-size: 33px;
         line-height: 154%;
         text-transform: uppercase;
-        margin-bottom: rem(20);
+        margin-bottom: 20px;
     }
 
     &__subtext p {
-        font-size: fz-subtext;
+        font-size: 24px;
         line-height: 154%;
         text-transform: uppercase;
-        margin-bottom: rem(40);
+        margin-bottom: 40px;
     }
 
     &__subtext span {
-        margin-bottom: rem(20);
-        font-size: $fz-subtext-s;
-        padding-left: rem(60);
+        margin-bottom: 20px;
+        font-size: 15px;
+        padding-left: 60px;
         position: relative;
         display: flex;
         align-items: center;
@@ -306,9 +316,9 @@
             top: 50%;
             left: 0;
             height: 1px;
-            width: rem(44);
+            width: 45px;
             background-color: #000;
-            margin-right: rem(10);
+            margin-right: 10px;
         }
 
         // display: flex;
@@ -317,17 +327,17 @@
 
     &__text {
         font-weight: 400;
-        max-width: rem(165);
+        max-width: 165px;
         line-height: 1.1;
     }
 
     &__inner {}
 
     &__link {
-        border-radius: rem(6);
-        font-size: $fz-link2;
-        padding:rem(24) 0;
-        max-width: rem(465);
+        border-radius: 6px;
+        font-size: 12px;
+        padding: 24px 0;
+        max-width: 465px;
         clip-path: polygon(0 0, 100% 0%, 100% 85%, 53% 100%, 0 85%);
         border: none;
         text-align: center;
@@ -363,8 +373,8 @@
             position: absolute;
             top: 0;
             right: 0;
-            height: rem(70);
-            width: rem(65);
+            height: 70px;
+            width: 65px;
             background-image: url('../images/count.webp');
             background-repeat: no-repeat;
             background-position: center;
@@ -388,31 +398,36 @@
 
 .services {
     &__title {
-        margin-bottom: rem(10);
+        margin-bottom: 10px;
     }
 
     &__text {
         text-align: center;
         font-weight: 400;
-        font-size: $fz-subtext-s;
-        margin-bottom: rem(65);
+        font-size: 15px;
+        margin-bottom: 65px;
 
     }
 
     &__items {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        gap: $fz-subtext-s;
+        gap: 15px;
         // flex-direction: column;
         position: relative;
+
+        @media (max-width: 1200px) {
+            justify-content: center;
+        }
 
         &::before {
             content: "";
             position: absolute;
             top: -3%;
             left: -20%;
-            height: rem(414);
-            width: rem(350);
+            height: 415px;
+            width: 350px;
             background-image: url('../images/woman.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -424,8 +439,8 @@
     &__item {
         background: #ffffff;
         box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.05);
-        max-width: rem(350);
-        padding: rem(20) 0 rem(35);
+        max-width: 350px;
+        padding: 20px 0 35px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -435,23 +450,23 @@
     }
 
     &__img {
-        width: rem(200);
-        height: rem(200);
+        width: 200px;
+        height: 200px;
         object-fit: cover;
-        margin-bottom: rem(20);
+        margin-bottom: 20px;
     }
 
     &__subtitle {
-        font-size: $fz-subtitle;
-        margin-bottom: rem(20);
+        font-size: 18px;
+        margin-bottom: 20px;
 
     }
 
     &__subtext {
         font-weight: 400;
-        font-size: $fz-link;
-        max-width: rem(225);
-        margin-bottom: rem(20);
+        font-size: 13px;
+        max-width: 225px;
+        margin-bottom: 20px;
         text-align: center;
         line-height: 1.1;
     }
@@ -460,18 +475,18 @@
         // border: 1px solid;
         overflow: hidden;
         position: relative;
-        max-width: rem(225);
+        max-width: 225px;
         background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
         border-radius: 25px;
         font-weight: 400;
-        font-size: $fz-link;
+        font-size: 13px;
         border: none;
         display: block;
         color: #ffffff;
         border-bottom: 2px solid #635136;
         // margin: auto;
         // text-align: center;
-        padding: $fz-btn rem(40);
+        padding: 11px 40px;
         width: 100%;
         text-align: center;
         z-index: 1;
@@ -484,16 +499,16 @@
         &:after {
             background: #fff;
             content: "";
-            height: rem(155);
+            height: 155px;
             // left: -75px;
-            right: rem(-15);
+            right: -15px;
             // right: -75px;
             // opacity: .2;
             position: absolute;
-            top: rem(-50);
+            top: -50px;
             transform: rotate(35deg);
             // transition: all 30.5s cubic-bezier(0.19, 1, 0.22, 1);
-            width: rem(25);
+            width: 25px;
             z-index: -10;
             animation-name: my-animation;
             animation-duration: 3s;
@@ -503,9 +518,6 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-
-
-
 
         &:focus {
             color: $focus;
@@ -524,7 +536,7 @@
             color: $active;
         }
 
-        // padding: rem(10) rem(100);
+        // padding: 10px 100px;
 
     }
 }
@@ -535,30 +547,30 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: rem(100) 0 rem(150) 0;
+    // padding: 100px 0 150px 0;
 
     &__title {
-        margin-bottom: rem(10);
+        margin-bottom: 10px;
     }
 
     &__subtext {
         text-align: center;
         font-weight: 400;
-        font-size: $fz-subtext-s;
-        margin-bottom: rem(65);
+        font-size: 15px;
+        margin-bottom: 65px;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-evenly;
-        gap: rem(80) rem(30);
+        gap: 80px 30px;
         flex-wrap: wrap;
     }
 
     &__item {
-        padding: rem(10);
+        padding: 10px;
         background: $white;
-        max-width: rem(300);
+        max-width: 300px;
         width: 100%;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
         position: relative;
@@ -568,8 +580,8 @@
             position: absolute;
             bottom: 5%;
             right: 4%;
-            height: rem(125);
-            width: rem(125);
+            height: 125px;
+            width: 125px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -611,8 +623,8 @@
             position: absolute;
             top: 0;
             left: 12%;
-            height: rem(26);
-            width: rem(26);
+            height: 26px;
+            width: 26px;
             border-radius: 50%;
             transition: transform 1s;
             background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
@@ -620,8 +632,8 @@
     }
 
     &__box {
-        padding: rem(60) rem(0) rem(0) rem(0);
-        min-height: rem(350);
+        padding: 60px 0 0 0;
+        min-height: 350px;
         line-height: 1.1;
         border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
@@ -629,13 +641,13 @@
     }
 
     &__text {
-        padding-left: $fz-subtext-s;
-        max-width: rem(240);
-        font-size: $fz-subtext-s;
+        padding-left: 15px;
+        max-width: 240px;
+        font-size: 15px;
     }
 
     &__text p {
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
     }
 
     &__text span {
@@ -650,14 +662,14 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: rem(100) 0 rem(60) 0;
+    // padding: 100px 0 60px 0;
 
     &__wrapper {
         position: relative;
     }
 
     &__box {
-        max-width: rem(425);
+        max-width: 425px;
         position: relative;
 
         &::after {
@@ -665,8 +677,8 @@
             position: absolute;
             bottom: -24%;
             right: -29%;
-            height: rem(195);
-            width: rem(265);
+            height: 195px;
+            width: 265px;
             background-image: url('../images/check.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -675,16 +687,20 @@
             // display: inline;
             // cursor: none;
         }
+
+        @media (max-width: 576px) {
+            display: none;
+        }
     }
 
     &__title {
-        margin-bottom: $fz-subtext-s;
+        margin-bottom: 15px;
         text-align: start;
     }
 
     &__text {
         font-weight: 400;
-        font-size: $fz-subtext-s;
+        font-size: 15px;
         // line-height: 154%;
         line-height: 1.5;
 
@@ -695,20 +711,20 @@
     }
 
     &__text p {
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
     }
 
     &__btn {
-        max-width: rem(355);
+        max-width: 355px;
         text-align: center;
-        font-size: $fz-btn;
+        font-size: 11px;
         position: relative;
         color: $white;
         text-transform: uppercase;
         border: none;
-        padding: rem(18) 0;
+        padding: 18px 0;
         box-shadow: inset 0 0px 8px rgba(0, 0, 0, 0.1);
-        border-radius: rem(30);
+        border-radius: 30px;
         width: 100%;
         animation-name: grat;
         animation-duration: 2s;
@@ -726,8 +742,8 @@
             position: absolute;
             top: -20%;
             left: -10%;
-            height: rem(110);
-            width: rem(150);
+            height: 110px;
+            width: 150px;
             background-image: url('../images/drawing.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -756,16 +772,19 @@
     }
 
     &__img {
-        width: rem(500);
-        height: rem(595);
+        width: 500px;
+        height: 595px;
         object-fit: cover;
     }
 }
+
 // потом сделать одинаковые отступы
 // не сделал средний слайд шире может и так норм
 // проверить все своиства
+
+
 .trust {
-    padding: rem(100) 0 rem(60) 0;
+    // padding: 100px 0 60px 0;
     position: relative;
     background-image: url('../images/trust-bg.webp');
     background-position: unset;
@@ -773,32 +792,33 @@
     background-repeat: no-repeat;
 
     &__title {
-        max-width: rem(590);
-        margin: auto auto $fz-subtext-s;
+        max-width: 590px;
+        margin: auto auto 15px;
         line-height: 1.1;
-        // margin-bottom: $fz-subtext-s;
+        // margin-bottom: 15px;
         // text-align: center;
     }
 
     &__subtext {
         font-weight: 400;
-        font-size: fz-subtext;
+        font-size:24px;
         text-align: center;
-        margin-bottom: rem(45);
+        margin-bottom: 45px;
     }
 
     .js-slick {
         // max-width: 1105px;
         // overflow: hidden;
         position: relative;
+        // margin: 0 -20px 0px;
 
         &::before {
             content: "";
             position: absolute;
             bottom: 2%;
-            right: rem(-5);
-            height: rem(165);
-            width: rem(145);
+            right: 5px;
+            height: 165px;
+            width: 145px;
             background-image: url('../images/likes.webp');
             background-repeat: no-repeat;
             background-position: center;
@@ -815,16 +835,16 @@
     // }
 
     &__item {
-
+        padding: 0 20px;
         // height: rem(460);
         // max-width: rem(338);
         // opacity: 0.5;
-        padding: rem(10);
+        padding: 10px;
         background: $white;
         // background: red;
         // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-        // padding-top: rem(20);
-        margin-top: rem(20);
+        // padding-top: 20px;
+        margin-top: 20px;
         // возможно перенести три своиства
         // height: 525px;
         // height: 500px;
@@ -832,47 +852,48 @@
 
     &__box {
         // height: rem(415);
-        border: rem(3) solid transparent;
+        border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
         // position: relative;
-        padding: rem(40) rem(16);
-        height: rem(500);
+        padding: 40px 16px;
+        height: 500px;
     }
 
     &__subtitle {
-        margin-bottom: rem(10);
+        margin-bottom: 10px;
     }
 
     &__instagram {
-        margin-bottom: rem(35);
+        margin-bottom: 35px;
         display: flex;
         align-items: center;
         text-decoration-line: underline;
         font-weight: 400;
-        font-size: $fz-instagram;
+        font-size: 12px;
         color: rgba(0, 0, 0, 0.4);
     }
 
     &__svg {
-        margin-right: rem(5);
+        margin-right: 5px;
     }
 
     &__text {
         font-weight: 400;
-        font-size: $fz-text;
+        font-size: 14px;
         line-height: 1.1;
     }
 
     &__text p {
-        margin-bottom: rem(20);
+        margin-bottom: 20px;
     }
 }
 
 
+
 // сделать пп и оптимизировать ксс есть что
 .advantages {
-    padding: rem(140) 0 rem(100);
+    // padding: 140px 0 100px;
     // background-color:$white;
     background: url('../images/advantage-bg.webp');
     background-position: center;
@@ -880,20 +901,25 @@
     background-repeat: no-repeat;
 
     &__title {
-        margin-bottom: $fz-subtext-s;
+        margin-bottom: 15px;
     }
 
     &__subtext {
-        // margin-bottom: rem(70);
-        margin-bottom: rem(40);
+        // margin-bottom: 70px;
+        margin-bottom: 40px;
         text-align: center;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 576px) {
+            display: block;
+        }
     }
-// !!!!!
+
+    // !!!!!
     &__itemss {
         display: flex;
         justify-content: center;
@@ -904,15 +930,16 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-left: 20px;
     }
 
     &__item {
-        width: rem(245);
-        margin-bottom: rem(70);
+        width: 245px;
+        margin-bottom: 70px;
         position: relative;
 
         &:nth-child(odd) {
-            margin-left: rem(70);
+            margin-left: 70px;
         }
 
         &::before {
@@ -920,20 +947,21 @@
             position: absolute;
             top: 8%;
             left: -12%;
-            height: rem(18);
-            width: rem(18);
+            height: 18px;
+            width: 18px;
             background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
             border-radius: 50%;
         }
     }
-// !!!!!!
+
+    // !!!!!!
     &__itemi {
-        width: rem(245);
-        margin-bottom: rem(70);
+        width: 245px;
+        margin-bottom: 70px;
         position: relative;
 
         &:first-child {
-            margin-left: rem(-30);
+            margin-left: -30px;
         }
 
         &::before {
@@ -941,8 +969,8 @@
             position: absolute;
             top: 8%;
             left: -12%;
-            height: rem(18);
-            width: rem(18);
+            height: 18px;
+            width: 18px;
             background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
             border-radius: 50%;
         }
@@ -950,8 +978,8 @@
 
     &__box {
         // padding: 10px;
-        max-width: rem(390);
-        padding: rem(5);
+        max-width: 390px;
+        padding: 5px;
         margin: 0 auto;
         background: #ffffff;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -960,21 +988,21 @@
     }
 
     &__wrap {
-        padding: rem(17) 0;
+        padding: 17px 0;
         border: 1px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
     }
 
     &__subtitle {
-        font-size: fz-subtext;
-        margin-bottom: $fz-subtext-s;
+        font-size:24px;
+        margin-bottom: 15px;
         text-transform: uppercase;
     }
 
     &__text p {
         font-weight: 400;
-        font-size: $fz-link;
+        font-size: 13px;
         // line-height: 154%;
         line-height: 1.5;
     }
@@ -988,30 +1016,30 @@
     }
 
     &__img {
-        width: rem(525);
-        height: rem(650);
+        width: 525px;
+        height: 650px;
         object-fit: cover;
     }
 
     &__name {
-        font-size: $fz-subtext-s;
+        font-size: 15px;
         margin-bottom: 5;
     }
 
     &__info {
         font-weight: 400;
-        font-size: $fz-btn;
+        font-size: 11px;
     }
 }
 
 // записать и 2 вариант слайдера 
 // не идеальный вариан слайдера н опод другому не получилось потом попробывать
 .gallery {
-    padding: rem(50) 0 rem(150);
+    // padding: 50px 0 150px;
     position: relative;
 
     &__title {
-        margin-bottom: rem(10);
+        margin-bottom: 10px;
     }
 
     &__wrapper {
@@ -1021,24 +1049,24 @@
     &__items {
         display: flex;
         justify-content: space-between;
-        gap: rem(30);
+        gap: 30px;
     }
 
     &__item {
-        padding-left: rem(30);
-        padding-right: rem(30);
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     &__text {
         font-weight: 400;
-        font-size: $fz-subtext-s;
+        font-size: 15px;
         text-align: center;
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
     }
 
     &__img {
-        width: rem(300);
-        height: rem(500);
+        width: 300px;
+        height: 500px;
         object-fit: cover;
     }
 }
@@ -1049,7 +1077,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: rem(100) 0 rem(150);
+    // padding: 100px 0 150px;
 
 
     &__wrapper {
@@ -1068,29 +1096,29 @@
     }
 
     &__img {
-        width: rem(725);
-        height: rem(815);
+        width: 725px;
+        height: 815px;
         object-fit: cover;
     }
 
     &__box {
-        max-width: rem(445); //!!!
+        max-width: 445px; //!!!
         margin-left: auto;
     }
 
     &__title {
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
         color: #44403a;
         text-align: start;
     }
 
     &__text {
-        margin-bottom: rem(20);
+        margin-bottom: 20px;
     }
 
     &__text p {
         font-weight: 400;
-        font-size: $fz-subtext-s;
+        font-size: 15px;
         line-height: 154%;
         color: #363636;
 
@@ -1098,7 +1126,7 @@
 
     &__text span {
         font-weight: 700;
-        // font-size: $fz-subtext-s;
+        // font-size: 15px;
         // line-height: 154%;
         // color: #363636;
     }
@@ -1110,17 +1138,17 @@
     // margin-top: 23px;
     // position: relative;
     // width: 442px;
-    padding: rem(10);
+    padding: 10px;
     background: $white;
     position: relative;
 
     &::before {
         // content: "";
         position: absolute;
-        bottom: rem(-55);
-        right: rem(-45);
-        height: rem(175);
-        width: rem(160);
+        bottom: -55px;
+        right: -45px;
+        height: 175px;
+        width: 160px;
         background-image: url('../images/ks.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -1131,20 +1159,20 @@
         border: 1px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-        padding: rem(45);
+        padding: 45px;
     }
 
     &__text {
         font-weight: 400;
-        margin-bottom: rem(35);
+        margin-bottom: 35px;
     }
 
     &__input,
     &__btn {
         border: none;
-        width: rem(300);
+        width: 300px;
         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
-        border-radius: rem(30);
+        border-radius: 30px;
         // cursor: pointer;
     }
 
@@ -1155,10 +1183,10 @@
         &::before {
             content: "";
             position: absolute;
-            bottom: rem(-35);
+            bottom: -35px;
             left: 14%;
-            height: $fz-subtext-s;
-            width: $fz-subtext-s;
+            height: 15px;
+            width: 15px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -1178,9 +1206,9 @@
     }
 
     &__input {
-        margin-bottom: rem(10);
-        padding: rem(14) 0 rem(22) rem(75);
-        font-size: $fz-input;
+        margin-bottom: 10px;
+        padding: 14px 0 22px 75px;
+        font-size: 14px;
         color: #44403a;
 
     }
@@ -1188,12 +1216,12 @@
     &__btn {
         background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
         text-align: center;
-        padding: $fz-subtext-s 0;
-        font-size: $fz-link;
+        padding: 15px 0;
+        font-size: 13px;
         text-transform: uppercase;
         color: $white;
         transition: all .5;
-        margin-bottom: rem(20);
+        margin-bottom: 20px;
 
         &:focus {
             color: $focus;
@@ -1216,10 +1244,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: rem(40) 0 rem(50);
+    // padding: 40px 0 50px;
 
     &__wrapper {
-        padding: rem(10);
+        padding: 10px;
         // position: relative;
         // margin: auto;
         // max-width: 1110px;
@@ -1232,8 +1260,8 @@
             position: absolute;
             bottom: -8%;
             right: -12%;
-            height: rem(240);
-            width: rem(240);
+            height: 240px;
+            width: 240px;
             background-image: url('../images/cont.png');
             background-repeat: no-repeat;
             background-position: center;
@@ -1245,11 +1273,11 @@
         border: 1px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-        padding: rem(40) 0 rem(50);
+        padding: 40px 0 50px;
     }
 
     &__title {
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
         color: #44403a;
     }
 
@@ -1260,7 +1288,7 @@
 
 // поменять иконку может быть
 .footer {
-    padding: rem(40) 0;
+    padding: 40px 0;
     background: #363636;
     color: $white;
 
@@ -1268,13 +1296,13 @@
         // max-width: rem(255);
         text-align: center;
         font-weight: 400;
-        font-size: $fz-text;
+        font-size: 14px;
         line-height: 1.1;
-        margin-bottom: rem(30);
+        margin-bottom: 30px;
     }
 
     &__menu {
-        gap: rem(30);
+        gap: 30px;
         display: flex;
         justify-content: space-between;
     }
@@ -1283,6 +1311,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: 576px) {
+            overflow: scroll;
+        }
     }
 
     &__text p {
@@ -1291,18 +1323,18 @@
 
     &__menu {
 
-        margin-bottom: rem(30); //!!!
+        margin-bottom: 30px; //!!!
     }
 
     &__items {
         display: flex;
         justify-content: space-between;
-        gap: rem(30);
+        gap: 30px;
     }
 
     &__item {
         outline-color: #000000;
-        outline-offset: rem(5);
+        outline-offset: 5px;
     }
 
     &__link {
@@ -1377,7 +1409,7 @@
             color: inherit;
             cursor: pointer;
             outline: none;
-            font-size: $fz-btn;
+            font-size: 11px;
             letter-spacing: .2em;
         }
 
@@ -1412,23 +1444,19 @@
 
 .slick-arrow--prev {
     position: absolute;
-    // top: 0;
     left: 0;
     bottom: 0;
 }
 
 .slick-arrow--next {
     position: absolute;
-    // top: 0;
-    // left: 50%;
     bottom: 0;
 }
 
 .slick-dots {
     position: absolute;
-    // top: 10%;
-    bottom: 0;
     color: #af955e;
+    bottom: 0;
     left: 1%;
 
 }
@@ -1448,12 +1476,12 @@
 
 .slick-dots-separator {
     // position: relative;
-    margin: 0 rem(5);
+    margin: 0 5px;
 }
 
 .slick-dots-button {
-    margin-left: rem(-20);
-    font-size: rem(16);
+    margin-left: -20px;
+    font-size: 16px;
 }
 
 // .slick-arrow--next
@@ -1464,8 +1492,8 @@
     position: absolute;
     top: inherit;
     bottom: 0;
-    height: rem(20);
-    width: rem(20);
+    height: 20px;
+    width: 20px;
     border: 0;
     background-color: transparent;
     cursor: pointer;
@@ -1478,8 +1506,8 @@
         top: 20%;
         left: 50%;
         transform: translateX(-50%);
-        height: rem(10);
-        width: rem(7);
+        height: 10px;
+        width: 7px;
         background-image: url('../images/icons/arrow-right.svg');
         background-repeat: no-repeat;
         background-position: center;
@@ -1504,27 +1532,22 @@
 }
 
 .slick-active {
-    // opacity: 0.7;
-    width: rem(360);
-    // width: 35.rem;8
+    // width: rem(360);
     // max-width: rem(360);
-    // margin-top: $fz-subtext-s;
 }
 
 
 .gallerys .slick-slide {
     opacity: 0.7;
-    // transition: all 300ms ease;
 }
 
 .gallerys .slick-center {
-    // padding-top: rem(20);
-    width: rem(360); //38
-    margin-top: rem(-15);
+    margin-top: -15px;
     // margin-left: -5px;
     opacity: 1;
     // height: rem(490);
-
+    // ---
+    // width: rem(360); //38
 }
 
 .trust__item {
@@ -1532,33 +1555,19 @@
 }
 
 .trust__box {
-    width: rem(340);
+    // width: rem(340);
+    // ---
+
+    // @media (max-width: 1200px) {
+    //     max-width: rem(340);
+    //     width: 340px;
+    // }
 }
 
-// div .gallery__items div .slick-slide .slick-current .slick-active .slick-center div {
-//     opacity: 1;
-//     // transition: all 300ms ease;
-// }
 
-//   .gallery__items .slick-center div {
-//     // -moz-transform: scale(1.08);
-//     // -ms-transform: scale(1.08);
-//     // -o-transform: scale(1.08);
-//     // -webkit-transform: scale(1.08);
-//     // color: #e67e22;
-//     opacity: 1 !important;
-//     // transform: scale(1.08);
-// }
 
-.slick-slide .slick-active .trust__item {}
 
-.trust__item .slick-slide .slick-cloned .slick-active {
-    // opacity: 0.7;
-}
 
-.slick-slide {
-    // opacity: 0.7;
-}
 
 .slick-prev {
     left: 44%;
@@ -1581,8 +1590,8 @@
     position: absolute;
     top: inherit;
     bottom: -6%;
-    height: rem(20);
-    width: rem(20);
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     z-index: 10;
     border: none;
@@ -1595,14 +1604,20 @@
         top: 20%;
         left: 50%;
         transform: translateX(-50%);
-        height: rem(10);
-        width: rem(7);
+        height: 10px;
+        width: 7px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
 }
 
+// .slick-list {
+//     // padding: 0  !important;
+// }
 
+.draggable {
+    padding: 0 !important;
+}
 
 @import 'media';
