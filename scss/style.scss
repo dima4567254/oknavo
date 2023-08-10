@@ -25,6 +25,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     // !!!одинаковые
@@ -32,6 +37,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+
     }
 
     &__text {
@@ -39,17 +46,25 @@
         font-size: 12px;
         color: #2c2c2c;
         font-weight: 400;
+        margin-right: 20px;
     }
 
     &__logo {
-        margin-right: 80px;
+        // margin-right: 20px;
+        // margin-right: 80px;
+        @include adaptiveValue("margin-right", 80, 20);
     }
 
     &__inner {
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-between;
         align-items: center;
+
+        // max-width: 440px;
         // gap: 60px;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
 
@@ -75,8 +90,6 @@
         //     order: 0;
         //     margin-bottom: 20px;
         // }
-
-
 
         span {
             height: 2px;
@@ -133,6 +146,7 @@
 
     &__menu {
         padding: 65px 0 0 50px;
+        // @include adaptiveValue("padding", 50, 20);
         transform: translateX(-200%);
         position: absolute;
         top: 0;
@@ -801,7 +815,7 @@
 
     &__subtext {
         font-weight: 400;
-        font-size:24px;
+        font-size: 24px;
         text-align: center;
         margin-bottom: 45px;
     }
@@ -995,7 +1009,7 @@
     }
 
     &__subtitle {
-        font-size:24px;
+        font-size: 24px;
         margin-bottom: 15px;
         text-transform: uppercase;
     }

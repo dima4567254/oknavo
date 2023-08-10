@@ -1,3 +1,75 @@
+$maxWidthContainer:1170;
+// $maxWidth:1920;
+$containerWidth:1200;
+$minWidth:320;
+
+// @include adaptiv-value( "padding" 50, 20, 0, );
+
+// Адаптивное свойство (clamp)
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+    @if ($startSize==0) {
+        $startSize: 0.000001;
+    }
+
+    @if ($minSize==0) {
+        $minSize: 0.000001;
+    }
+
+    // Для calc();
+    $addSize: math.div($startSize - $minSize, 16);
+
+    @if ($widthFrom==$containerWidth and $maxWidthContainer==0) {
+        $widthFrom: $maxWidth;
+    }
+
+    // Брейк-поинты в EM
+    $widthFromMedia: em($widthFrom);
+    $widthToMedia: em($widthTo);
+
+    // Формула плавающего значения
+    // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+    $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+    $yIntersection: -$widthTo * $slope+$minSize;
+
+    @if ($yIntersection==0) {
+        $yIntersection: 0.000001;
+    }
+
+    $flyValue: #{rem($yIntersection)}" + "#{$slope * 100}vw;
+
+    // Получение значения свойства
+    $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+
+    // Если отрицательные значения
+    @if ($minSize > $startSize) {
+        $propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"};
+    }
+
+    // Если поддерживается clamp();
+    @supports (#{$property}: $propertyValue) {
+        #{$property}: $propertyValue;
+    }
+
+    // Если не поддерживается clamp();
+    @supports not (#{$property}: $propertyValue) {
+        #{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+    }
+
+    // Устанавливаем значения по умолчанию
+    @if $widthFrom !=$containerWidth and $widthFrom !=$maxWidth and $keepSize !=1 and $keepSize !=2 {
+        @media (min-width: $widthFromMedia) {
+            #{$property}: inherit;
+        }
+    }
+
+    @if $widthTo !=$minWidth and $keepSize !=1 and $keepSize !=3 {
+        @media (max-width: $widthToMedia) {
+            #{$property}: inherit;
+        }
+    }
+}
+
+
 html,
 body {
     height: 100%;
@@ -106,11 +178,25 @@ body {
     align-items: center;
     text-align: center;
 
+    // max-width: 440px;
+    // gap: 60px;
+    @media (max-width: 576px) {
+        display: block;
+    }
+
     &__time {
         font-size: 12px;
         line-height: 1.2;
         color: #2c2c2c;
-        margin-right: 60px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+
+
+        // @include adaptiveValue("margin-right", 60, 20);
+
+
     }
 
     &__time p {
@@ -121,7 +207,7 @@ body {
     }
 
     &__box {
-        margin-right: 60px;
+        // margin-right: 60px;
         // &:not(:last-child) {
         //     margin-right: 60px;
         // }
@@ -300,3 +386,35 @@ body {
 }
 
 // footer__link--indent
+// @mixin adaptiv-value($property, $startSize, $minSize, $type) {
+//     $addSize: $startSize - $minSize;
+
+//     @if $type==1 {
+//         // только если меньше контейнера
+//         #{$property}: $startSize + px;
+
+//         @media (max-width: #{$maxWidthContainer + px }) {
+//             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+//         }
+//     }
+
+//     @else if $type==2 {
+//         // только если больше контейнера
+//         #{$property}: $startSize + px;
+
+//         @media (min-width: #{$maxWidthContainer + px }) {
+//             #{$property}: calc(#{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+//         }
+//     }
+
+//     @else {
+//         // всегда
+//         #{$property}: calc(#{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+
+//     }
+// }
+
+
+// .div {
+//     @include adaptiveValue("font-size", 50, 20);
+// }
