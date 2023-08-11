@@ -1,7 +1,7 @@
-$maxWidthContainer:1170;
+$maxWidthContainer:1200;
 // $maxWidth:1920;
-$containerWidth:1200;
-$minWidth:320;
+$containerWidth:1105;
+$minWidth:0;
 
 // @include adaptiv-value( "padding" 50, 20, 0, );
 
@@ -69,6 +69,12 @@ $minWidth:320;
     }
 }
 
+//Percent
+@function percent($px, $from) {
+    $result: math.div($px, $from) * 100%;
+    @return $result;
+}
+
 
 html,
 body {
@@ -112,7 +118,7 @@ body {
 }
 
 .container {
-    max-width: 1115px;
+    max-width: 1105px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -180,9 +186,12 @@ body {
 
     // max-width: 440px;
     // gap: 60px;
-    @media (max-width: 576px) {
-        display: block;
+    @media (max-width: 992px) { 
+        display: none;
     }
+    // @media (max-width: 576px) {
+    //     display: block;
+    // }
 
     &__time {
         font-size: 12px;
