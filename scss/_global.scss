@@ -128,6 +128,7 @@ body {
     font-size: 36px;
     text-align: center;
     text-transform: uppercase;
+    // @include adaptiveValue("font-size", 60, 26);
 
     @media (max-width: 1200px) {
         font-size: 33px;
@@ -189,9 +190,9 @@ body {
 
     // max-width: 440px;
     // gap: 60px;
-    @media (max-width: 992px) { 
-        display: none;
-    }
+    // @media (max-width: 992px) { 
+    //     display: none;
+    // }
     // @media (max-width: 576px) {
     //     display: block;
     // }
@@ -200,14 +201,6 @@ body {
         font-size: 12px;
         line-height: 1.2;
         color: #2c2c2c;
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
-
-
-        // @include adaptiveValue("margin-right", 60, 20);
-
 
     }
 
@@ -232,6 +225,12 @@ body {
         align-items: center;
         max-width: 195px;
         flex-wrap: wrap;
+
+        @media (max-width: 576px) {
+            //  max-width: 100%;
+            margin: 0 auto;
+        }
+
         // потом сделать выше врапер
 
         //  overflow: hidden;

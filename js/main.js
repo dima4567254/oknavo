@@ -121,17 +121,17 @@ $('.header__btn').on('click', function () {
 });
 //
 // ,
-// $(function () {
-//     let header = $('.header');
+$(function () {
+    let header = $('.header');
 
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 690) {
-//             header.addClass('header-fixed');
-//         } else {
-//             header.removeClass('header-fixed');
-//         }
-//     });
-// });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
+            header.addClass('header-fixed');
+        } else {
+            header.removeClass('header-fixed');
+        }
+    });
+});
 
 // $(".menu a").on("click", function (event) {
 //     event.preventDefault();
@@ -201,22 +201,37 @@ $('.gallery__items').slick({
     slidesToShow: 3,  /* количество слайдов на показ*/
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed:3000,
+    autoplaySpeed: 3000,
+    // responsive: [
+    //     // {
+    //     //     breakpoint: 992,//если меньше не включая 992
+    //     //     settings: {
+    //     //         slidesToShow: 2,
+
+    //     //     }
+    //     // },
+    //     // {
+    //     //     breakpoint: 400,
+    //     //     settings: {
+    //     //         slidesToShow: 1,
+
+    //     //     }
+    //     // },
+    // ]
     responsive: [
-        // {
-        //     breakpoint: 992,//если меньше не включая 992
-        //     settings: {
-        //         slidesToShow: 2,
-
-        //     }
-        // },
-        // {
-        //     breakpoint: 400,
-        //     settings: {
-        //         slidesToShow: 1,
-
-        //     }
-        // },
+        {
+            breakpoint: 840,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                // slidesToScroll: 2,
+            }
+        },
     ]
 });
 // дотсы
@@ -271,20 +286,19 @@ $(".gallerys--carousel .js-slick").slick({
 		</button>'
         );
     },
-    // responsive: [
-    //     {
-    //         breakpoint: 1150,
-    //         settings: {
-    //             slidesToShow: 2,
-    //         }
-    //     },
-
-    //     {
-    //         breakpoint: 620,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //         }
-    //     },
-    // ]
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                // slidesToScroll: 2,
+            }
+        },
+    ]
 });
