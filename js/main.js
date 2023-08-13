@@ -261,7 +261,7 @@ $(".gallerys--overlay .js-slick").slick({
     }
 });
 
-// // Carousel
+
 // слик
 $(".gallerys--carousel .js-slick").slick({
     // variableWidth: true,
@@ -301,4 +301,33 @@ $(".gallerys--carousel .js-slick").slick({
             }
         },
     ]
+});
+
+
+const modalWindow = document.querySelector('.modal');
+let elements = document.querySelectorAll('.modal-window');
+
+for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+    elements[i].addEventListener('click', function () {  /*при клике на элемент */
+        if (modalWindow.classList.contains('modal-open')) {
+            modalWindow.classList.remove('modal-open');
+        } else {
+            modalWindow.classList.add('modal-open');
+        }
+        document.onkeydown = function (event) {
+            if (event.keyCode == 27) {
+                modalWindow.classList.remove('modal-open');
+            }
+        }
+    })
+}
+
+// close modal
+$('.modal').click(function () {
+    var select = $('.modal__form');
+    if ($(event.target).closest(select).length)
+        return;
+    $('.modal').toggleClass('modal-open');
+    $(document).unbind('click');
+    event.stopPropagation();
 });
