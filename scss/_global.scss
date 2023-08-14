@@ -85,7 +85,7 @@ body {
 body {
     font-weight: 700;
     font-size: 16px;
-    line-height: 154%;
+    line-height: 1.5;
     color: $black-main;
     font-family: 'REM';
     // line-height: 1.2;
@@ -131,40 +131,40 @@ body {
     // @include adaptiveValue("font-size", 60, 26);
 
     @media (max-width: 1200px) {
-        font-size: 33px;
-    }
-
-    @media (max-width: 992px) {
         font-size: 31px;
     }
 
-    @media (max-width: 768px) {
-        font-size: 28px;
+    @media (max-width: 992px) {
+        font-size: 29px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
         font-size: 26px;
     }
 
-    &--bem {
-        margin-bottom: 70px;
-
-        @media (max-width: 1200px) {
-            margin-bottom: 60px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 50px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 576px) {
-            margin-bottom: 30px;
-        }
+    @media (max-width: 576px) {
+        font-size: 24px;
     }
+
+    // &--bem {
+    //     margin-bottom: 70px;
+
+    //     @media (max-width: 1200px) {
+    //         margin-bottom: 60px;
+    //     }
+
+    //     @media (max-width: 992px) {
+    //         margin-bottom: 50px;
+    //     }
+
+    //     @media (max-width: 768px) {
+    //         margin-bottom: 40px;
+    //     }
+
+    //     @media (max-width: 576px) {
+    //         margin-bottom: 30px;
+    //     }
+    // }
 }
 
 .section {
@@ -200,7 +200,14 @@ body {
     &__time {
         font-size: 12px;
         line-height: 1.2;
-        color: #2c2c2c;
+        color: $black3;
+        // margin-right: 60px;
+        // @include adaptiveValue("margin-right", 60, 20);
+        margin-right: 60px;
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
 
     }
 
@@ -212,10 +219,17 @@ body {
     }
 
     &__box {
+
         // margin-right: 60px;
         // &:not(:last-child) {
         //     margin-right: 60px;
         // }
+         margin-right: 60px;
+        // @include adaptiveValue("margin-right", 60, 20);
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
     }
 
     &__wrapper {
@@ -278,8 +292,6 @@ body {
         // color: #2c2c2c;
         transition: color 0.5s;
 
-
-
         &:focus {
             color: $focus;
         }
@@ -305,6 +317,89 @@ body {
         color: #b9a36b;
     }
 }
+
+.calls {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: $white;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &__time {
+        font-size: 12px;
+        line-height: 1.2;
+        // color: #2c2c2c;
+        margin-right: 0px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    &__svg {
+        margin-right: 5px;
+    }
+
+    &__tel {
+        font-weight: 400;
+        text-align: start;
+    }
+
+    &__box {
+        margin-right: 0px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        max-width: 195px;
+        flex-wrap: wrap;
+
+        @media (max-width: 576px) {
+            //  max-width: 100%;
+            // margin: 0 auto;
+        }
+
+        // &--animation {
+        //     animation-name: link-scale;
+        //     animation-duration: 2s;
+        //     animation-timing-function: linear;
+        //     animation-iteration-count: infinite;
+        // }
+    }
+
+    &__wrapper--animation {}
+
+    &__link {
+        transition: color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $ac;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

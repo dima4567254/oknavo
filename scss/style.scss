@@ -5,9 +5,6 @@
 @import 'global';
 @import 'libs';
 
-
-
-
 .header-fixed {
     background-color: #f0f0f0;
 }
@@ -19,6 +16,7 @@
     left: 0;
     right: 0;
     z-index: 200;
+    background-color: #f0f0f0;
 
     &__wrapper {
         display: flex;
@@ -42,15 +40,24 @@
         font-weight: 400;
         margin-right: 20px;
 
-        @media (max-width: 992px) {
+        @media (max-width: 568px) {
             display: none;
         }
     }
 
     &__logo {
-        // margin-right: 20px;
-        // margin-right: 80px;
-        @include adaptiveValue("margin-right", 80, 20);
+        // @include adaptiveValue("margin-right", 80, 20);
+        margin-right: 80px;
+
+        @media (max-width: 1200px) {}
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {}
+
+        @media (max-width: 576px) {}
     }
 
 
@@ -74,14 +81,10 @@
     }
 
     &__info {
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             display: none;
         }
     }
-
-
-
-    &__button {}
 
     &__btn {
         border: none;
@@ -157,8 +160,9 @@
     }
 
     &__menu {
-        padding: 65px 0 0 50px;
-        // @include adaptiveValue("padding", 50, 20);
+        // padding: 65px 0 0 50px;
+        @include adaptiveValue("padding-top", 65, 20);
+        @include adaptiveValue("padding-left", 50, 10);
         transform: translateX(-200%);
         position: absolute;
         top: 0;
@@ -172,6 +176,10 @@
 
         @media (max-width: 768px) {
             width: 50%;
+        }
+
+        @media (max-width: 576px) {
+            width: 75%;
         }
 
         &.header__menu--active {
@@ -208,6 +216,10 @@
         display: flex;
         gap: 25px;
         flex-direction: column;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__item {
@@ -257,8 +269,6 @@
     }
 }
 
-
-
 // проверить все своиства возможно можно оптимизировать
 .intro {
     background-image: url('../images/fon.webp');
@@ -270,7 +280,7 @@
     flex-direction: column;
     justify-content: end;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
         height: 100vh;
         justify-content: center;
         padding-top: 90px;
@@ -291,13 +301,15 @@
 
     &__left {
         margin-right: 20px;
-        max-width: 630px;
+        max-width: 57%;
 
         @media (max-width: 992px) {
             margin-bottom: 20px;
+            max-width: 55%;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
+            max-width: 100%;
             margin-right: 0px;
         }
     }
@@ -308,14 +320,21 @@
         object-fit: cover;
 
         @media (max-width: 992px) {
-            height: auto;
-            width: 100%;
-            max-width: 675px;
+            // height: auto;
+            // width: 100%;
+            // max-width: 675px;
+            width: 285px;
+            height: 420px;
+
+            // 373.75 287.5 201.25 115
+            // 548.75 422.5 296.25 170
         }
 
         @media (max-width: 768px) {
-            height: 225px;
-            width: 155px;
+            // height: 225px;
+            // width: 155px;
+            height: 146px;
+            width: 100px;
             display: flex;
             margin: 0 auto;
         }
@@ -330,6 +349,10 @@
         display: flex;
         max-width: 630px;
         @include adaptiveValue("margin-bottom", 60, 20);
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__box {
@@ -352,10 +375,29 @@
     }
 
     &__title {
-        @include adaptiveValue("font-size", 33, 26);
-        line-height: 154%;
+        // @include adaptiveValue("font-size", 33, 26);
+        font-size: 33px;
+        // line-height: 154%;
+        line-height: 1.5;
         text-transform: uppercase;
         margin-bottom: 20px;
+
+        @media (max-width: 1200px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 27px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 22px;
+            line-height: 1.1;
+        }
     }
 
 
@@ -365,7 +407,8 @@
 
     &__subtext p {
         @include adaptiveValue("font-size", 24, 20);
-        line-height: 154%;
+        // line-height: 154%;
+        line-height: 1.6;
         text-transform: uppercase;
     }
 
@@ -462,8 +505,6 @@
         text-transform: uppercase;
     }
 }
-
-
 
 .services {
     &__title {
@@ -608,7 +649,6 @@
     }
 }
 
-
 .installments {
     background-image: url('../images/installments-bg.webp');
     background-position: center;
@@ -741,7 +781,7 @@
     &__box {
         max-width: 425px;
         position: relative;
-        @include adaptiveValue("max-width", 425, 350);
+        // @include adaptiveValue("max-width", 425, 350);
 
         @media (max-width: 576px) {
             width: 100%;
@@ -965,7 +1005,6 @@
 // не сделал средний слайд шире может и так норм
 // проверить все своиства
 
-
 .trust {
     position: relative;
     background-image: url('../images/trust-bg.webp');
@@ -996,14 +1035,33 @@
             right: 5px;
             height: 165px;
             width: 145px;
+            // 133.75 102.5 71.25 40
+            // 117.5 90 62.5 35
             background-image: url('../images/likes.webp');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             z-index: 100;
 
+            @media (max-width: 1200px) {
+                height: 135px;
+                width: 115px;
+            }
+
+            @media (max-width: 992px) {
+                height: 100px;
+                width: 90px;
+            }
+
+            @media (max-width: 768px) {
+                height: 70px;
+                width: 60px;
+            }
+
             @media (max-width: 576px) {
-                right: 16%;
+                // height: 40px;
+                // width: 35px;
+                display: none;
             }
         }
     }
@@ -1024,15 +1082,28 @@
         border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-        padding: 40px 16px;
+        // padding: 40px 16px;
         height: 500px;
         @include adaptiveValue("padding-bottom", 40, 20);
         @include adaptiveValue("padding-top", 40, 20);
         @include adaptiveValue("padding-left", 16, 10);
         @include adaptiveValue("padding-right", 16, 10);
 
+        // 462.5 425 387.5 350
+        @media (max-width: 1200px) {
+            height: 460px;
+        }
+
         @media (max-width: 992px) {
-            height: 475px;
+            height: 425px;
+        }
+
+        @media (max-width: 768px) {
+            height: 387px;
+        }
+
+        @media (max-width: 576px) {
+            height: 350px;
         }
 
     }
@@ -1337,7 +1408,12 @@
     background-repeat: no-repeat;
     position: relative;
 
-    &__wrapper {}
+    &__wrapper {
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
 
     &__images {
         position: absolute;
@@ -1355,10 +1431,17 @@
         }
 
         @media (max-width: 992px) {
-            left: 2%;
-            bottom: -4%;
-            display: none;
+            // left: 2%;
+            // bottom: -2.5%;
+            // bottom: -1.5%;
+            // display: none;
+            // left: 50%;
+            // transform: translateX(-50%);
+            position: relative;
+            max-width: 400px;
+            margin: 0px auto -115px;
         }
+
 
     }
 
@@ -1381,7 +1464,7 @@
 
         @media (max-width: 992px) {
             width: 340px;
-            height: 386px;
+            height: 405px;
         }
 
         @media (max-width: 768px) {
@@ -1398,6 +1481,10 @@
     &__box {
         max-width: 445px; //!!!
         margin-left: auto;
+
+        @media (max-width: 992px) {
+            margin: 0 auto;
+        }
     }
 
     &__title {
@@ -1413,7 +1500,9 @@
     &__text p {
         font-weight: 400;
         font-size: 15px;
-        line-height: 154%;
+        // line-height: 154%;
+        line-height: 1.5;
+
         color: $black-main;
 
     }
@@ -1563,6 +1652,10 @@
     // ---!!!
     max-width: 720px;
 
+    @media (max-width: 992px) {
+        margin-bottom: 20px;
+    }
+
     @media (max-width: 576px) {
         text-align: center;
     }
@@ -1581,11 +1674,17 @@
         background-size: cover;
 
         @media (max-width: 992px) {
-            bottom: -30%;
+            // bottom: -30%;
+            // left: 87%;
+            // bottom: -43%;
+            // left: 84%;
+            bottom: -37%;
+            left: 98%;
         }
 
         @media (max-width: 768px) {
             bottom: -26%;
+
         }
 
         @media (max-width: 576px) {
@@ -1962,6 +2061,10 @@
     bottom: 0;
     left: 1%;
 
+    @media (max-width: 576px) {
+        bottom: -6%;
+    }
+
 }
 
 .slick-dots-button {
@@ -2030,8 +2133,10 @@
     }
 
     @media (max-width: 568px) {
-        right: 38%;
+        right: 34%;
+        bottom: -6%;
     }
+
 
     &::before {
         background-image: url('../images/icons/arrow-right.svg');
@@ -2050,7 +2155,8 @@
     }
 
     @media (max-width: 568px) {
-        left: 36%;
+        left: 29%;
+        bottom: -6%;
     }
 
     &::before {
@@ -2328,4 +2434,5 @@
     z-index: 300;
 }
 
+// удалить!!!
 @import 'media';
