@@ -40,8 +40,11 @@
 <!-- доделать адаптив  -->
 <!-- сделать попап -->
 <!-- скролл -->
+<!-- подумать про кнопку в меню -->
 <!-- табличку появления -->
 <!-- кеще рз проверить обертки в модал -->
+<!-- иконки в меню не стабильны -->
+<!-- фокус инстаграм -->
 
 
 <body>
@@ -224,8 +227,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="intro__link" href="#">
-                                <span>
+                            <a class="intro__link btn" href="#">
+                                <span class="span">
                                     розрахувати попередню вартість
                                 </span>
                                 <p>
@@ -261,8 +264,10 @@
                                 глухі, арочні, одностулкові, двостулкові та інші
                             </p>
                         </div>
-                        <a class="services__link" href="#">
-                            Вибрати вікно
+                        <a class="services__link btn" href="#">
+                            <span class="span">
+                                Вибрати вікно
+                            </span>
                         </a>
                     </li>
                     <li class="services__item">
@@ -276,8 +281,10 @@
                                 П-подібні, французький балкон, лоджія та інші
                             </p>
                         </div>
-                        <a class="services__link" href="#">
-                            Вибрати балкон
+                        <a class="services__link btn" href="#">
+                            <span class="span">
+                                Вибрати балкон
+                            </span>
                         </a>
                     </li>
                     <li class="services__item">
@@ -291,8 +298,10 @@
                                 Металопластикові двері для Вашого будинку
                             </p>
                         </div>
-                        <a class="services__link" href="#">
-                            Вибрати двері
+                        <a class="services__link btn" href="#">
+                            <span class="span">
+                                Вибрати двері
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -387,11 +396,17 @@
                                 прорахунку, і озвучить Вам точну вартість прямо на місці.
                             </p>
                             <p>
-                                Вам<span> не потрібно чекати </span>кілька днів!
+                                Вам
+                                <span>
+                                    не потрібно чекати
+                                </span>
+                                кілька днів!
                             </p>
                         </div>
                         <button class="cause__btn btn modal-window" type="button">
-                            викликати фахівця
+                            <span class="span">
+                                викликати фахівця
+                            </span>
                         </button>
                     </div>
                     <div class="cause__images">
@@ -761,7 +776,7 @@
             </div>
         </section>
 
-        <!-- <section class="advantages section">
+        <section class="advantages section">
             <div class="container">
                 <h2 class="advantages__title title">
                     переваги роботи з нами
@@ -772,9 +787,9 @@
                     </p>
                 </div>
                 <div class="advantages__wrapper">
-                    <ul class="advantages__left">
+                    <ul class="advantages__items">
                         <li class="advantages__item">
-                            <!-- <div class="advantages__box"> --
+                            <!-- <div class="advantages__box"> -->
                             <h3 class="advantages__subtitle">
                                 зручна оплата
                             </h3>
@@ -786,7 +801,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <!-- </div> --
+                            <!-- </div> -->
                         </li>
                         <li class="advantages__item">
                             <h3 class="advantages__subtitle">
@@ -830,7 +845,7 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="advantages__right">
+                    <ul class="advantages__itemss">
                         <li class="advantages__itemi">
                             <h3 class="advantages__subtitle">
                                 лояльність
@@ -874,7 +889,7 @@
                     </ul>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <section class="gallery section">
             <div class="container">
@@ -967,8 +982,12 @@
                                     oninvalid="this.setCustomValidity('Введіть ваш телефон')">
 
                                 <button class="form__btn btn" type="submit">
-                                    хочу розстрочку
-                                    <span class="sr-only">Кнопка відправлення повідомлення</span>
+                                    <span class="span">
+                                        хочу розстрочку
+                                    </span>
+                                    <span class="sr-only">
+                                        Кнопка відправлення повідомлення
+                                    </span>
                                 </button>
 
                             </div>
@@ -1098,21 +1117,27 @@
                         <label class="sr-only" for="work-name">
                             Введіть ваше ім'я*
                         </label>
-                        <span class="form__img form__img--men"></span>
+                        <span class="form__img form__img--men">
+                            <!-- подписать!!! -->
+                        </span>
                         <input class="form__input" id="work-name" type="text" name="name" placeholder="Введіть ім'я"
                             required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
 
                         <label class="sr-only" for="work-tel">
                             Введіть ваш телефон*
                         </label>
-                        <span class="form__img form__img--whatsap"></span>
+                        <span class="form__img form__img--whatsap">
+                            <!-- подписать!!! -->
+                        </span>
                         <input class="form__input" id="work-tel" type="tel" name="tel" data-mask="+38 (___) ___-__-__"
                             placeholder="Введіть Ваш номер" required
                             oninvalid="this.setCustomValidity('Введіть ваш телефон')">
 
                         <button class="form__btn btn" type="submit">
                             відправити
-                            <span class="sr-only">Кнопка відправлення повідомлення</span>
+                            <span class="sr-only">
+                                Кнопка відправлення повідомлення
+                            </span>
                         </button>
                     </div>
                 </div>

@@ -443,7 +443,7 @@
         font-size: 12px;
         // padding: 24px 0;
         @include adaptiveValue("padding-bottom", 24, 10);
-        @include adaptiveValue("padding-top", 24, 10);
+        @include adaptiveValue("padding-top", 25, 10);
         max-width: 465px;
         clip-path: polygon(0 0, 100% 0%, 100% 85%, 53% 100%, 0 85%);
         border: none;
@@ -517,7 +517,6 @@
         font-size: 15px;
         margin-bottom: 65px;
         @include adaptiveValue("margin-bottom", 60, 20);
-
     }
 
     &__items {
@@ -554,7 +553,7 @@
                 content: "";
                 position: absolute;
                 top: -3%;
-                left: -20%;
+                left: -65%;
                 height: 415px;
                 width: 350px;
                 background-image: url('../images/woman.png');
@@ -569,11 +568,8 @@
                     width: 150px;
                 }
 
-                @media (max-width: 568px) {
-                    top: 74%;
-                    left: -4%;
-                    height: 85px;
-                    width: 50px;
+                @media (max-width: 768px) {
+                    display: none;
                 }
             }
         }
@@ -619,7 +615,7 @@
         z-index: 1;
         transition: background 0.5s;
 
-        &:after {
+        &::before {
             background: $white;
             content: "";
             height: 155px;
@@ -641,6 +637,7 @@
 
         &:hover {
             background: linear-gradient(180deg, #ceb77d 0%, #67563b 100%);
+            // color: $white;
         }
 
         &:active {
@@ -869,7 +866,7 @@
         box-shadow: inset 0 0px 8px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
         width: 100%;
-        animation-name: grat;
+        // animation-name: grat;
         animation-duration: 2s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
@@ -898,6 +895,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            z-index: 20;
 
             @media (max-width: 768px) {
                 left: -5%;
@@ -913,7 +911,7 @@
         }
 
         &:hover {
-            background: linear-gradient(180deg, #968047 0%, #695331 100%);
+            // background: linear-gradient(180deg, #968047 0%, #695331 100%);
         }
 
         &:active {
@@ -1147,43 +1145,47 @@
     background-repeat: no-repeat;
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     &__subtext {
         // margin-bottom: 70px;
-        // margin-bottom: 40px;
-        @include adaptiveValue("margin-bottom", 40, 20);
+        margin-bottom: 40px;
         text-align: center;
     }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
 
-        // @include adaptiveValue("grid-column-gap", 30, 20);
-        // grid-column-gap: 20px;
+        @media (max-width: 1200px) {}
+
         @media (max-width: 992px) {
-            @include adaptiveValue("row-gap", 45, 20);
+            flex-wrap: wrap;
+            justify-content: end;
+            align-items: flex-start;
+
         }
+
 
         @media (max-width: 576px) {
             display: block;
         }
     }
 
-    &__right {
+    // !!!!!
+    &__itemss {
         display: flex;
         justify-content: center;
         flex-direction: column;
 
         @media (max-width: 992px) {
-            margin-top: -275px;
+            margin-left: 30px;
         }
     }
 
-    &__left {
+    &__items {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -1192,10 +1194,6 @@
         @media (max-width: 1200px) {
             margin-left: 30px;
         }
-
-        @media (max-width: 992px) {
-            justify-content: start;
-        }
     }
 
     &__item {
@@ -1203,14 +1201,9 @@
         position: relative;
 
         &:not(:last-child) {
-            // @include adaptiveValue("margin-bottom", 70, 20);
             margin-bottom: 70px;
 
             @media (max-width: 992px) {
-                margin-bottom: 20px;
-            }
-
-            @media (max-width: 576px) {
                 margin-bottom: 20px;
             }
         }
@@ -1218,7 +1211,6 @@
         &:nth-child(odd) {
             margin-left: 70px;
 
-            // @include adaptiveValue("font-size", 50, 20);
             @media (max-width: 992px) {
                 margin-left: 0px;
             }
@@ -1241,35 +1233,21 @@
         width: 245px;
         position: relative;
 
-        &:not(:last-child) {
-            margin-bottom: 70px;
-
-            @media (max-width: 992px) {
-                margin-bottom: 30px;
-            }
-
-            @media (max-width: 576px) {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            max-width: 245px;
-            width: inherit;
-            // @include adaptiveValue("margin-bottom", 45, 20);
-            margin-left: 30px;
-
-        }
-
         &:first-child {
             margin-left: -30px;
 
             @media (max-width: 992px) {
-                margin-left: 30px;
+                margin-left: 0px;
             }
         }
 
+        &:not(:last-child) {
+            margin-bottom: 70px;
 
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
+        }
 
         &::before {
             content: "";
@@ -1320,17 +1298,38 @@
 
     &__inner {
         line-height: 1;
+
+        @media (max-width: 992px) {
+            order: -1;
+        }
     }
 
     &__img {
-        width: 525px;
-        height: 650px;
+        width: 525px; //130
+        height: 650px; //160
         object-fit: cover;
 
+        // 426.25 327.5 228.75 130
+        // 527.5 405 282.5 160
         @media (max-width: 1200px) {
-            height: 445px;
-            width: 370px;
+            width: 345px; //130
+            // height: 525px;
+            height: 434px;
+        }
 
+        @media (max-width: 992px) {
+            width: 325px; //130
+            height: 405px;
+        }
+
+        @media (max-width: 768px) {
+            width: 225px; //130
+            height: 280px;
+        }
+
+        @media (max-width: 576px) {
+            width: 130px; //130
+            height: 160px;
         }
     }
 
@@ -1417,17 +1416,19 @@
 
     &__images {
         position: absolute;
-        bottom: -6%;
+        bottom: -6.5%;
         left: 360px;
         z-index: 100;
-        // width: 725px;
-        // height: 815px;
+        width: 725px;
+        height: 815px;
 
         @media (max-width: 1200px) {
             left: 3%;
-            bottom: -6%;
-            // width: 50%;
-            // height: 70%;
+            // bottom: -6%;
+            width: 500px;
+            height: 610px;
+            // bottom: -37.5%;
+            bottom: -4.5%;
         }
 
         @media (max-width: 992px) {
@@ -1437,18 +1438,17 @@
             // display: none;
             // left: 50%;
             // transform: translateX(-50%);
-            position: relative;
-            max-width: 400px;
-            margin: 0px auto -115px;
+            // position: relative;
+            // max-width: 400px;
+            // margin: 0px auto -115px;
+
         }
-
-
     }
 
     &__img {
         // width: 100%;
         // height: 100%;
-        width: 725px;
+        width: 675px;
         height: 815px;
         object-fit: cover;
 
@@ -1458,7 +1458,7 @@
             // height: auto;
             // width: 100%;
             // max-width: 405px;
-            width: 542px;
+            width: 500px;
             height: 610px;
         }
 
@@ -1673,6 +1673,11 @@
         background-position: center;
         background-size: cover;
 
+        @media (max-width: 1200px) {
+            left: 88%;
+            bottom: -44%;
+        }
+
         @media (max-width: 992px) {
             // bottom: -30%;
             // left: 87%;
@@ -1725,7 +1730,6 @@
 
     &__text {
         font-weight: 400;
-
     }
 
     &__text p {
@@ -1791,7 +1795,6 @@
         @include adaptiveValue("padding-top", 14, 10);
         //  @include adaptiveValue("padding-left", 16, 10);
         @include adaptiveValue("padding-left", 75, 20);
-
         font-size: 14px;
         color: $black2;
 
