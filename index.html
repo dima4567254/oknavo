@@ -956,7 +956,6 @@
                                 Розстрочку до 10 місяців під 0% Без Першого
                                 Внеску.
                             </span>
-
                         </div>
                         <form class="form">
                             <div class="form__wrap">
@@ -965,22 +964,24 @@
                                         Скористайтеся унікальною пропозицією! Просто введіть Ваше Ім'я та Номер телефону
                                     </p>
                                 </div>
-                                <label class="sr-only" for="work-name">
-                                    Введіть ваше ім'я*
+                                <label class="form__labels" for="work-name">
+                                    <input class="form__input" id="work-name" type="text" name="name"
+                                        placeholder="Введіть ім'я" required
+                                        oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                                    <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
+                                        <use xlink:href="images/sprite.svg#user">
+                                        </use>
+                                    </svg>
                                 </label>
-                                <span class="form__img form__img--men"></span>
-                                <input class="form__input" id="work-name" type="text" name="name"
-                                    placeholder="Введіть ім'я" required
-                                    oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-
-                                <label class="sr-only" for="work-tel">
-                                    Введіть ваш телефон*
+                                <label class="form__label" for="work-tel">
+                                    <input class="form__input" id="work-tel" type="tel" name="tel"
+                                        data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
+                                        oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                                    <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
+                                        <use xlink:href="images/sprite.svg#whatsap">
+                                        </use>
+                                    </svg>
                                 </label>
-                                <span class="form__img form__img--whatsap"></span>
-                                <input class="form__input" id="work-tel" type="tel" name="tel"
-                                    data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
-                                    oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-
                                 <button class="form__btn btn" type="submit">
                                     <span class="span">
                                         хочу розстрочку
@@ -989,7 +990,6 @@
                                         Кнопка відправлення повідомлення
                                     </span>
                                 </button>
-
                             </div>
                         </form>
                     </div>
@@ -1088,7 +1088,7 @@
                         </li>
                     </ul>
                 </nav>
-                <a class="footer__link" href="#">
+                <a class="footer__link footer__link--svg" href="#">
                     <svg class="footer__svg" width="14px" height="16px" fill="#ffffff">
                         <use xlink:href="images/sprite.svg#instagram">
                         </use>

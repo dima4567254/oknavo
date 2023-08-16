@@ -1419,29 +1419,20 @@
         bottom: -6.5%;
         left: 360px;
         z-index: 100;
-        width: 725px;
-        height: 815px;
+        // width: 725px;
+        // height: 815px;
 
         @media (max-width: 1200px) {
             left: 3%;
             // bottom: -6%;
-            width: 500px;
-            height: 610px;
+            // width: 500px;
+            // height: 610px;
             // bottom: -37.5%;
-            bottom: -4.5%;
+            bottom: -6%;
         }
 
         @media (max-width: 992px) {
-            // left: 2%;
-            // bottom: -2.5%;
-            // bottom: -1.5%;
-            // display: none;
-            // left: 50%;
-            // transform: translateX(-50%);
-            // position: relative;
-            // max-width: 400px;
-            // margin: 0px auto -115px;
-
+            display: none;
         }
     }
 
@@ -1458,8 +1449,10 @@
             // height: auto;
             // width: 100%;
             // max-width: 405px;
-            width: 500px;
-            height: 610px;
+            // width: 500px;
+            // height: 610px;
+            width: 550px;
+            height: 660px;
         }
 
         @media (max-width: 992px) {
@@ -1467,15 +1460,15 @@
             height: 405px;
         }
 
-        @media (max-width: 768px) {
-            width: 245px;
-            height: 347px;
-        }
+        // @media (max-width: 768px) {
+        //     width: 245px;
+        //     height: 347px;
+        // }
 
-        @media (max-width: 576px) {
-            width: 100%;
-            height: 100%;
-        }
+        // @media (max-width: 576px) {
+        //     width: 100%;
+        //     height: 100%;
+        // }
     }
 
     &__box {
@@ -1512,140 +1505,8 @@
     }
 }
 
-
-
-// .form {
-//     // margin-top: 23px;
-//     // position: relative;
-//     // width: 442px;
-//     padding: 10px;
-//     background: $white;
-//     position: relative;
-
-//     &::before {
-//         // content: "";
-//         position: absolute;
-//         bottom: -55px;
-//         right: -45px;
-//         height: 175px;
-//         width: 160px;
-//         background-image: url('../images/ks.png');
-//         background-repeat: no-repeat;
-//         background-position: center;
-//         background-size: cover;
-//     }
-// // !!!
-//     &__wrap {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-
-//     &__images {
-//         width: 305px;
-//         height: 340px;
-//         object-fit: cover;
-//     }
-
-//     &__wrap {
-//         border: 1px solid transparent;
-//         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
-//         border-image-slice: 1;
-//         // padding: 45px;
-//         @include adaptiveValue("padding", 45, 20);
-//     }
-
-//     &__text {
-//         font-weight: 400;
-//         // margin-bottom: 35px;
-//         @include adaptiveValue("margin-bottom", 35, 20);
-//     }
-
-//     &__input,
-//     &__btn {
-//         border: none;
-//         width: 300px;
-//         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
-//         border-radius: 30px;
-
-//         // cursor: pointer;
-//         @media (max-width: 576px) {
-//             width: 100%;
-//         }
-//     }
-
-//     &__img {
-//         position: relative;
-//         display: block;
-
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             bottom: -35px;
-//             left: 14%;
-//             height: 15px;
-//             width: 15px;
-//             background-repeat: no-repeat;
-//             background-position: center;
-//             background-size: cover;
-//         }
-
-//         &--whatsap {
-//             &::before {
-//                 background-image: url('../images/whatsap.png');
-//             }
-//         }
-
-//         &--men {
-//             &::before {
-//                 background-image: url('../images/men.png');
-//             }
-//         }
-//     }
-
-//     &__input {
-//         margin-bottom: 10px;
-//         // padding: 14px 0 22px 75px;
-//         @include adaptiveValue("padding-bottom", 22, 10);
-//         @include adaptiveValue("padding-top", 14, 10);
-//         //  @include adaptiveValue("padding-left", 16, 10);
-//         @include adaptiveValue("padding-right", 75, 20);
-
-//         font-size: 14px;
-//         color: $black2;
-
-//     }
-
-//     &__btn {
-//         background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
-//         text-align: center;
-//         // padding: 15px 0;
-//         @include adaptiveValue("padding-bottom", 15, 10);
-//         @include adaptiveValue("padding-top", 15, 10);
-//         font-size: 13px;
-//         text-transform: uppercase;
-//         color: $white;
-//         transition: all .5;
-//         margin-bottom: 20px;
-
-//         &:focus {
-//             color: $focus;
-//         }
-
-//         &:hover {
-//             // !!!плавность
-//             background: linear-gradient(180deg, #ceb77d 0%, #67563b 100%);
-//         }
-
-//         &:active {
-//             color: $active;
-//         }
-//     }
-// }
-
 .form {
-    // margin-top: 23px;
-    // position: relative;
-    // width: 442px;
+
     padding: 10px;
     background: $white;
     position: relative;
@@ -1674,7 +1535,7 @@
         background-size: cover;
 
         @media (max-width: 1200px) {
-            left: 88%;
+            left: 86%;
             bottom: -44%;
         }
 
@@ -1690,10 +1551,12 @@
         @media (max-width: 768px) {
             bottom: -26%;
 
+
         }
 
         @media (max-width: 576px) {
             bottom: -18%;
+            left: 94%;
         }
     }
 
@@ -1726,6 +1589,10 @@
         border-image-slice: 1;
         // padding: 45px;
         @include adaptiveValue("padding", 45, 20);
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     &__text {
@@ -1759,51 +1626,41 @@
         }
     }
 
-    &__img {
+    &__labels {
         position: relative;
-        display: block;
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -35px;
-            left: 14%;
-            height: 15px;
-            width: 15px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        &--whatsap {
-            &::before {
-                background-image: url('../images/whatsap.png');
-            }
-        }
-
-        &--men {
-            &::before {
-                background-image: url('../images/men.png');
-            }
-        }
     }
+
+    &__label {
+        position: relative;
+    }
+
+    &__svg {
+        position: absolute;
+        width: 18px;
+        height: 15px;
+        top: 3px;
+        left: 45px;
+    }
+
 
     &__input {
         margin-bottom: 10px;
-        // padding: 14px 0 22px 75px;
         @include adaptiveValue("padding-bottom", 22, 10);
         @include adaptiveValue("padding-top", 14, 10);
-        //  @include adaptiveValue("padding-left", 16, 10);
         @include adaptiveValue("padding-left", 75, 20);
+
         font-size: 14px;
         color: $black2;
+
+        @media (max-width: 992px) {
+            padding-left: 70px;
+        }
 
     }
 
     &__btn {
         background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
         text-align: center;
-        // padding: 15px 0;
         @include adaptiveValue("padding-bottom", 15, 10);
         @include adaptiveValue("padding-top", 15, 10);
         font-size: 13px;
@@ -1854,7 +1711,7 @@
             background-size: cover;
 
             @media (max-width: 1200px) {
-                right: -2%;
+                right: -1%;
             }
 
             @media (max-width: 992px) {
@@ -1867,10 +1724,8 @@
         border: 1px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-
         @include adaptiveValue("padding-bottom", 40, 20);
         @include adaptiveValue("padding-top", 40, 20);
-
     }
 
     &__title {
@@ -1880,8 +1735,6 @@
 
     &__info {
         justify-content: space-around;
-
-
 
         @media (max-width: 576px) {
             display: block;
@@ -1943,8 +1796,11 @@
     &__link {
         transition: color 0.5s;
         font-weight: 400;
-        width: 77px;
-        margin: auto;
+
+        // width: 77px;
+        // margin: auto;
+
+
         // !!!записать
 
         &:focus {
@@ -1957,6 +1813,13 @@
 
         &:active {
             color: $active;
+        }
+
+        &--svg {
+            @media (max-width: 576px) {
+                // margin-left: 60px;
+                margin-right: 60px;
+            }
         }
     }
 }
