@@ -10,45 +10,52 @@
     <title>ПЛАСТИКОВІ ВІКНА В ОДЕСІ</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
 </head>
+
+
+<!--!!! типерь название плпгиноав в слайдере с большой буквы -->
 <!-- да бывает спан в параграфе -->
 <!-- если для слайдера нужно стрелки их записать -->
-<!--!!! типерь название плпгиноав в слайдере с большой буквы -->
+
 <!-- переименовать info -->
 <!-- menu nav скорей всего не првильно -->
 <!-- 36 что то не правильно с параграфами -->
 <!-- задал svg стили инлайтово в файле не работало -->
 <!-- </p>
- <span>возможно убрать такую ситуацию
+<!-- там где одна строчка возможно сделать без п -->
+<!-- стоит ли уменшать карточки? -->
+<!-- поменять везде лин хейдж -->
+ <!-- <span>возможно убрать такую ситуацию
      Розстрочку до 10 місяців під 0% Без Першого
      Внеску.
  </span>
- </p> -->
-<!-- там где одна строчка возможно сделать без п -->
-<!-- стоит ли уменшать карточки? -->
-
-<!-- поменять везде лин хейдж -->
+ </p> --> -->
+<!-- ----------- -->
 
 
+
+<!-- js оптимизировать -->
+
+<!-- разобраться с вебп -->
 <!-- поменять шрифт -->
 
-<!-- хедер доадаптив -->
-<!-- транзишин на баграунд -->
-<!-- слайдер на 700 не ровно -->
 
-<!-- // определиться делать line-height: в ем или в процентах -->
-<!-- // плавность градиента -->
-<!-- доделать адаптив  -->
-<!-- сделать попап -->
-<!-- скролл -->
+
+
+
+
+
 <!-- подумать про кнопку в меню -->
 <!-- табличку появления -->
 <!-- кеще рз проверить обертки в модал -->
 <!-- иконки в меню не стабильны -->
 <!-- фокус инстаграм -->
-<!-- чек на 769 -->
+<!-- проверить на списки -->
 
-<!-- уменшить картинку и доделать 768 568 -->
-<!-- cause 631 -->
+<!-- слайдер на 700 не ровно -->
+<!-- еще раз проверить слайдер -->
+
+
+
 
 <body>
     <header class="header">
@@ -119,32 +126,32 @@
                         </a>
                         <ul class="menu__items">
                             <li class="menu__item">
-                                <a class="menu__link" href="#">
+                                <a class="menu__link" href="#services">
                                     Продукція
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#service">
+                                <a class="menu__link" href="#installments">
                                     Розстрочка
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#collections">
+                                <a class="menu__link" href="#cause">
                                     Відгуки
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#products">
+                                <a class="menu__link" href="#advantages">
                                     Переваги
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#about">
+                                <a class="menu__link" href="#gallery">
                                     Галерея
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#blog">
+                                <a class="menu__link" href="#contact">
                                     Контакти
                                 </a>
                             </li>
@@ -174,8 +181,6 @@
                                     <a class="calls__link" href="tel:+380960989500">
                                         +380-96-098-95-00
                                     </a>
-                                    <!-- </div> -->
-                                    <!-- <div class="info__wrapper info__wrapper--skale"> -->
                                     <svg class="calls__svg" width="15px" height="15px" style="transform:rotate(270deg);"
                                         fill="#ffffff">
                                         <use xlink:href="images/sprite.svg#tel">
@@ -245,7 +250,7 @@
             </div>
         </section>
 
-        <section class="services section">
+        <section class="services section" id="services">
             <div class="container">
                 <h2 class="services__title title">
                     рішення під будь-який бюджет
@@ -311,7 +316,7 @@
             </div>
         </section>
 
-        <section class="installments section">
+        <section class="installments section" id="installments">
             <div class="container">
                 <h2 class="installments__title title">
                     РОЗСТРОЧКА 0%
@@ -385,7 +390,7 @@
             </div>
         </section>
 
-        <section class="cause section">
+        <section class="cause section" id="cause">
             <div class="container">
                 <div class="cause__wrapper ">
                     <div class="cause__box">
@@ -779,7 +784,7 @@
             </div>
         </section>
 
-        <section class="advantages section">
+        <section class="advantages section" id="advantages">
             <div class="container">
                 <h2 class="advantages__title title">
                     переваги роботи з нами
@@ -835,10 +840,8 @@
                         </li>
                     </ul>
                     <div class="advantages__inner">
-                        <!-- <div class="advantages__images"> -->
                         <img class="advantages__img" src="images/master-a.png"
                             alt="Людина в уніформі майстра з рулеткою">
-                        <!-- </div> -->
                         <div class="advantages__box">
                             <div class="advantages__wrap">
                                 <div class="advantages__name">
@@ -896,7 +899,7 @@
             </div>
         </section>
 
-        <section class="gallery section">
+        <section class="gallery section" id="gallery">
             <div class="container">
                 <div class="gallery__title title">
                     галерея робіт
@@ -1002,7 +1005,7 @@
             </div>
         </section>
 
-        <section class="contact section">
+        <section class="contact section" id="contact">
             <div class="container">
                 <div class="contact__wrapper">
                     <div class="contact__box">
@@ -1104,7 +1107,6 @@
     </footer>
 
     <div class="modal">
-        <!-- <div class="modal__inner"> -->
         <form class="modal__form form">
             <div class="form__wrap">
                 <div class="form__inner">
@@ -1148,8 +1150,6 @@
                 </div>
             </div>
         </form>
-
-        <!-- </div> -->
     </div>
     <script src="js/main.min.js?_v=20230727015200"></script>
 </body>

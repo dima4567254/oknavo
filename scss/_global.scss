@@ -236,7 +236,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 195px;
+        max-width: 190px;
         flex-wrap: wrap;
 
         @media (max-width: 576px) {
@@ -248,7 +248,7 @@ body {
 
         //  overflow: hidden;
         &--animation {
-            animation-name: link-scale;
+            // animation-name: link-scale;
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
@@ -305,7 +305,7 @@ body {
     }
 
     &__text {
-        font-family: Century Gothic;
+        // font-family: Century Gothic;
         font-weight: 400;
         font-size: 12px;
         line-height: 1.2;
