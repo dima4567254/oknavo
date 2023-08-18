@@ -40,7 +40,7 @@ $('.gallery__items').slick({
     // autoplaySpeed: 3000,
     responsive: [
         {
-            breakpoint: 750,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
@@ -56,7 +56,7 @@ $('.gallery__items').slick({
     ]
 });
 // дотсы
-$(".gallerys--overlay .js-slick").slick({
+$(".gallerys--overlay").slick({
     // variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" aria-label="Previous" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
@@ -84,7 +84,7 @@ $(".gallerys--overlay .js-slick").slick({
 
 
 // слик
-$(".gallerys--carousel .js-slick").slick({
+$(".trust__slider").slick({
     // variableWidth: true,
     dots: true,
     slidesToShow: 3,  /* количество слайдов на показ*/
@@ -107,21 +107,21 @@ $(".gallerys--carousel .js-slick").slick({
 		</button>'
         );
     },
-    responsive: [
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                // slidesToScroll: 2,
-            }
-        },
-    ]
+    // responsive: [
+    //     {
+    //         breakpoint: 992,
+    //         settings: {
+    //             slidesToShow: 2,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 480,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             // slidesToScroll: 2,
+    //         }
+    //     },
+    // ]
 });
 
 

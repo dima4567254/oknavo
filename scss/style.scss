@@ -320,19 +320,11 @@
         object-fit: cover;
 
         @media (max-width: 992px) {
-            // height: auto;
-            // width: 100%;
-            // max-width: 675px;
             width: 285px;
             height: 420px;
-
-            // 373.75 287.5 201.25 115
-            // 548.75 422.5 296.25 170
         }
 
         @media (max-width: 768px) {
-            // height: 225px;
-            // width: 155px;
             height: 146px;
             width: 100px;
             display: flex;
@@ -1002,7 +994,7 @@
         @include adaptiveValue("margin-bottom", 45, 20);
     }
 
-    .js-slick {
+    &__slider {
         position: relative;
 
         @media (max-width: 576px) {
@@ -1016,8 +1008,6 @@
             right: 5px;
             height: 165px;
             width: 145px;
-            // 133.75 102.5 71.25 40
-            // 117.5 90 62.5 35
             background-image: url('../images/likes.webp');
             background-repeat: no-repeat;
             background-position: center;
@@ -1035,17 +1025,8 @@
             }
 
             @media (max-width: 768px) {
-                // height: 70px;
-                // width: 60px;
                 display: none;
             }
-
-            // @media (max-width: 576px) {
-            //     // height: 40px;
-            //     // width: 35px;
-                
-
-            // }
         }
     }
 
@@ -1066,14 +1047,12 @@
         border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-        // padding: 40px 16px;
         height: 500px;
         @include adaptiveValue("padding-bottom", 40, 20);
         @include adaptiveValue("padding-top", 40, 20);
         @include adaptiveValue("padding-left", 16, 10);
         @include adaptiveValue("padding-right", 16, 10);
 
-        // 462.5 425 387.5 350
         @media (max-width: 1200px) {
             height: 460px;
         }
@@ -1089,7 +1068,6 @@
         @media (max-width: 576px) {
             height: 350px;
         }
-
     }
 
     &__subtitle {
@@ -1121,6 +1099,27 @@
 
         &:not(:last-child) {
             margin-bottom: 20px;
+        }
+    }
+
+    &__slider .slick-slide {
+        opacity: 0.7;
+
+        @media (max-width: 992px) {
+            opacity: 1;
+        }
+    }
+
+    &__slider .slick-center {
+        margin-top: -15px;
+        // margin-left: -5px;
+        opacity: 1;
+
+        // height: rem(490);
+        // ---
+        // width: rem(360); //38
+        @media (max-width: 992px) {
+            margin-top: 0px;
         }
     }
 }
@@ -1453,15 +1452,22 @@
         width: 100%;
         height: 500px;
         object-fit: cover;
-        @media (max-width: 992px) { 
-            height: 400px;
+
+        @media (max-width: 1200px) {
+            height: 460px;
+        }
+
+        @media (max-width: 992px) {
+            height: 425px;
         }
 
         @media (max-width: 768px) {
-            height: 350px;
+            height: 385px;
         }
 
+        // 462.5 425 387.5 350
         @media (max-width: 576px) {
+            height: 350px;
             margin: 0 auto;
             display: flex;
             max-width: 300px;
@@ -1529,16 +1535,6 @@
             width: 340px;
             height: 405px;
         }
-
-        // @media (max-width: 768px) {
-        //     width: 245px;
-        //     height: 347px;
-        // }
-
-        // @media (max-width: 576px) {
-        //     width: 100%;
-        //     height: 100%;
-        // }
     }
 
     &__box {
@@ -1610,10 +1606,6 @@
         }
 
         @media (max-width: 992px) {
-            // bottom: -30%;
-            // left: 87%;
-            // bottom: -43%;
-            // left: 84%;
             bottom: -37%;
             left: 98%;
         }
@@ -1657,7 +1649,6 @@
         border: 1px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
-        // padding: 45px;
         @include adaptiveValue("padding", 45, 20);
 
         @media (max-width: 768px) {
@@ -1690,7 +1681,6 @@
         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
 
-        // cursor: pointer;
         @media (max-width: 576px) {
             width: 100%;
         }
@@ -2100,26 +2090,7 @@
     }
 }
 
-.gallerys .slick-slide {
-    opacity: 0.7;
 
-    @media (max-width: 992px) {
-        opacity: 1;
-    }
-}
-
-.gallerys .slick-center {
-    margin-top: -15px;
-    // margin-left: -5px;
-    opacity: 1;
-
-    // height: rem(490);
-    // ---
-    // width: rem(360); //38
-    @media (max-width: 992px) {
-        margin-top: 0px;
-    }
-}
 
 
 .slick-prev {
