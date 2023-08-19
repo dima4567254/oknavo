@@ -1,9 +1,8 @@
-
 $('.header__btn, .menu a').on('click', function () {
     $('.header__menu ').toggleClass('header__menu--active');
     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
 });
-$('.menu a').on('click', function () {
+$('.menu a header__btn').on('click', function () {
     $('.header__btn').toggleClass('active');
     // для крестика и для меню и что бы закрывалось меню после выбора сcылки
 });
@@ -23,21 +22,18 @@ $(function () {
         }
     });
 });
+
 $(".menu a").on("click", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
         top = $(id).offset().top;
-    // tops = top - 80;
     tops = top - 80;
     $('body,html').animate({ scrollTop: tops }, 1500);
 });
 
-
 $('.gallery__items').slick({
-    slidesToShow: 3,  /* количество слайдов на показ*/
+    slidesToShow: 3,  
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
     responsive: [
         {
             breakpoint: 768,
@@ -50,21 +46,16 @@ $('.gallery__items').slick({
             breakpoint: 577,
             settings: {
                 slidesToShow: 1,
-                // slidesToScroll: 2,
             }
         },
     ]
 });
+
 // дотсы
 $(".gallerys--overlay").slick({
-    // variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" aria-label="Previous" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
     nextArrow: '<button type="button" aria-label="Next" role="button" class="slick-arrow slick-arrow--next">Next</button>',
-    // centerMode: true,
-    // slidesToShow: 3,  /* количество слайдов на показ*/
-    // slidesToScroll: 3,
-    // centerPadding: "15%",
     customPaging: function (slider, i) {
         var current = i + 1;
         current = current < 10 ? "0" + current : current;
@@ -82,12 +73,10 @@ $(".gallerys--overlay").slick({
     }
 });
 
-
 // слик
 $(".trust__slider").slick({
-    // variableWidth: true,
     dots: true,
-    slidesToShow: 3,  /* количество слайдов на показ*/
+    slidesToShow: 3,  
     slidesToScroll: 1,
     centerMode: true,
     prevArrow: '<button type="button" aria-label="Prev" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
@@ -107,23 +96,21 @@ $(".trust__slider").slick({
 		</button>'
         );
     },
-    // responsive: [
-    //     {
-    //         breakpoint: 992,
-    //         settings: {
-    //             slidesToShow: 2,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 480,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             // slidesToScroll: 2,
-    //         }
-    //     },
-    // ]
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
 });
-
 
 const modalWindow = document.querySelector('.modal');
 let elements = document.querySelectorAll('.modal-window');

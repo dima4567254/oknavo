@@ -76,6 +76,7 @@ $maxWidth:0;
     @return $result;
 }
 
+// !!!
 html {
     font-size: 62.5%;
 }
@@ -84,20 +85,13 @@ html,
 body {
     height: 100%;
 }
-
+// перепроверить!!!
 body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.5;
     color: $black-main;
     font-family: 'REM';
-    // line-height: 1.2;
-    // letter-spacing: 0.6px;
-
-    // font-weight: 400;
-    // font-size: 15px;
-    // line-height: 154%;
-    // color: #363636;
 }
 
 .sr-only {
@@ -111,11 +105,6 @@ body {
     white-space: nowrap;
     border: 0;
 }
-
-/*
-.title {
-    @extend %title;
-}*/
 
 .main {
     flex-grow: 1;
@@ -131,7 +120,6 @@ body {
     font-size: 36px;
     text-align: center;
     text-transform: uppercase;
-    // @include adaptiveValue("font-size", 60, 26);
 
     @media (max-width: 1200px) {
         font-size: 31px;
@@ -148,62 +136,65 @@ body {
     @media (max-width: 576px) {
         font-size: 24px;
     }
-
-    // &--bem {
-    //     margin-bottom: 70px;
-
-    //     @media (max-width: 1200px) {
-    //         margin-bottom: 60px;
-    //     }
-
-    //     @media (max-width: 992px) {
-    //         margin-bottom: 50px;
-    //     }
-
-    //     @media (max-width: 768px) {
-    //         margin-bottom: 40px;
-    //     }
-
-    //     @media (max-width: 576px) {
-    //         margin-bottom: 30px;
-    //     }
-    // }
 }
 
 .section {
-    // padding: 100px 0;
     @include adaptiveValue("padding-top", 100, 20);
     @include adaptiveValue("padding-bottom", 100, 20);
 }
 
+.btn {
+    background: linear-gradient(-45deg, #bb9f5c, #b99b6b, #655a3c);
+    white-space: nowrap;
+    position: relative;
 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, #968047 0%, #695331 100%);
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+        border-radius: inherit;
+    }
 
-.info span {
-    color: #b9a36b;
+    .span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:focus {
+        color: $focus;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        color: $active;
+    }
 }
 
-// стоит ли растянуть ховер на весь блок с свг
+.info span {
+    color: $brown;
+}
+
 .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 
-    // max-width: 440px;
-    // gap: 60px;
-    // @media (max-width: 992px) { 
-    //     display: none;
-    // }
-    // @media (max-width: 576px) {
-    //     display: block;
-    // }
-
     &__time {
         font-size: 12px;
         line-height: 1.2;
         color: $black3;
-        // margin-right: 60px;
-        // @include adaptiveValue("margin-right", 60, 20);
         margin-right: 60px;
 
         @media (max-width: 992px) {
@@ -212,21 +203,8 @@ body {
 
     }
 
-    &__time p {
-        // font-weight: 400;
-        // display: block;
-        // display: block;
-
-    }
-
     &__box {
-
-        // margin-right: 60px;
-        // &:not(:last-child) {
-        //     margin-right: 60px;
-        // }
         margin-right: 60px;
-        // @include adaptiveValue("margin-right", 60, 20);
 
         @media (max-width: 992px) {
             margin-right: 20px;
@@ -234,7 +212,6 @@ body {
     }
 
     &__wrapper {
-        // margin-bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -242,23 +219,17 @@ body {
         flex-wrap: wrap;
 
         @media (max-width: 576px) {
-            //  max-width: 100%;
             margin: 0 auto;
         }
 
-        // потом сделать выше врапер
-
-        //  overflow: hidden;
         &--animation {
-            // animation-name: link-scale;
+            animation-name: link-scale;
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
 
     }
-
-    // &__box p {}
 
     &__inner {
         display: flex;
@@ -267,20 +238,12 @@ body {
         margin-bottom: 5px;
     }
 
-    &__inner p {
-        // font-weight: 400;
-        // margin-bottom: 5px;
-    }
-
     &__inner span {
-        // font-weight: 400;
-        color: #b9a36b;
+        color: $brown;
     }
 
     &__svg {
         margin-right: 5px;
-        // transform:rotate(270deg !important);
-        // style="transform:rotate(270deg !important);">
     }
 
     &__tel {
@@ -289,8 +252,6 @@ body {
     }
 
     &__link {
-        //  display: block;
-        // color: #2c2c2c;
         transition: color 0.5s;
 
         &:focus {
@@ -307,29 +268,21 @@ body {
     }
 
     &__text {
-        // font-family: Century Gothic;
         font-weight: 400;
         font-size: 12px;
         line-height: 1.2;
-        color: #2c2c2c;
+        color: $black3;
     }
 
     &__text span {
-        color: #b9a36b;
+        color: $brown;
     }
 }
 
 .calls {
-    // display: block;
-    // justify-content: space-between;
-    // align-items: center;
     text-align: center;
     color: $white;
     display: none;
-
-    // @media (max-width: 1200px) {
-
-    // }
 
     @media (max-width: 768px) {
         display: block;
@@ -338,7 +291,6 @@ body {
     &__time {
         font-size: 12px;
         line-height: 1.2;
-        // color: #2c2c2c;
         margin-right: 0px;
     }
 
@@ -368,21 +320,7 @@ body {
         align-items: center;
         max-width: 195px;
         flex-wrap: wrap;
-
-        @media (max-width: 576px) {
-            //  max-width: 100%;
-            // margin: 0 auto;
-        }
-
-        // &--animation {
-        //     animation-name: link-scale;
-        //     animation-duration: 2s;
-        //     animation-timing-function: linear;
-        //     animation-iteration-count: infinite;
-        // }
     }
-
-    &__wrapper--animation {}
 
     &__link {
         transition: color 0.5s;
@@ -411,8 +349,7 @@ body {
     @return m#{i}n(#{$numbers});
 }
 
-// переименовать!!!!!!
-@keyframes my-animation {
+@keyframes white-stripe {
     0% {
         right: 120%;
     }
@@ -425,16 +362,6 @@ body {
         right: -20%;
     }
 }
-
-// переименовать!!!!!!
-@keyframes my {
-    0% {
-        background: linear-gradient(180deg, #ceb77d 0%, #67563b 100%);
-    }
-}
-
-
-
 
 @keyframes menu-menu {
     0% {
@@ -458,8 +385,7 @@ body {
     }
 }
 
-// переименовать!!!!!!
-@keyframes grat {
+@keyframes color-animation {
     0% {
         background-position: 0 50%;
     }
@@ -471,91 +397,4 @@ body {
     100% {
         background-position: 0 50%;
     }
-}
-
-
-
-.section {
-    &--bem {
-        padding: $padding-main 0;
-
-        @media (max-width: 992px) {
-            padding: $padding-992 0;
-        }
-
-        @media (max-width: 768px) {
-            padding: $padding-768 0;
-        }
-
-        @media (max-width: 576px) {
-            padding: $padding-576 0;
-        }
-    }
-}
-
-// footer__link--indent
-// @mixin adaptiv-value($property, $startSize, $minSize, $type) {
-//     $addSize: $startSize - $minSize;
-
-//     @if $type==1 {
-//         // только если меньше контейнера
-//         #{$property}: $startSize + px;
-
-//         @media (max-width: #{$maxWidthContainer + px }) {
-//             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
-//         }
-//     }
-
-//     @else if $type==2 {
-//         // только если больше контейнера
-//         #{$property}: $startSize + px;
-
-//         @media (min-width: #{$maxWidthContainer + px }) {
-//             #{$property}: calc(#{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-//         }
-//     }
-
-//     @else {
-//         // всегда
-//         #{$property}: calc(#{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
-
-//     }
-// }
-
-
-// .div {
-//     @include adaptiveValue("font-size", 50, 20);
-// }
-.btn {
-    background: linear-gradient(-45deg, #bb9f5c, #b99b6b, #655a3c);
-    // width: fit-content;
-    // cursor: pointer;
-    white-space: nowrap;
-    position: relative;
-}
-
-.cause__btn {}
-
-
-.btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    // background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
-    background: linear-gradient(180deg, #968047 0%, #695331 100%);
-    opacity: 0;
-    transition: all 0.6s ease-in-out;
-    border-radius: inherit;
-}
-
-.btn .span {
-    position: relative;
-    z-index: 1;
-}
-
-.btn:hover::after {
-    opacity: 1;
 }
