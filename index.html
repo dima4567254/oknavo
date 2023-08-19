@@ -13,22 +13,23 @@
 
 
 <!--!!! типерь название плпгиноав в слайдере с большой буквы -->
-<!-- да бывает спан в параграфе -->
-<!-- если для слайдера нужно стрелки их записать -->
 
-<!-- переименовать info -->
-<!-- menu nav скорей всего не првильно -->
+<!-- да бывает спан в параграфе -->
+
+
+
+
 <!-- 36 что то не правильно с параграфами -->
 <!-- задал svg стили инлайтово в файле не работало -->
 <!-- </p>
-<!-- там где одна строчка возможно сделать без п -->
+ там где одна строчка возможно сделать без п -->
 <!-- стоит ли уменшать карточки? -->
-<!-- поменять везде лин хейдж -->
+
 <!-- <span>возможно убрать такую ситуацию
      Розстрочку до 10 місяців під 0% Без Першого
      Внеску.
  </span>
- </p> --> -->
+ </p> -->
 <!-- ----------- -->
 
 
@@ -36,26 +37,28 @@
 <!-- js оптимизировать -->
 
 <!-- разобраться с вебп -->
-<!-- поменять шрифт -->
 
 
 
-<!-- проверить еще раз иконхи в хедере завтра -->
+
+<!-- проверить еще раз иконки в хедере завтра -->
 
 
 
 <!-- подумать про кнопку в меню -->
 <!-- табличку появления -->
-<!-- кеще рз проверить обертки в модал -->
 
-<!-- фокус инстаграм -->
+<!-- --------------- -->
 
-<!-- проверить на списки -->
 
-<!-- слайдер на 700 не ровно -->
-<!-- еще раз проверить слайдер -->
+
+<!-- переименовать info -->
+
+
 
 <!-- проверить на процент с сотыми -->
+
+<!-- проверить адаптив труе слайдера -->
 
 
 
@@ -63,7 +66,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav class="header__wrapper">
+            <div class="header__box">
                 <div class="header__box">
                     <a class="header__logo logo" href="#">
                         <img class="logo__menu" src="images/logo.svg" alt="Логотип">
@@ -74,7 +77,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="header__inner">
+                <div class="header__box header__box--info">
                     <div class="header__info info">
                         <div class="info__time">
                             <div class="info__inner">
@@ -193,12 +196,11 @@
                                         080 030-99-96
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                     </nav>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
@@ -738,6 +740,7 @@
                                     <use xlink:href="images/sprite.svg#instagram">
                                     </use>
                                 </svg>
+
                                 srubinova28
                             </div>
                             <div class="trust__text">
@@ -771,7 +774,6 @@
                 <div class="advantages__wrapper">
                     <ul class="advantages__left">
                         <li class="advantages__item">
-                            <!-- <div class="advantages__box"> -->
                             <h3 class="advantages__subtitle">
                                 зручна оплата
                             </h3>
@@ -874,9 +876,9 @@
 
         <section class="gallery section" id="gallery">
             <div class="container">
-                <div class="gallery__title title">
+                <h2 class="gallery__title title">
                     галерея робіт
-                </div>
+                </h2>
                 <div class="gallery__text">
                     <p>
                         Подивіться, які результати ми приносимо нашим клієнтам
@@ -944,7 +946,7 @@
                                         Скористайтеся унікальною пропозицією! Просто введіть Ваше Ім'я та Номер телефону
                                     </p>
                                 </div>
-                                <label class="form__labels" for="work-name">
+                                <label class="form__name" for="work-name">
                                     <input class="form__input" id="work-name" type="text" name="name"
                                         placeholder="Введіть ім'я" required
                                         oninvalid="this.setCustomValidity('введіть ваше ім`я')">
@@ -953,7 +955,7 @@
                                         </use>
                                     </svg>
                                 </label>
-                                <label class="form__label" for="work-tel">
+                                <label class="form__tel" for="work-tel">
                                     <input class="form__input" id="work-tel" type="tel" name="tel"
                                         data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
                                         oninvalid="this.setCustomValidity('Введіть ваш телефон')">
@@ -1094,16 +1096,17 @@
                                 Просто введіть Ваше Ім'я та Номер телефону
                             </p>
                         </div>
-                        <label class="form__labels" for="work-name">
-                            <input class="form__input" id="work-name" type="text" name="name" placeholder="Введіть ім'я"
-                                required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                        <label class="form__labels" for="modal-name">
+                            <input class="form__input" id="modal-name" type="text" name="name"
+                                placeholder="Введіть ім'я" required
+                                oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                             <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
                                 <use xlink:href="images/sprite.svg#user">
                                 </use>
                             </svg>
                         </label>
-                        <label class="form__label" for="work-tel">
-                            <input class="form__input" id="work-tel" type="tel" name="tel"
+                        <label class="form__label" for="modal-tel">
+                            <input class="form__input" id="modal-tel" type="tel" name="tel"
                                 data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
                                 oninvalid="this.setCustomValidity('Введіть ваш телефон')">
                             <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
@@ -1111,7 +1114,6 @@
                                 </use>
                             </svg>
                         </label>
-
                         <button class="form__btn btn" type="submit">
                             відправити
                             <span class="sr-only">

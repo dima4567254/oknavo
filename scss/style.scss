@@ -6,7 +6,7 @@
 @import 'libs';
 
 .header-fixed {
-    background-color: #f0f0f0;
+    background-color: $silver;
 }
 
 .header {
@@ -16,27 +16,24 @@
     left: 0;
     right: 0;
     z-index: 200;
-    background-color: #f0f0f0;
 
-    &__wrapper {
+    &__box {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
 
-    }
-
-    // !!!одинаковые
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        &--info {
+            @media (max-width: 992px) {
+                display: contents;
+            }
+        }
     }
 
     &__text {
         line-height: 1.3;
         font-size: 12px;
-        color: #2c2c2c;
+        color: $black3;
         font-weight: 400;
         margin-right: 20px;
 
@@ -46,37 +43,10 @@
     }
 
     &__logo {
-        // @include adaptiveValue("margin-right", 80, 20);
         margin-right: 80px;
-
-        @media (max-width: 1200px) {}
 
         @media (max-width: 992px) {
             margin-right: 20px;
-        }
-
-        @media (max-width: 768px) {}
-
-        @media (max-width: 576px) {}
-    }
-
-
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        // max-width: 440px;
-        // gap: 60px;
-        @media (max-width: 992px) {
-            display: contents;
-            // !!! ниже удалиь
-        }
-
-        @media (max-width: 768px) {
-            width: 100%;
-            justify-content: center;
         }
     }
 
@@ -90,7 +60,6 @@
         border: none;
         background-color: transparent;
         order: 1;
-        // margin-left: 40px;
         width: 23px;
         height: 22px;
         position: relative;
@@ -99,12 +68,7 @@
         align-items: center;
         padding: 0;
         z-index: 10;
-        // transition: all 2s;
-
-        // @media (max-width: 575) {
-        //     order: 0;
-        //     margin-bottom: 20px;
-        // }
+        // transition: all 0.5s;
 
         span {
             height: 2px;
@@ -128,24 +92,20 @@
         &::before {
             content: '';
             top: 0;
-            transition: all 0.5s;
         }
 
         &::after {
             bottom: 0;
-            transition: all 0.5s;
         }
     }
 
     &__btn.active span {
         transform: scale(0);
-        transition: all 0.5s;
     }
 
     &__btn.active:before,
     &__btn.active::after {
         background-color: $white;
-        transition: all 0.5s;
     }
 
     &__btn.active:before {
@@ -160,7 +120,6 @@
     }
 
     &__menu {
-        // padding: 65px 0 0 50px;
         @include adaptiveValue("padding-top", 65, 20);
         @include adaptiveValue("padding-left", 50, 10);
         transform: translateX(-200%);
@@ -1363,15 +1322,9 @@
     &__img {
         width: 552px;
         height: 632px;
-        // width: 500px; //130
-        // height: 610px; //160
-        // object-fit: contain;
+        margin-right: 25px;
         object-fit: contain;
-        // width: 490px;
-        // height: 590px;
 
-        // 426.25 327.5 228.75 130
-        // 527.5 405 282.5 160
         @media (max-width: 1200px) {
             width: 345px; //130
             // height: 525px;
@@ -1383,6 +1336,7 @@
             // height: 405px;
             width: 552px;
             height: 575px;
+            margin-right: 0px;
         }
 
         @media (max-width: 768px) {
@@ -1572,7 +1526,6 @@
 }
 
 .form {
-
     padding: 10px;
     background: $white;
     position: relative;
@@ -1590,8 +1543,10 @@
     &::before {
         content: "";
         position: absolute;
-        left: 93%;
-        bottom: -34%;
+        // left: 93%;
+        // bottom: -34%;
+        left: 99%;
+        bottom: -41%;
         transform: translate(-50%, -50%);
         @include adaptiveValue("height", 175, 45); //45
         @include adaptiveValue("width", 160, 40); //40
@@ -1612,14 +1567,19 @@
 
         @media (max-width: 768px) {
             bottom: -26%;
-
-
         }
 
         @media (max-width: 576px) {
             bottom: -18%;
             left: 94%;
         }
+    }
+
+    &__wrap {
+        border: 1px solid transparent;
+        border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
+        border-image-slice: 1;
+        @include adaptiveValue("padding", 45, 20);
     }
 
     &__inner {
@@ -1642,17 +1602,6 @@
 
         @media (max-width: 576px) {
             width: 100%;
-        }
-    }
-
-    &__wrap {
-        border: 1px solid transparent;
-        border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
-        border-image-slice: 1;
-        @include adaptiveValue("padding", 45, 20);
-
-        @media (max-width: 768px) {
-            text-align: center;
         }
     }
 
@@ -1686,11 +1635,11 @@
         }
     }
 
-    &__labels {
+    &__name {
         position: relative;
     }
 
-    &__label {
+    &__tel {
         position: relative;
     }
 
@@ -1701,7 +1650,6 @@
         top: 3px;
         left: 45px;
     }
-
 
     &__input {
         margin-bottom: 10px;
@@ -1715,7 +1663,6 @@
         @media (max-width: 992px) {
             padding-left: 70px;
         }
-
     }
 
     &__btn {
@@ -1734,7 +1681,6 @@
         }
 
         &:hover {
-            // !!!плавность
             background: linear-gradient(180deg, #ceb77d 0%, #67563b 100%);
         }
 
@@ -1877,10 +1823,13 @@
 
         &--svg {
             @media (max-width: 576px) {
-                // margin-left: 60px;
                 margin-right: 60px;
             }
         }
+    }
+
+    &__svg {
+        display: block;
     }
 }
 
@@ -2172,6 +2121,7 @@
 //     // padding: 0  !important;
 // }
 
+
 .draggable {
     padding: 0 !important;
 }
@@ -2341,5 +2291,3 @@
     z-index: 300;
 }
 
-// удалить!!!
-@import 'media';
