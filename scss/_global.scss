@@ -100,6 +100,7 @@ body {
 body {
     font-weight: 700;
     font-size: 16px;
+    //!!! возможно решил сделать вместо 15 16
     line-height: 1.5;
     color: $black-main;
     font-family: 'REM';
@@ -192,11 +193,13 @@ body {
     }
 }
 
-.info span {
-    color: $brown;
-}
+// .calls span {
+//     color: $brown;
+// }
 
-.info {
+// svg удалить
+
+.calls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,6 +224,11 @@ body {
     }
 
     &__svg {
+        margin-right: 5px;
+        fill: currentColor;
+    }
+
+    &__icon {
         margin-right: 5px;
     }
 
@@ -256,37 +264,26 @@ body {
     }
 
     &__link {
-        // transition: color 0.5s;
-
+        transition: color 0.5s ease-out;
 
         &:focus {
             color: $focus;
         }
 
         &:hover {
-            // color: $ac;
-            animation-name: animation-color;
-            animation-duration: 4s;
-            // animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            
-
-            svg path {
-                animation-name: animation-color;
-                animation-duration: 4s;
-                // animation-timing-function: linear;
-                animation-iteration-count: infinite;
-            }
-
+            color: $ac;
         }
 
         &:active {
             color: $active;
         }
+
+        &--color {
+            &:hover {
+                color: $black;
+            }
+        }
     }
-
-
-
 
     &__text {
         font-weight: 400;
@@ -300,65 +297,7 @@ body {
     }
 }
 
-.calls {
-    text-align: center;
-    color: $white;
-    display: none;
-
-    @media (max-width: 768px) {
-        display: block;
-    }
-
-    &__time {
-        font-size: 12px;
-        line-height: 1.2;
-        // margin-right: 0px;
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-    &__svg {
-        margin-right: 5px;
-    }
-
-    &__tel {
-        font-weight: 400;
-        text-align: start;
-    }
-
-    &__box {
-        margin-right: 0px;
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        max-width: 195px;
-        flex-wrap: wrap;
-    }
-
-    &__link {
-        transition: color 0.5s;
-
-        &:focus {
-            color: $focus;
-        }
-
-        &:hover {
-            color: $ac;
-        }
-
-        &:active {
-            color: $active;
-        }
-    }
-}
+.infos {}
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
@@ -366,27 +305,6 @@ body {
 
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
-}
-
-@keyframes animation-color {
-    0% {
-        //  .intro__link {
-        color: green;
-
-        // svg path {
-        fill: green;
-        // }
-
-        //  }
-    }
-
-    // 20% {
-    //     right: -20%;
-    // }
-
-    // 100% {
-    //     right: -20%;
-    // }
 }
 
 @keyframes white-stripe {
