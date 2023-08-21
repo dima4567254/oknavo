@@ -1,7 +1,7 @@
 $maxWidthContainer:1200;
 // $maxWidth:1920;
 $containerWidth:1105;
-$minWidth:0;
+$minWidth:320; //ставить что бы считало минимальное до этого
 $keepSize:0;
 $maxWidth:0;
 // @include adaptiv-value( "padding" 50, 20, 0, );
@@ -18,6 +18,8 @@ $maxWidth:0;
 
     // Для calc();
     $addSize: math.div($startSize - $minSize, 16);
+
+
 
     @if ($widthFrom==$containerWidth and $maxWidthContainer==0) {
         $widthFrom: $maxWidth;
@@ -79,12 +81,21 @@ $maxWidth:0;
 // !!!
 html {
     font-size: 62.5%;
+
+    @media (max-width: 1200px) {
+        font-size: 50%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 35%;
+    }
 }
 
 html,
 body {
     height: 100%;
 }
+
 // перепроверить!!!
 body {
     font-weight: 700;
@@ -139,8 +150,8 @@ body {
 }
 
 .section {
-    @include adaptiveValue("padding-top", 100, 20);
-    @include adaptiveValue("padding-bottom", 100, 20);
+    @include adaptiveValue("padding-top", 100, 35);
+    @include adaptiveValue("padding-bottom", 100, 35);
 }
 
 .btn {
@@ -200,7 +211,21 @@ body {
         @media (max-width: 992px) {
             margin-right: 20px;
         }
+    }
 
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    &__svg {
+        margin-right: 5px;
+    }
+
+    &__tel {
+        font-weight: 400;
     }
 
     &__box {
@@ -215,7 +240,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 190px;
+        max-width: 195px;
         flex-wrap: wrap;
 
         @media (max-width: 576px) {
@@ -228,44 +253,40 @@ body {
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-    &__inner span {
-        color: $brown;
-    }
-
-    &__svg {
-        margin-right: 5px;
-    }
-
-    &__tel {
-        font-weight: 400;
-
     }
 
     &__link {
-        transition: color 0.5s;
+        // transition: color 0.5s;
+
 
         &:focus {
             color: $focus;
         }
 
         &:hover {
-            color: $ac;
+            // color: $ac;
+            animation-name: animation-color;
+            animation-duration: 4s;
+            // animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+
+            svg path {
+                animation-name: animation-color;
+                animation-duration: 4s;
+                // animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
         }
 
         &:active {
             color: $active;
         }
     }
+
+
+
 
     &__text {
         font-weight: 400;
@@ -291,7 +312,7 @@ body {
     &__time {
         font-size: 12px;
         line-height: 1.2;
-        margin-right: 0px;
+        // margin-right: 0px;
     }
 
     &__inner {
@@ -339,14 +360,33 @@ body {
     }
 }
 
-
-
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
+}
+
+@keyframes animation-color {
+    0% {
+        //  .intro__link {
+        color: green;
+
+        // svg path {
+        fill: green;
+        // }
+
+        //  }
+    }
+
+    // 20% {
+    //     right: -20%;
+    // }
+
+    // 100% {
+    //     right: -20%;
+    // }
 }
 
 @keyframes white-stripe {

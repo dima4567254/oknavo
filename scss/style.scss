@@ -148,9 +148,15 @@
 }
 
 .active {
-    position: fixed;
-    top: 6%;
-    left: 4.1%;
+    position: absolute;
+    top: 53%;
+    left: 4%;
+    // top: 6%;
+    // left: 4%;
+    // left: 76.1094px;
+    // left: 0px;
+    // padding-left: 59px;
+
 }
 
 .menu {
@@ -246,8 +252,12 @@
 
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
         justify-content: center;
+    }
+
+    @media (max-width: 576px) {
+
         // потом проверить все разрешения
     }
 
@@ -295,21 +305,23 @@
         object-fit: cover;
 
 
-        @media (max-width: 992px) {
-            width: 285px;
-            height: 420px;
-        }
+        // @media (max-width: 992px) {
+        //     width: 285px;
+        //     height: 420px;
+        // }
 
         @media (max-width: 768px) {
-            height: 146px;
-            width: 100px;
-            display: flex;
-            margin: 0 auto;
+            // height: 146px;
+            // width: 100px;
+            // display: flex;
+            // margin: 0 auto;
+            display: none;
         }
 
         @media (max-width: 576px) {
-            height: 100px;
-            width: 65px;
+            // height: 100px;
+            // width: 65px;
+            display: none;
         }
     }
 
@@ -369,6 +381,7 @@
 
     &__subtext {
         margin-bottom: 20px;
+        line-height: 1.1;
     }
 
     &__subtext p {
@@ -618,6 +631,10 @@
         border: 3px solid transparent;
         border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
         border-image-slice: 1;
+
+        @media (max-width: 576px) {
+            min-height: 300px;
+        }
     }
 
     &__item {
@@ -685,7 +702,6 @@
     }
 
     &__text {
-
         max-width: 240px;
         font-size: 15px;
     }
@@ -860,9 +876,10 @@
 
     &__subtext {
         font-weight: 400;
-        font-size: 24px;
+        font-size: 13px;
         text-align: center;
         @include adaptiveValue("margin-bottom", 45, 20);
+        line-height: 1.1;
     }
 
     &__slider {
@@ -905,6 +922,10 @@
         padding: 10px;
         background: $white;
         margin-top: 20px;
+
+        @media (max-width: 576px) {
+            margin-top: 0px;
+        }
     }
 
     &__box {
@@ -913,9 +934,9 @@
         border-image-slice: 1;
         height: 500px;
         @include adaptiveValue("padding-bottom", 40, 20);
-        @include adaptiveValue("padding-top", 40, 20);
-        @include adaptiveValue("padding-left", 16, 10);
-        @include adaptiveValue("padding-right", 16, 10);
+        @include adaptiveValue("padding-top", 40, 40);
+        @include adaptiveValue("padding-left", 16, 40);
+        @include adaptiveValue("padding-right", 16, 40);
 
         @media (max-width: 1200px) {
             height: 460px;
@@ -930,7 +951,7 @@
         }
 
         @media (max-width: 576px) {
-            height: 350px;
+            height: 300px;
         }
     }
 
@@ -956,6 +977,10 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 1.1;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &__text p {
@@ -1265,6 +1290,7 @@
         font-size: 15px;
         text-align: center;
         @include adaptiveValue("margin-bottom", 30, 20);
+        line-height: 1.1;
     }
 
     &__img {
@@ -1345,6 +1371,10 @@
         @media (max-width: 992px) {
             margin: 0 auto;
         }
+
+        @media (max-width: 576px) {
+            max-width: 100%;
+        }
     }
 
     &__title {
@@ -1373,7 +1403,7 @@
     padding: 10px;
     background: $white;
     position: relative;
-    max-width: 720px;
+    // max-width: 440px;
 
     @media (max-width: 992px) {
         margin-bottom: 20px;
@@ -1381,39 +1411,48 @@
 
     @media (max-width: 576px) {
         text-align: center;
+        // max-width: 100%;
     }
 
     &::before {
         content: "";
         position: absolute;
-        left: 99%;
-        bottom: -41%;
-        transform: translate(-50%, -50%);
-        @include adaptiveValue("height", 175, 45);
-        @include adaptiveValue("width", 160, 40);
+        // left: 99%;
+        right: 0%;
+        bottom: 0%;
+        transform: translate(50%, 50%);
+        @include adaptiveValue("height", 140, 45);
+        @include adaptiveValue("width", 125, 40);
         background-image: url('../images/ks.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         @media (max-width: 1200px) {
-            left: 85%;
-            bottom: -44%;
+            right: 8%;
         }
 
         @media (max-width: 992px) {
-            bottom: -37%;
-            left: 98%;
-        }
-
-        @media (max-width: 768px) {
-            bottom: -26%;
+            right: 0%;
         }
 
         @media (max-width: 576px) {
-            bottom: -18%;
-            left: 92%;
+            right: 4%;
         }
+
+        // @media (max-width: 992px) {
+        //     bottom: -37%;
+        //     left: 98%;
+        // }
+
+        // @media (max-width: 768px) {
+        //     bottom: -26%;
+        // }
+
+        // @media (max-width: 576px) {
+        //     bottom: -18%;
+        //     left: 92%;
+        // }
     }
 
     &__wrap {
@@ -1452,6 +1491,7 @@
 
     &__text p {
         @include adaptiveValue("margin-bottom", 35, 20);
+        font-size: 13px;
     }
 
     &__text span {
@@ -1500,7 +1540,7 @@
         font-size: 14px;
         color: $black2;
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             padding-left: 70px;
         }
     }

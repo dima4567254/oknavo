@@ -104,6 +104,7 @@ $(".trust__slider").slick({
             }
         },
         {
+            // 480
             breakpoint: 480,
             settings: {
                 slidesToShow: 1,
