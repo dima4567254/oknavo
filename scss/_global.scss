@@ -96,11 +96,9 @@ body {
     height: 100%;
 }
 
-// перепроверить!!!
 body {
     font-weight: 700;
     font-size: 16px;
-    //!!! возможно решил сделать вместо 15 16
     line-height: 1.5;
     color: $black-main;
     font-family: 'REM';
@@ -192,112 +190,6 @@ body {
         color: $active;
     }
 }
-
-// .calls span {
-//     color: $brown;
-// }
-
-// svg удалить
-
-.calls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-
-    &__time {
-        font-size: 12px;
-        line-height: 1.2;
-        color: $black3;
-        margin-right: 60px;
-
-        @media (max-width: 992px) {
-            margin-right: 20px;
-        }
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5px;
-    }
-
-    &__svg {
-        margin-right: 5px;
-        fill: currentColor;
-    }
-
-    &__icon {
-        margin-right: 5px;
-    }
-
-    &__tel {
-        font-weight: 400;
-    }
-
-    &__box {
-        margin-right: 60px;
-
-        @media (max-width: 992px) {
-            margin-right: 20px;
-        }
-    }
-
-    &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 195px;
-        flex-wrap: wrap;
-
-        @media (max-width: 576px) {
-            margin: 0 auto;
-        }
-
-        &--animation {
-            animation-name: link-scale;
-            animation-duration: 2s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-    }
-
-    &__link {
-        transition: color 0.5s ease-out;
-
-        &:focus {
-            color: $focus;
-        }
-
-        &:hover {
-            color: $ac;
-        }
-
-        &:active {
-            color: $active;
-        }
-
-        &--color {
-            &:hover {
-                color: $black;
-            }
-        }
-    }
-
-    &__text {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.2;
-        color: $black3;
-    }
-
-    &__text span {
-        color: $brown;
-    }
-}
-
-.infos {}
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
