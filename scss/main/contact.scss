@@ -1,0 +1,126 @@
+.contact {
+    background-image: url('../images/contact-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        padding: 10px;
+        background: $white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -8%;
+            right: -12%;
+            @include adaptiveValue("height", 240, 60);
+            @include adaptiveValue("width", 240, 60);
+            background-image: url('../images/cont.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media (max-width: 1200px) {
+                right: -1%;
+            }
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__box {
+        border: 1px solid transparent;
+        border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
+        border-image-slice: 1;
+        @include adaptiveValue("padding-bottom", 40, 20);
+        @include adaptiveValue("padding-top", 40, 20);
+    }
+
+    &__title {
+        color: $black2;
+        @include adaptiveValue("margin-bottom", 30, 20);
+    }
+
+    &__calls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+        @media (max-width: 576px) {
+            display: block;
+        }
+    }
+
+    &__time {
+        font-size: 15px;
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 576px) {
+            margin-right: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        @media (max-width: 576px) {
+            justify-content: center;
+        }
+    }
+
+    &__inner span {
+        color: $brown;
+    }
+
+    &__svg {
+        margin-right: 5px;
+    }
+
+    &__tel {
+        display: flex;
+        justify-content: center;
+        max-width: 195px;
+        flex-wrap: wrap;
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__link {
+        transition: color .5s ease-out;
+        color: $brown;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $black;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}

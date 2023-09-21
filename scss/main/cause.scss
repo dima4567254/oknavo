@@ -1,0 +1,137 @@
+.cause {
+    background-image: url('../images/cause-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__box {
+        max-width: 425px;
+        position: relative;
+
+
+        @media (max-width: 768px) {
+            max-width: 305px;
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -24%;
+            right: -29%;
+            @include adaptiveValue("height", 195, 50);
+            @include adaptiveValue("width", 265, 65);
+            background-image: url('../images/check.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media (max-width: 1200px) {
+                bottom: -15%;
+                right: -29%;
+                height: 160px;
+                width: 215px;
+            }
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        text-align: start;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    &__text span {
+        font-weight: 700;
+    }
+
+    &__text p {
+        @include adaptiveValue("margin-bottom", 30, 20);
+    }
+
+    &__btn {
+        max-width: 355px;
+        text-align: center;
+        font-size: 11px;
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+        border: none;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        width: 100%;
+        animation-name: grat;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        background-size: 400% 400%;
+        z-index: 15;
+        @include adaptiveValue("padding-bottom", 18, 10);
+        @include adaptiveValue("padding-top", 18, 10);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            @include adaptiveValue("height", 110, 30);
+            @include adaptiveValue("width", 150, 35);
+            background-image: url('../images/drawing.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: 20;
+
+            @media (max-width: 768px) {
+                left: -5%;
+            }
+        }
+    }
+
+    &__images {
+        position: absolute;
+        right: 0%;
+        line-height: 0;
+        bottom: -37%;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 530px;
+        object-fit: contain;
+
+        @media (max-width: 1200px) {
+            width: 405px;
+            height: 470px;
+        }
+
+        @media (max-width: 992px) {
+            width: 340px;
+            height: 460px;
+        }
+
+        @media (max-width: 768px) {
+            width: 245px;
+            height: 347px;
+        }
+    }
+}

@@ -1,35 +1,15 @@
-/*$Butler: 'Butler',
-sans-serif;*/
-
 $active: trnsporent;
 $focus: trnsporent;
 $hover:linear-gradient(180deg, #ceb77d 0%, #67563b 100%);
-
 $ac: #fcd7b6;
 $white: #FFFFFF;
 $black: #000000;
 $black2: #44403a;
 $black3: #2c2c2c;
 $black4: #2a2a2a;
-
 $black-main:#363636;
 $title: #436372;
 $btn-menu:silver;
 $silver:#f0f0f0;
-
 $brown:#b9a36b;
 $brown2:#af955e;
-
-//REM
-@function rem($px) {
-    $result: math.div($px, 10) + rem;
-    @return $result;
-}
-
-@mixin line-height($font-size, $line-height, $px, ) {
-    line-height: ($line-height / $font-size);
-    font-size: ($font-size + $px);
-}
-
-
-

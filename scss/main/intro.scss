@@ -1,0 +1,201 @@
+.intro {
+    background-image: url('../images/fon.webp');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+
+    @media (max-width: 1400px) {
+        height: 100vh;
+    }
+
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -50px;
+
+        @media (max-width: 768px) {
+            display: block;
+            max-width: 445px;
+        }
+    }
+
+    &__left {
+        margin-right: 20px;
+        max-width: 57%;
+
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
+            max-width: 55%;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        height: auto;
+        width: 100%;
+        max-width: 460px;
+        object-fit: cover;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        max-width: 630px;
+        @include adaptiveValue("margin-bottom", 60, 20);
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__gift,
+    &__calc {
+        width: 50px;
+        height: 45px;
+        object-fit: cover;
+        margin-right: 5px;
+    }
+
+    &__gift {
+        height: 53px;
+    }
+
+    &__title {
+        font-size: 33px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @media (max-width: 1200px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 27px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 22px;
+            line-height: 1.1;
+        }
+    }
+
+    &__subtext {
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    &__subtext p {
+        @include adaptiveValue("font-size", 24, 20);
+        line-height: 1.6;
+        text-transform: uppercase;
+    }
+
+    &__subtext span {
+        font-size: 15px;
+        padding-left: 60px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 1px;
+            width: 45px;
+            background-color: $black;
+            margin-right: 10px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        max-width: 165px;
+        line-height: 1.1;
+    }
+
+    &__link {
+        border-radius: 6px;
+        font-size: 12px;
+        @include adaptiveValue("padding-bottom", 24, 10);
+        @include adaptiveValue("padding-top", 25, 10);
+        max-width: 465px;
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 53% 100%, 0 85%);
+        border: none;
+        text-align: center;
+        display: block;
+        color: $white;
+        background: linear-gradient(-45deg, #bb9f5c, #b99b6b, #655a3c);
+        line-height: 1.1;
+        position: relative;
+        animation-name: color-animation;
+        animation-duration: 2.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        background-size: 400% 400%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background: linear-gradient(70deg, #ceb77d 0%, #67563b 100%);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            height: 70px;
+            width: 65px;
+            background-image: url('../images/count.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &:focus {
+            clip-path: none;
+        }
+    }
+
+    &__link span {
+        text-transform: uppercase;
+    }
+}

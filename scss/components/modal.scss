@@ -1,0 +1,166 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(4rem);
+    transition: opacity .5s,
+        overflow .5s;
+    opacity: 0;
+    z-index: -100;
+}
+
+.modal-open {
+    opacity: 1;
+    z-index: 300;
+}
+
+.form {
+    padding: 10px;
+    background: $white;
+    position: relative;
+    max-width: 720px;
+
+    @media (max-width: 992px) {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 576px) {
+        text-align: center;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        transform: translate(50%, 50%);
+        @include adaptiveValue("height", 140, 45);
+        @include adaptiveValue("width", 125, 40);
+        background-image: url('../images/ks.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 1200px) {
+            right: 8%;
+        }
+
+        @media (max-width: 992px) {
+            right: 0%;
+        }
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__wrap {
+        border: 1px solid transparent;
+        border-image: linear-gradient(to top, transparent 6%, #bbac89 99%);
+        border-image-slice: 1;
+        @include adaptiveValue("padding", 45, 20);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__images {
+        width: 49%;
+        height: 340px;
+        object-fit: contain;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__box {
+        width: 51%;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+    }
+
+    &__text p {
+        @include adaptiveValue("margin-bottom", 35, 20);
+        font-size: 13px;
+    }
+
+    &__text span {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 17px;
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
+    }
+
+    &__input,
+    &__btn {
+        border: none;
+        width: 300px;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        position: relative;
+    }
+
+    &__tel {
+        position: relative;
+    }
+
+    &__svg {
+        position: absolute;
+        width: 18px;
+        height: 15px;
+        top: 3px;
+        left: 45px;
+    }
+
+    &__input {
+        margin-bottom: 10px;
+        @include adaptiveValue("padding-bottom", 22, 10);
+        @include adaptiveValue("padding-top", 14, 10);
+        @include adaptiveValue("padding-left", 75, 20);
+        font-size: 14px;
+        color: $black2;
+
+        @media (max-width: 1200px) {
+            padding-left: 70px;
+        }
+    }
+
+    &__btn {
+        background: linear-gradient(180deg, $brown 0%, #a07f4b 100%);
+        text-align: center;
+        @include adaptiveValue("padding-bottom", 15, 10);
+        @include adaptiveValue("padding-top", 15, 10);
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $white;
+        transition: all .5;
+        margin-bottom: 20px;
+    }
+}

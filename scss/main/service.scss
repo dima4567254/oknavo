@@ -1,0 +1,125 @@
+.services {
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        text-align: center;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 65px;
+        @include adaptiveValue("margin-bottom", 60, 20);
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            justify-content: center;
+            gap: 20px 10px;
+        }
+    }
+
+    &__item {
+        background: $white;
+        box-shadow: 0 4px 37px rgba(0, 0, 0, 0.05);
+        max-width: 350px;
+        padding: 20px 0 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        @media (max-width: 576px) {
+            padding: 20px 0 20px;
+
+        }
+
+        &--img {
+            &::before {
+                content: "";
+                position: absolute;
+                top: -3%;
+                left: -65%;
+                height: 415px;
+                width: 350px;
+                background-image: url('../images/woman.webp');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                @media (max-width: 1200px) {
+                    top: 44%;
+                    left: -22%;
+                    height: 200px;
+                    width: 150px;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__subtext {
+        font-weight: 400;
+        font-size: 13px;
+        max-width: 225px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    &__link {
+        overflow: hidden;
+        position: relative;
+        max-width: 225px;
+        background: linear-gradient(180deg, $brown 0%, #a07f4b 100%);
+        border-radius: 25px;
+        font-weight: 400;
+        font-size: 13px;
+        border: none;
+        display: block;
+        color: $white;
+        border-bottom: 2px solid #635136;
+        padding: 11px 40px;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+
+        &::before {
+            background: $white;
+            content: "";
+            height: 155px;
+            right: -15px;
+            position: absolute;
+            top: -50px;
+            transform: rotate(35deg);
+            width: 25px;
+            z-index: -10;
+            animation-name: white-stripe;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+}

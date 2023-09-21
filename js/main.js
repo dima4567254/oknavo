@@ -1,28 +1,13 @@
 $('.header__btn, .menu a, .menu__button').on('click', function () {
-    $('.header__menu ').toggleClass('header__menu--active');
-    // открыть меню и закрыть меню 
-});
-
-$('.menu a').on('click', function () {
-    $('.header__btn').toggleClass('active');
+    $('.header__menu, .header__btn').toggleClass('active');
+    // открыть меню и закрыть меню
     // что бы закрывалось меню после выбора сcылки
-});
-
-$('.header__btn').on('click', function () {
-    $('.header__btn ').toggleClass('active');
     // убирает кнопку
-});
-$('.menu__button').on('click', function () {
-    $('.header__btn').toggleClass('active');
     // убирает класс с кнопки
 });
-// для 2 крестика меню
-
-
 
 $(function () {
     let header = $('.header');
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 10) {
             header.addClass('header-fixed');
