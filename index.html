@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
 </head>
 
-<body>
-    <header class="header">
+<body class="wrapper">
+    <header id="header" class="header lock-padding">
         <div class="container">
             <div class="header__box">
                 <div class="header__box">
@@ -37,21 +37,21 @@
                             </div>
                         </div>
                         <div class="header__tel">
-                            <a class="header__link" href="tel:+380960989500">
+                            <a class="header__link" href="tel:+380966857214">
                                 <svg class="header__svg" width="15px" height="15px" style="transform:rotate(270deg);"
                                     fill="#ffffff">
                                     <use xlink:href="images/sprite.svg#tel">
                                     </use>
                                 </svg>
-                                +380-96-098-95-00
+                                +380-96-685-72-14
                             </a>
-                            <a class="header__link" href="tel:+0800309996">
+                            <a class="header__link" href="tel:+0801756293">
                                 <svg class="header__svg" width="15px" height="15px" style="transform:rotate(270deg);"
                                     fill="#ffffff">
                                     <use xlink:href="images/sprite.svg#tel">
                                     </use>
                                 </svg>
-                                080 030-99-96
+                                080 175-62-93
                             </a>
                             <div class="header__subtext">
                                 <p>
@@ -75,8 +75,8 @@
                         </a>
                         <ul class="menu__items">
                             <li class="menu__item">
-                                <a class="menu__link" href="#services">
-                                    Продукція
+                                <a class="menu__link" href="#advantages">
+                                    Переваги
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -85,13 +85,13 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#cause">
-                                    Відгуки
+                                <a class="menu__link" href="#services">
+                                    Продукція
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#advantages">
-                                    Переваги
+                                <a class="menu__link" href="#cause">
+                                    Відгуки
                                 </a>
                             </li>
                             <li class="menu__item">
@@ -131,16 +131,16 @@
                                         <use xlink:href="images/sprite.svg#tel">
                                         </use>
                                     </svg>
-                                    <a class="menu__tel" href="tel:+380960989500">
-                                        +380-96-098-95-00
+                                    <a class="menu__tel" href="tel:+380966857214">
+                                        +380-96-685-72-14.
                                     </a>
                                     <svg class="menu__svg" width="15px" height="15px" style="transform:rotate(270deg);"
                                         fill="#ffffff">
                                         <use xlink:href="images/sprite.svg#tel">
                                         </use>
                                     </svg>
-                                    <a class="menu__tel" href="tel:+0800309996">
-                                        080 030-99-96
+                                    <a class="menu__tel" href="tel:+0801756293">
+                                        080 175-62-93
                                     </a>
                                 </div>
                             </div>
@@ -200,67 +200,114 @@
             </div>
         </section>
 
-        <section class="services section" id="services">
+        <section class="advantages section" id="advantages">
             <div class="container">
-                <h2 class="services__title title">
-                    рішення під будь-який бюджет
+                <h2 class="advantages__title title">
+                    переваги роботи з нами
                 </h2>
-                <div class="services__text">
-                    Наша продукція
+                <div class="advantages__subtext">
+                    Чому працювати з нами - вигідно?
                 </div>
-                <ul class="services__items">
-                    <li class="services__item services__item--img">
-                        <img class="services__img" src="images/window.webp"
-                            alt="глухі, арочні, одностулкові, двостулкові та інші">
-                        <h3 class="services__subtitle">
-                            Вікна
-                        </h3>
-                        <div class="services__subtext">
-                            <p>
-                                глухі, арочні, одностулкові, двостулкові та інші
-                            </p>
+                <div class="advantages__wrapper">
+                    <ul class="advantages__left">
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                зручна оплата
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    Розстрочка до 10 місяців під 0%,
+                                    <span>
+                                        без початкового внеску
+                                    </span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                чіткі гарантії
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    гарантія на весь товар
+                                    <span>
+                                        5 років
+                                    </span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="advantages__item">
+                            <h3 class="advantages__subtitle">
+                                відкритість
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    озвучування вартості
+                                    <span>
+                                        відразу
+                                    </span>
+                                    після заміру, а також безкоштовна доставка вікон
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="advantages__inner">
+                        <img class="advantages__img" src="images/master-a.webp"
+                            alt="Людина в уніформі майстра з рулеткою">
+                        <div class="advantages__box">
+                            <div class="advantages__wrap">
+                                <div class="advantages__name">
+                                    олександр
+                                </div>
+                                <div class="advantages__info">
+                                    монтажник, досвід роботи: 5 років
+                                </div>
+                            </div>
                         </div>
-                        <a class="services__link btn" href="#">
-                            <span class="span">
-                                Вибрати вікно
-                            </span>
-                        </a>
-                    </li>
-                    <li class="services__item">
-                        <img class="services__img" src="images/balcony.webp"
-                            alt="П-подібні, французький балкон, лоджія та інші">
-                        <h3 class="services__subtitle">
-                            Скління балконів
-                        </h3>
-                        <div class="services__subtext">
-                            <p>
-                                П-подібні, французький балкон, лоджія та інші
-                            </p>
-                        </div>
-                        <a class="services__link btn" href="#">
-                            <span class="span">
-                                Вибрати балкон
-                            </span>
-                        </a>
-                    </li>
-                    <li class="services__item">
-                        <img class="services__img" src="images/door.webp"
-                            alt="Металопластикові двері для Вашого будинку">
-                        <h3 class="services__subtitle">
-                            Металопластикові двері
-                        </h3>
-                        <div class="services__subtext">
-                            <p>
-                                Металопластикові двері для Вашого будинку
-                            </p>
-                        </div>
-                        <a class="services__link btn" href="#">
-                            <span class="span">
-                                Вибрати двері
-                            </span>
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+                    <ul class="advantages__right">
+                        <li class="advantages__itemi">
+                            <h3 class="advantages__subtitle">
+                                лояльність
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    перший платіж
+                                    <span>
+                                        через місяць
+                                    </span>
+                                    після оформлення
+                                </p>
+                            </div>
+                        </li>
+                        <li class="advantages__itemi">
+                            <h3 class="advantages__subtitle">
+                                спеціалісти
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    <span>
+                                        безкоштовний
+                                    </span>
+                                    виклик інженера
+                                </p>
+                            </div>
+                        </li>
+                        <li class="advantages__itemi">
+                            <h3 class="advantages__subtitle">
+                                швидкість
+                            </h3>
+                            <div class="advantages__text">
+                                <p>
+                                    монтаж продукції проводиться протягом одного дня, виготовлення
+                                </p>
+                                <p>
+                                    <span>від 10 до 14 днів.</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -336,38 +383,67 @@
             </div>
         </section>
 
-        <section class="cause section" id="cause">
+        <section class="services section" id="services">
             <div class="container">
-                <div class="cause__wrapper">
-                    <div class="cause__box">
-                        <h2 class="cause__title title">
-                            викликати фахівця
-                        </h2>
-                        <div class="cause__text">
+                <h2 class="services__title title">
+                    рішення під будь-який бюджет
+                </h2>
+                <div class="services__text">
+                    Наша продукція
+                </div>
+                <ul class="services__items">
+                    <li class="services__item services__item--img">
+                        <img class="services__img" src="images/window.webp"
+                            alt="глухі, арочні, одностулкові, двостулкові та інші">
+                        <h3 class="services__subtitle">
+                            Вікна
+                        </h3>
+                        <div class="services__subtext">
                             <p>
-                                Ви можете залишити заявку, і викликати нашого інженера який зніме всі розміри
-                                необхідні
-                                для
-                                прорахунку, і озвучить Вам точну вартість прямо на місці.
-                            </p>
-                            <p>
-                                Вам
-                                <span>
-                                    не потрібно чекати
-                                </span>
-                                кілька днів!
+                                глухі, арочні, одностулкові, двостулкові та інші
                             </p>
                         </div>
-                        <button class="cause__btn btn modal-window" type="button">
+                        <a class="services__link btn" href="#">
                             <span class="span">
-                                викликати фахівця
+                                Вибрати вікно
                             </span>
-                        </button>
-                    </div>
-                    <div class="cause__images">
-                        <img class="cause__img" src="images/cause.webp" alt="Людина в уніформі майстра">
-                    </div>
-                </div>
+                        </a>
+                    </li>
+                    <li class="services__item">
+                        <img class="services__img" src="images/balcony.webp"
+                            alt="П-подібні, французький балкон, лоджія та інші">
+                        <h3 class="services__subtitle">
+                            Скління балконів
+                        </h3>
+                        <div class="services__subtext">
+                            <p>
+                                П-подібні, французький балкон, лоджія та інші
+                            </p>
+                        </div>
+                        <a class="services__link btn" href="#">
+                            <span class="span">
+                                Вибрати балкон
+                            </span>
+                        </a>
+                    </li>
+                    <li class="services__item">
+                        <img class="services__img" src="images/door.webp"
+                            alt="Металопластикові двері для Вашого будинку">
+                        <h3 class="services__subtitle">
+                            Металопластикові двері
+                        </h3>
+                        <div class="services__subtext">
+                            <p>
+                                Металопластикові двері для Вашого будинку
+                            </p>
+                        </div>
+                        <a class="services__link btn" href="#">
+                            <span class="span">
+                                Вибрати двері
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -701,113 +777,37 @@
             </div>
         </section>
 
-        <section class="advantages section" id="advantages">
+        <section class="cause section" id="cause">
             <div class="container">
-                <h2 class="advantages__title title">
-                    переваги роботи з нами
-                </h2>
-                <div class="advantages__subtext">
-                    Чому працювати з нами - вигідно?
-                </div>
-                <div class="advantages__wrapper">
-                    <ul class="advantages__left">
-                        <li class="advantages__item">
-                            <h3 class="advantages__subtitle">
-                                зручна оплата
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    Розстрочка до 10 місяців під 0%,
-                                    <span>
-                                        без початкового внеску
-                                    </span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="advantages__item">
-                            <h3 class="advantages__subtitle">
-                                чіткі гарантії
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    гарантія на весь товар
-                                    <span>
-                                        5 років
-                                    </span>
-                                </p>
-                            </div>
-                        </li>
-                        <li class="advantages__item">
-                            <h3 class="advantages__subtitle">
-                                відкритість
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    озвучування вартості
-                                    <span>
-                                        відразу
-                                    </span>
-                                    після заміру, а також безкоштовна доставка вікон
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="advantages__inner">
-                        <img class="advantages__img" src="images/master-a.webp"
-                            alt="Людина в уніформі майстра з рулеткою">
-                        <div class="advantages__box">
-                            <div class="advantages__wrap">
-                                <div class="advantages__name">
-                                    олександр
-                                </div>
-                                <div class="advantages__info">
-                                    монтажник, досвід роботи: 5 років
-                                </div>
-                            </div>
+                <div class="cause__wrapper">
+                    <div class="cause__box">
+                        <h2 class="cause__title title">
+                            викликати фахівця
+                        </h2>
+                        <div class="cause__text">
+                            <p>
+                                Ви можете залишити заявку, і викликати нашого інженера який зніме всі розміри
+                                необхідні
+                                для
+                                прорахунку, і озвучить Вам точну вартість прямо на місці.
+                            </p>
+                            <p>
+                                Вам
+                                <span>
+                                    не потрібно чекати
+                                </span>
+                                кілька днів!
+                            </p>
                         </div>
+                        <a class="cause__btn btn modal-window" href="#popup">
+                            <span class="span">
+                                викликати фахівця
+                            </span>
+                        </a>
                     </div>
-                    <ul class="advantages__right">
-                        <li class="advantages__itemi">
-                            <h3 class="advantages__subtitle">
-                                лояльність
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    перший платіж
-                                    <span>
-                                        через місяць
-                                    </span>
-                                    після оформлення
-                                </p>
-                            </div>
-                        </li>
-                        <li class="advantages__itemi">
-                            <h3 class="advantages__subtitle">
-                                спеціалісти
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    <span>
-                                        безкоштовний
-                                    </span>
-                                    виклик інженера
-                                </p>
-                            </div>
-                        </li>
-                        <li class="advantages__itemi">
-                            <h3 class="advantages__subtitle">
-                                швидкість
-                            </h3>
-                            <div class="advantages__text">
-                                <p>
-                                    монтаж продукції проводиться протягом одного дня, виготовлення
-                                </p>
-                                <p>
-                                    <span>від 10 до 14 днів.</span>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="cause__images">
+                        <img class="cause__img" src="images/cause.webp" alt="Людина в уніформі майстра">
+                    </div>
                 </div>
             </div>
         </section>
@@ -852,6 +852,47 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact__wrapper">
+                    <div class="contact__box">
+                        <h2 class="contact__title title">
+                            контактна інформація
+                        </h2>
+                        <div class="contact__calls">
+                            <div class="contact__time">
+                                <div class="contact__inner">
+                                    <svg class="contact__svg" width="15px" height="15px" fill="#b9a36b">
+                                        <use xlink:href="images/sprite.svg#clock">
+                                        </use>
+                                    </svg>
+                                    <span>
+                                        9.30-19.00
+                                    </span>
+                                </div>
+                                <div class="contact__text">
+                                    Приймаємо дзвінки
+                                </div>
+                            </div>
+                            <div class="contact__tel">
+                                <a class="contact__link" href="tel:+380966857214">
+                                    +380-96-685-72-14
+                                </a>
+                                <a class="contact__link" href="tel:+0801756293">
+                                    +080 175-62-93
+                                </a>
+                                <div class="contact__text">
+                                    Дзвінок безкоштовний
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -911,45 +952,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="contact section" id="contact">
-            <div class="container">
-                <div class="contact__wrapper">
-                    <div class="contact__box">
-                        <h2 class="contact__title title">
-                            контактна інформація
-                        </h2>
-                        <div class="contact__calls">
-                            <div class="contact__time">
-                                <div class="contact__inner">
-                                    <svg class="contact__svg" width="15px" height="15px" fill="#b9a36b">
-                                        <use xlink:href="images/sprite.svg#clock">
-                                        </use>
-                                    </svg>
-                                    <span>
-                                        9.30-19.00
-                                    </span>
-                                </div>
-                                <div class="contact__text">
-                                    Приймаємо дзвінки
-                                </div>
-                            </div>
-                            <div class="contact__tel">
-                                <a class="contact__link" href="tel:+380960989500">
-                                    +380-96-098-95-00
-                                </a>
-                                <a class="contact__link" href="tel:+0800309996">
-                                    +080 030-99-96
-                                </a>
-                                <div class="contact__text">
-                                    Дзвінок безкоштовний
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -964,13 +966,13 @@
                 <nav class="footer__menu">
                     <ul class="footer__items">
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
-                                Продукція
+                            <a class="footer__link" href="#service">
+                                Розстрочка
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#service">
-                                Розстрочка
+                            <a class="footer__link" href="#">
+                                Продукція
                             </a>
                         </li>
                         <li class="footer__item">
@@ -1008,49 +1010,56 @@
         </div>
     </footer>
 
-    <div class="modal">
-        <form class="modal__form form">
-            <div class="form__wrap">
-                <div class="form__inner">
-                    <img class="form__images" src="images/master-f.webp"
-                        alt="Людина в уніформі майстра з ручкою і планшетом">
-                    <div class="form__box">
-                        <div class="form__text">
-                            <span>
-                                Скористайтеся унікальною пропозицією!
+    <div class="modal" id="popup">
+        <div class="modal__inner">
+            <form class="form">
+                <div class="form__wrap">
+                    <div class="form__inner">
+                        <button class="form__button close-popup" type="button">
+                            <span></span>
+                            <span class="sr-only">
+                                Закрити модальне вікно
                             </span>
-                            <p>
-                                Просто введіть Ваше Ім'я та Номер телефону
-                            </p>
-                        </div>
-                        <label class="form__name" for="modal-name">
-                            <input class="form__input" id="modal-name" type="text" name="name"
-                                placeholder="Введіть ім'я" required
-                                oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                            <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
-                                <use xlink:href="images/sprite.svg#user">
-                                </use>
-                            </svg>
-                        </label>
-                        <label class="form__tel" for="modal-tel">
-                            <input class="form__input" id="modal-tel" type="tel" name="tel"
-                                data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
-                                oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                            <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
-                                <use xlink:href="images/sprite.svg#whatsap">
-                                </use>
-                            </svg>
-                        </label>
-                        <button class="form__btn btn" type="submit">
-                            відправити
                         </button>
+                        <img class="form__images" src="images/master-f.webp"
+                            alt="Людина в уніформі майстра з ручкою і планшетом">
+                        <div class="form__box">
+                            <div class="form__text">
+                                <span>
+                                    Скористайтеся унікальною пропозицією!
+                                </span>
+                                <p>
+                                    Просто введіть Ваше Ім'я та Номер телефону
+                                </p>
+                            </div>
+                            <label class="form__name" for="modal-name">
+                                <input class="form__input" id="modal-name" type="text" name="name"
+                                    placeholder="Введіть ім'я" required
+                                    oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                                <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
+                                    <use xlink:href="images/sprite.svg#user">
+                                    </use>
+                                </svg>
+                            </label>
+                            <label class="form__tel" for="modal-tel">
+                                <input class="form__input" id="modal-tel" type="tel" name="tel"
+                                    data-mask="+38 (___) ___-__-__" placeholder="Введіть Ваш номер" required
+                                    oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                                <svg class="form__svg" width="15px" height="15px" fill="#c0c0c0">
+                                    <use xlink:href="images/sprite.svg#whatsap">
+                                    </use>
+                                </svg>
+                            </label>
+                            <button class="form__btn btn" type="submit">
+                                відправити
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
     <script src="js/main.min.js?_v=20230727015200"></script>
 </body>
-
 </html>

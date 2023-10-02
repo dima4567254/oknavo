@@ -26,7 +26,7 @@ $(".menu a").on("click", function (event) {
 });
 
 $('.gallery__items').slick({
-    slidesToShow: 3,  
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
         {
@@ -70,7 +70,7 @@ $(".gallerys--overlay").slick({
 // слик
 $(".trust__slider").slick({
     dots: true,
-    slidesToShow: 3,  
+    slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     prevArrow: '<button type="button" aria-label="Prev" role="button" class="slick-arrow slick-arrow--prev">Prev</button>',
@@ -107,30 +107,96 @@ $(".trust__slider").slick({
     ]
 });
 
-const modalWindow = document.querySelector('.modal');
-let elements = document.querySelectorAll('.modal-window');
+const popupLinks = document.querySelectorAll('.modal-window');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll(".lock-padding");
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+let unlock = true;
+const timeout = 800;
 
-for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
-    elements[i].addEventListener('click', function () {  /*при клике на элемент */
-        if (modalWindow.classList.contains('modal-open')) {
-            modalWindow.classList.remove('modal-open');
-        } else {
-            modalWindow.classList.add('modal-open');
-        }
-        document.onkeydown = function (event) {
-            if (event.keyCode == 27) {
-                modalWindow.classList.remove('modal-open');
-            }
-        }
-    })
+if (popupLinks.length > 0) {
+    for (let index = 0; index < popupLinks.length; index++) {
+        const popupLink = popupLinks[index];
+        popupLink.addEventListener("click", function (e) {
+            const popupName = popupLink.getAttribute('href').replace('#', '');
+            const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
+            e.preventDefault();
+        });
+    }
 }
 
-// close modal
-$('.modal').click(function () {
-    var select = $('.modal__form');
-    if ($(event.target).closest(select).length)
-        return;
-    $('.modal').toggleClass('modal-open');
-    $(document).unbind('click');
-    event.stopPropagation();
+if (popupCloseIcon.length > 0) {
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        const el = popupCloseIcon[index];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.modal'));
+            e.preventDefault();
+        });
+    }
+}
+
+function popupOpen(curentPopup) {
+    if (curentPopup && unlock) {
+        const popupActive = document.querySelector('.modal.open');
+        if (popupActive) {
+            popupClose(popupActive, false);
+        } else {
+            bodyLock();
+        }
+        curentPopup.classList.add('open');
+        curentPopup.addEventListener("click", function (e) {
+            if (!e.target.closest('.modal__inner')) {
+                popupClose(e.target.closest('.modal'));
+            }
+        });
+    }
+}
+function popupClose(popupActive, doUnlock = true) {
+    if (unlock) {
+        popupActive.classList.remove('open');
+        if (doUnlock) {
+            bodyUnLock();
+        }
+    }
+}
+
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    if (lockPadding.length > 0) {
+        for (let index = 0; index < lockPadding.length; index++) {
+            const el = lockPadding[index];
+            el.style.paddingRight = lockPaddingValue;
+        }
+    }
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+
+}
+function bodyUnLock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0) {
+            for (let index = 0; index < lockPadding.length; index++) {
+                const el = lockPadding[index];
+                el.style.paddingRight = '0px';
+            }
+        }
+        body.style.paddingRight = '0px';
+        body.classList.remove('lock');
+    }, timeout);
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.which === 27) {
+        const popupActive = document.querySelector('.modal.open');
+        popupClose(popupActive);
+    }
 });

@@ -81,8 +81,10 @@
         animation-iteration-count: infinite;
         background-size: 400% 400%;
         z-index: 15;
-        @include adaptiveValue("padding-bottom", 18, 10);
-        @include adaptiveValue("padding-top", 18, 10);
+        @include adaptiveValue("padding-bottom", 25, 10);
+        @include adaptiveValue("padding-top", 25, 10);
+        @include adaptiveValue("padding-left", 114, 10);
+        @include adaptiveValue("padding-right", 114, 10);
 
         &::before {
             content: "";
@@ -105,7 +107,7 @@
 
     &__images {
         position: absolute;
-        right: 0%;
+        right: 0;
         line-height: 0;
         bottom: -37%;
 
