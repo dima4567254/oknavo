@@ -68,6 +68,7 @@ body {
     background: linear-gradient(-45deg, #bb9f5c, #b99b6b, #655a3c);
     white-space: nowrap;
     position: relative;
+    display: block;
 
     &::after {
         content: "";
@@ -82,7 +83,7 @@ body {
         border-radius: inherit;
     }
 
-    .span {
+    &__span {
         position: relative;
         z-index: 1;
     }

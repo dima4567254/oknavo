@@ -89,10 +89,10 @@ body.lock {
 
     &__button {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 40px;
-        height: 40px;
+        top: 1%;
+        right: 1%;
+        width: 25px;
+        height: 25px;
         border: none;
         background-color: transparent;
         padding: 0;
@@ -103,9 +103,7 @@ body.lock {
         &::before,
         &::after {
             height: 2px;
-            width: 20px;
-            top: 50%;
-            left: 25%;
+            width: 25px;
             background-color: $black;
         }
 
@@ -113,16 +111,17 @@ body.lock {
         &::after {
             position: absolute;
             content: '';
+            left: 0;
         }
 
         &::before {
             transform: rotate(45deg);
-            top: 20px;
+            top: 50%;
         }
 
         &::after {
             transform: rotate(-45deg);
-            bottom: 10px;
+            bottom: 40%;
         }
 
         &:focus {
@@ -224,7 +223,7 @@ body.lock {
         font-size: 13px;
         text-transform: uppercase;
         color: $white;
-        transition: all .5;
+        // transition: all .5;
         margin-bottom: 20px;
     }
 }

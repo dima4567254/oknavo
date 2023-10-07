@@ -17,13 +17,16 @@ $(function () {
     });
 });
 
-$(".menu a").on("click", function (event) {
+$(".menu a, .scroll a").on("click", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
         top = $(id).offset().top;
     tops = top - 80;
     $('body,html').animate({ scrollTop: tops }, 1500);
 });
+
+$('a[href="' + this.location.pathname + '"]').parent().addClass('header-fixed');
+// что бы класс не пропадал
 
 $('.gallery__items').slick({
     slidesToShow: 3,
