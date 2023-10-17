@@ -1,5 +1,5 @@
 .cause {
-    background-image: url('../images/cause-bg.webp');
+    background-image: url('../images/dist/cause-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
             right: -29%;
             @include adaptiveValue("height", 195, 50);
             @include adaptiveValue("width", 265, 65);
-            background-image: url('../images/check.webp');
+            background-image: url('../images/dist/check.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -94,7 +94,7 @@
             left: -10%;
             @include adaptiveValue("height", 110, 30);
             @include adaptiveValue("width", 150, 35);
-            background-image: url('../images/drawing.webp');
+            background-image: url('../images/dist/drawing.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;

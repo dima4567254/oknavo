@@ -1,5 +1,5 @@
 .installments {
-    background-image: url('../images/installments-bg.webp');
+    background-image: url('../images/dist/installments-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,32 +60,32 @@
 
         &--tel {
             &::before {
-                background-image: url('../images/installment/tel.webp');
+                background-image: url('../images/dist/installment/tel.png');
             }
         }
 
         &--roulette {
             &::before {
-                background-image: url('../images/installment/roulette.webp');
+                background-image: url('../images/dist/installment/roulette.png');
             }
         }
 
 
         &--folder {
             &::before {
-                background-image: url('../images/installment/folder.webp');
+                background-image: url('../images/dist/installment/folder.png');
             }
         }
 
         &--wallet {
             &::before {
-                background-image: url('../images/installment/wallet.webp');
+                background-image: url('../images/dist/installment/wallet.png');
             }
         }
 
         &--like {
             &::before {
-                background-image: url('../images/installment/like.webp');
+                background-image: url('../images/dist/installment/like.png');
             }
         }
 

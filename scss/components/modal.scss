@@ -56,7 +56,7 @@ body.lock {
         transform: translate(50%, 50%);
         @include adaptiveValue("height", 140, 45);
         @include adaptiveValue("width", 125, 40);
-        background-image: url('../images/ks.webp');
+        background-image: url('../images/dist/ks.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

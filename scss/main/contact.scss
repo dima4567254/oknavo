@@ -1,5 +1,5 @@
 .contact {
-    background-image: url('../images/contact-bg.webp');
+    background-image: url('../images/dist/contact-bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
             right: -12%;
             @include adaptiveValue("height", 240, 60);
             @include adaptiveValue("width", 240, 60);
-            background-image: url('../images/cont.webp');
+            background-image: url('../images/dist/cont.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
