@@ -63,11 +63,26 @@
         &--svg {
             @media (max-width: 576px) {
                 margin-right: 60px;
+                font-weight: 400;
             }
         }
     }
 
     &__svg {
         display: block;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            path {
+                fill: $ac;
+            }
+        }
+
+        &:active {
+            color: $active;
+        }
     }
 }
