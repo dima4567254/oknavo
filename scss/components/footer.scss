@@ -17,7 +17,7 @@
         margin-bottom: 30px;
     }
 
-    &__text p {
+    &__text span {
         text-transform: uppercase;
     }
 
@@ -41,7 +41,7 @@
     &__item {
         outline-color: $black;
         outline-offset: 5px;
-        margin-bottom: 20px;
+        
     }
 
     &__link {
@@ -65,6 +65,12 @@
                 margin-right: 60px;
                 font-weight: 400;
             }
+        }
+
+        &--document {
+            text-decoration: underline;
+            color: $brown3;
+            font-size: 14px;
         }
     }
 
