@@ -35,45 +35,6 @@ body.lock {
 }
 
 .form {
-    padding: 10px;
-    background: $white;
-    position: relative;
-    max-width: 720px;
-
-    @media (max-width: 992px) {
-        margin-bottom: 20px;
-    }
-
-    @media (max-width: 576px) {
-        text-align: center;
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        transform: translate(50%, 50%);
-        @include adaptiveValue("height", 140, 45);
-        @include adaptiveValue("width", 125, 40);
-        background-image: url('../images/dist/ks.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        @media (max-width: 1200px) {
-            right: 8%;
-        }
-
-        @media (max-width: 992px) {
-            right: 0;
-        }
-
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -225,5 +186,37 @@ body.lock {
         color: $white;
         // transition: all .5;
         margin-bottom: 20px;
+    }
+
+    &__buttons {
+        max-width: 210px;
+        box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        font-weight: 400;
+        font-size: 11px;
+        // display: block;
+        background: none;
+        text-align: center;
+        border: 1px solid #a07f4b;
+        padding: 18px 51px 18px 50px;
+        color: #a07f4b;
+
+        transition: background 5.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            // color: $ac;
+            background-color: #a07f4b;
+            color: $white;
+            // background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
+            // background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(138, 33, 115, 0.7) 54.65%, rgba(212, 20, 90, 0.7) 98.16%); 
+        }
+
+        &:active {
+            color: $active;
+        }
     }
 }

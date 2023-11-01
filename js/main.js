@@ -233,3 +233,67 @@ document.addEventListener('keydown', function (e) {
         popupClose(popupActive);
     }
 });
+
+
+let btn = document.querySelector('.choice-one');
+let btn2 = document.querySelector('.choice-two');
+let btn3 = document.querySelector('.choice-three');
+let btn4 = document.querySelector('.choice-four');
+let btn5 = document.querySelector('.start-again');
+let btn6 = document.getElementsByClassName("item-one");
+let btn7 = document.getElementsByClassName("item-two");
+let btn8 = document.getElementsByClassName("item-three");
+
+// let input = document.querySelector('.form-choice__inputs');
+
+
+for (let i = 0; i < btn6.length; i++) {/*прокручиваем в цикле все элементы*/
+    btn6[i].addEventListener('click', function () {  /*при клике на элемент */
+        for (let i = 0; i < btn6.length; i++) {
+            btn.classList.remove('active');
+            btn2.classList.add('active');
+        }
+    })
+}
+for (let i = 0; i < btn7.length; i++) {/*прокручиваем в цикле все элементы*/
+    btn7[i].addEventListener('click', function () {  /*при клике на элемент */
+        for (let i = 0; i < btn7.length; i++) {
+            btn2.classList.remove('active');
+            btn3.classList.add('active');
+        }
+    })
+}
+for (let i = 0; i < btn8.length; i++) {/*прокручиваем в цикле все элементы*/
+    btn8[i].addEventListener('click', function () { /*при клике на элемент */
+        for (let i = 0; i < btn8.length; i++) {
+            btn3.classList.remove('active');
+            btn4.classList.add('active');
+        }
+    })
+}
+
+btn5.addEventListener('click', () => {
+    btn4.classList.remove('active');
+    btn.classList.add('active');
+});
+
+const btn11 = document.getElementById("modal-homes");
+const btn22 = document.getElementById("modal-apartments");
+const img = document.querySelector(".choice__img");
+const source = document.querySelector(".source");
+// const form = document.getElementById("modal-home");
+
+// Добавить слушатель события click для каждого чекбокса
+btn11.addEventListener("click", () => {
+    // Изменить изображение на картинку 1
+    img.src = "images/dist/gift-lock.png";
+    source.srcset = "images/dist/gift-lock.webp";
+    source.srcset = "images/dist/gift-lock.avif";
+});
+
+btn22.addEventListener("click", () => {
+    // Изменить изображение на картинку 2
+    img.src = "images/dist/gift-net.png";
+    source.srcset = "images/dist/gift-net.webp";
+    source.srcset = "images/dist/gift-net.avif";
+});

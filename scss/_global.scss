@@ -39,6 +39,10 @@ body {
     &--small {
         max-width: 940px;
     }
+
+    &--choice {
+        max-width: 790px;
+    }
 }
 
 .title {
@@ -85,7 +89,6 @@ body {
         opacity: 0;
         transition: all .6s;
         border-radius: inherit;
-        // color: $white;
     }
 
     &__span {

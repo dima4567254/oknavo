@@ -74,4 +74,45 @@
         font-size: 15px;
 
     }
+
+    &__form {
+        position: relative;
+        padding: 10px;
+        background: $white;
+        max-width: 720px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 576px) {
+            text-align: center;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(50%, 50%);
+            @include adaptiveValue("height", 140, 45);
+            @include adaptiveValue("width", 125, 40);
+            background-image: url('../images/dist/ks.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media (max-width: 1200px) {
+                right: 8%;
+            }
+
+            @media (max-width: 992px) {
+                right: 0;
+            }
+
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+    }
 }
