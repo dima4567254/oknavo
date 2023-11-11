@@ -91,9 +91,13 @@ body {
         border-radius: inherit;
     }
 
-    &__span {
+    &__text {
         position: relative;
         z-index: 1;
+
+        @media (max-width: 576px) {
+            font-size: 11px;
+        }
     }
 
     &:focus {
@@ -112,7 +116,7 @@ body {
 }
 
 .logo {
-    &__menu {
+    &__img {
         width: 80px;
         height: 65px;
         object-fit: cover;

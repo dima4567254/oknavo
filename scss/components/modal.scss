@@ -32,6 +32,13 @@ body.lock {
         transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
         transition: transform .8s;
     }
+
+    &__form {
+        padding: 10px;
+        background-color: #ffffff;
+        position: relative;
+        max-width: 720px;
+    }
 }
 
 .form {
@@ -177,42 +184,41 @@ body.lock {
     }
 
     &__btn {
-        background: linear-gradient(180deg, $brown 0%, #a07f4b 100%);
+        background: linear-gradient(180deg, $brown 0%, $brown6 100%);
         text-align: center;
         @include adaptiveValue("padding-bottom", 15, 10);
         @include adaptiveValue("padding-top", 15, 10);
         font-size: 13px;
         text-transform: uppercase;
         color: $white;
-        // transition: all .5;
         margin-bottom: 20px;
     }
 
-    &__buttons {
+    &__test {
         max-width: 210px;
         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.1);
         border-radius: 30px;
         font-weight: 400;
         font-size: 11px;
-        // display: block;
         background: none;
         text-align: center;
-        border: 1px solid #a07f4b;
+        border: 1px solid $brown6;
         padding: 18px 51px 18px 50px;
-        color: #a07f4b;
+        color: $brown6;
+        transition: background .5s;
 
-        transition: background 5.5s;
+        @media (max-width: 576px) {
+            max-width: 100%;
+            width: 100%;
+        }
 
         &:focus {
             color: $focus;
         }
 
         &:hover {
-            // color: $ac;
-            background-color: #a07f4b;
+            background-color: $brown6;
             color: $white;
-            // background: linear-gradient(180deg, #b9a36b 0%, #a07f4b 100%);
-            // background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(138, 33, 115, 0.7) 54.65%, rgba(212, 20, 90, 0.7) 98.16%); 
         }
 
         &:active {

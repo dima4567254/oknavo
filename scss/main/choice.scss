@@ -1,20 +1,32 @@
+// проверить названия картинок
+// соеденить страници
 .choice {
     margin-top: 80px;
-    padding: 70px 0;
+    @include adaptiveValue("padding-bottom", 70, 20);
+    @include adaptiveValue("padding-top", 70, 20);
+    @include adaptiveValue("padding-left", 70, 0);
+    @include adaptiveValue("padding-right", 70, 0);
 
     &__text {
         font-size: 24px;
         max-width: 710px;
-        margin: auto auto 50px;
+        @include adaptiveValue("margin-bottom", 50, 20);
         text-align: center;
 
-        // one-three
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
+
         &--thanks {
             max-width: 400px;
             margin-bottom: 30px;
             font-size: 18px;
-            color: #44403a;
+            color: $black2;
             text-align: start;
+
+            @media (max-width: 576px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -23,11 +35,10 @@
     }
 
     &__wrap {
-        // padding: 55px 80px 85px 85px;//one
-        // padding: 55px 80px 75px 85px; //two
-        // padding: 55px 80px 100px 85px/; //three
-        // padding: 55px 80px 70px 85px; //four
-        padding: 55px 80px 80px 80px;
+        @include adaptiveValue("padding-bottom", 80, 20);
+        @include adaptiveValue("padding-top", 55, 20);
+        @include adaptiveValue("padding-left", 80, 10);
+        @include adaptiveValue("padding-right", 80, 10);
         max-width: 760px;
         border-radius: 30px;
         border: 10px solid $silver2;
@@ -37,47 +48,60 @@
     &__pretext {
         font-weight: 400;
         margin-bottom: 25px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
     }
 
-    &__img {
-        width: 595px;
-        height: 20px;
-        object-fit: contain;
-        // margin-bottom: 40px;//one
-        // margin-bottom: 45px; //two
-        margin-bottom: 45px; //four
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include adaptiveValue("margin-bottom", 45, 20);
+        @include adaptiveValue("gap", 30, 20);
+    }
+
+    &__item {
+        color: $white;
+        background-color: $brown7;
+        width: 90px;
+        font-size: 15px;
+        border-radius: 20px;
+        font-weight: 400;
+
+        &--disabled {
+            background-color: $silver2;
+        }
     }
 
     &__images {
-        width: 340px; //165
+        width: 340px;
         height: 255px;
-        margin-bottom: 70px; //four
-        // !!!принцип
+
+        &--thanks {
+            @include adaptiveValue("margin-bottom", 70, 20);
+        }
     }
 
     &__subtext {
         font-weight: 900;
         font-size: 15px;
         color: $black2;
-        // margin-bottom: 90px;//one
-        // margin-bottom: 0px; //two
-        // !!! принцип
-        margin-bottom: 90px; //three
+        @include adaptiveValue("margin-bottom", 90, 20);
 
         &--interest {
-            //two
-
+            margin-bottom: 0; 
         }
     }
 
-    // !!!разные названия
-    &__subtexts span {
+    &__info span {
         font-size: 18px;
         text-align: center;
         text-transform: uppercase;
     }
 
-    &__subtexts p {
+    &__info p {
         font-weight: 400;
     }
 
@@ -85,6 +109,11 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media (max-width: 768px) {
+            display: block;
+            text-align: start;
+        }
     }
 
     &__left {
@@ -99,10 +128,7 @@
 
     &__item {
         cursor: pointer;
-        // padding: 31px 21px 30px 20px;//one
-        // padding: 20px 15px 5px 30px; //two
-        // padding: 20px 20px 5px 20px; //three
-        padding: 20px; //three
+        padding: 20px;
         position: relative;
     }
 
@@ -119,10 +145,6 @@
     &__label {
         display: block;
         font-weight: 900;
-        // line-height: 1;//one
-        // line-height: 0.5; //two
-        line-height: 1.5; //two
-        // line-height: 1; //three
         margin-bottom: 10px;
     }
 
@@ -147,10 +169,8 @@
 
 .choice-four {
     background-image: url('../images/dist/ribbons.png');
-    // background-position: center left;
-    // background-position: 760px 935px;
-    background-position: 0px 0px;
-    // background-size: cover;
+    background-position: 10px 15px;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
