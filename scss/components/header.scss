@@ -7,7 +7,7 @@
     z-index: 200;
     color: $black3;
 
-    &__box {
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -54,7 +54,7 @@
         }
     }
 
-    &__inner {
+    &__box {
         display: flex;
         align-items: center;
     }
